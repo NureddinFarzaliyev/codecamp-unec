@@ -1,0 +1,283 @@
+
+/* * BLACK FRIDAY */
+
+.black-friday{
+    height: 80px;
+    background-color: var(--gray-900);
+    color: white;
+
+    @media (max-width: 650px) {
+        justify-content: space-around;
+    }
+}
+
+.black-friday-logo{
+    font-weight: 600;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+
+    @media (max-width: 650px) {
+        display: none;
+    }
+
+    & div{
+        background-color: var(--warn-300);
+        color: black;
+        padding: .5rem;
+        transform: rotate(-3deg);
+    }
+}
+
+.black-friday-discount{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.black-friday-discount>span:nth-child(1){
+    font-size: 14px;
+
+    @media (max-width: 550px) {
+        display: none;
+    }
+}
+
+.black-friday-discount>span:nth-child(2){
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--warn-500);
+
+    @media (max-width: 550px) {
+        font-size: 25px;
+    }
+}
+
+.black-friday-discount>span:nth-child(3){
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+.black-shop-btn{
+    border-radius: 2px;
+    border: none;
+    height: 48px;
+    width: 156px;
+    background-color: var(--warn-500);
+    font-size: 14px;
+    transition: background-color .15s;
+
+    & i {
+        margin-left: 10px;
+    }
+
+    &:hover{
+        background-color: var(--primary);
+    }
+}
+
+
+.black-close{
+    position: absolute;
+    right: 1rem;
+    width: 32px;
+    height: 32px;
+    background-color: var(--gray-800);
+    color: white;
+    border-radius: 2px;
+    transition: color .15s;
+
+    @media (max-width: 500px) {
+        position: static;
+    }
+
+    &:hover{
+        color: tomato;
+    }
+}
+
+
+/* * HEADER */
+
+
+/* * HEADER TOP */
+
+.header-top{
+    color: white;
+    background: var(--secondary);
+    height: 52px;
+    font-size: 14px;
+    border-bottom: solid var(--seperator-color) 1px;
+
+    @media (max-width: 660px) {
+        justify-content: center;
+    }
+}
+
+.header-top a, .header-top button {
+    color: white;
+}
+
+.welcome{
+    @media (max-width: 660px) {
+        display: none;
+    }
+}
+
+.social p {
+    @media (max-width: 760px) {
+        display: none;
+    }
+}
+
+.social{
+    align-items: center;
+}
+
+.header-top>div:last-child{
+    display: flex;
+
+    & div{
+        display: flex;
+        gap: 10px;
+    }
+
+    /* Seperator */
+
+    & div:nth-child(2){
+        padding-left: 1rem;
+    }
+
+    & div:first-child{
+        border-right: solid var(--seperator-color) 1px;
+        padding-right: 1rem;
+    }
+}
+
+/* * HEADER MIDDLE */
+
+.header-middle{
+    background-color: var(--secondary);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.logo{
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+}
+
+.search{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    @media (max-width: 750px) {
+        display: none;
+    }
+}
+
+.search input{
+    width: 100%;
+    height: 50px;
+    padding-left: 15px;
+}
+
+.search button{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.header-middle-icons{
+    color: white;
+    font-size: 25px;
+
+    
+
+    & i{
+        margin: 6px;
+        transition: color .15s;
+        cursor: pointer;
+
+        &:hover{
+            color: var(--primary);
+        }
+    }
+}
+
+/** HEADER BOTTOM */
+
+nav{
+    height: 80px;
+    border-bottom: solid rgba(0, 0, 0, .2) 1px;
+}
+
+nav div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & p {
+        margin-left: 10px;
+    }
+}
+
+.phone-number{
+    @media (max-width: 700px) {
+        display: none;
+    }
+}
+
+nav button {
+    font-size: 14px;
+    color: gray;
+    padding: 15px 15px;
+    transition: color .15s;
+
+    & i {
+        margin-right: 5px;
+    }
+
+    &:hover{
+        color: black;
+    }
+}
+
+.menu{
+    @media (max-width: 700px) {
+        width: 100%;
+    }
+}
+
+nav select{
+    border: none;
+    background-color: var(--gray-50);
+    padding: 15px 25px;
+    font-weight: 600;
+    margin-right: 15px;
+
+    @media (max-width: 700px) {
+        display: none;
+    }
+}
+
+nav button span {
+    @media (max-width: 1200px) {
+        display: none;
+    }
+}
+
+nav button i {
+    @media (max-width: 1200px) {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,54 @@
+:root{
+    --bg: #fff;
+    --secondary: #1B6392;
+    --primary: #FA8232;
+    --primary-100: #FFE7D6;
+    --warn-300: #F3DE6D;
+    --warn-400: #EFD33D;
+    --warn-500: #EBC80C;
+    --danger-500: #EE5858;
+    --sold-400: #929FA5;
+    --gray-50: #F2F4F5;
+    --gray-900: #191C1F;
+    --gray-800: #303639;
+    --seperator-color: rgba(255, 255, 255, .3);
+    --font: 'Public Sans', 'Times New Roman', Times, serif;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.general-padding{
+    padding: 0 1rem;
+
+    @media (min-width: 650px) {
+        padding: 0 3.5rem;
+    }
+
+    @media (min-width: 950px) {
+        padding: 0 10rem;
+    }
+}
+
+.space-between{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+body{
+    font-family: var(--font);
+}
+
+button{
+    border: none;
+    cursor: pointer;
+    background-color: inherit;
+}
+
+a{
+    color: black;
+}
