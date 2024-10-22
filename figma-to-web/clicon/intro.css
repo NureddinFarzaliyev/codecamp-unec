@@ -1,0 +1,201 @@
+
+.intro-products{
+    margin-top: 30px;
+    width: 100%;
+    justify-content: space-between;
+
+    @media (min-width: 651px) {
+        display: flex;
+    }
+}
+
+.intro-slider{
+    height: 520px;
+    background-color: var(--gray-50);
+
+    @media (min-width: 651px) {
+        width: 60%;
+    }
+    
+}
+
+.intro-slide:nth-child(1){
+    background-image: url(assets/xbox.png);
+}
+
+.intro-slide:nth-child(2){
+    background-image: url(assets/ps3_console.png);
+}
+
+.intro-slide:nth-child(3){
+    background-image: url(assets/ps5_console.png);
+}
+
+.intro-slide{
+    border-radius: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: baseline;
+    padding: 0px 50px;
+    gap: 20px;
+    position: relative;
+    
+    & h1 {
+        font-size: 48px;
+        z-index: 2;
+    }
+
+    & p {
+        color: var(--gray-800);
+        z-index: 2;
+    }
+
+    @media (max-width: 1500px) {
+        &::before{
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(255, 255, 255, .4);
+            left: 0;
+        }
+    }
+}
+
+.shop-now-btn{
+    z-index: 2;
+    color: #fff;
+    padding: 20px 40px;
+    background-color: var(--primary);
+    margin-top: 20px;
+    transition: background-color .15s;
+    border-radius: 2px;
+
+    &:hover{
+        background-color: var(--danger-500);
+    }
+}
+
+.intro-slide span{
+    z-index: 2;
+    font-size: 14px;
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    &::before{
+        content: '';
+        height: 1px;
+        width: 20px;
+        background-color: var(--secondary);
+        display: inline-block;
+    }
+
+    @media (max-width: 400px) {
+        display: none;
+    }
+}
+
+.intro-slide p{
+    width: 50%;
+}
+
+.intro-slide-money{
+    background-color: var(--secondary);
+    border: solid #fff 2px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.intro-prod-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 4%;
+    width: 39%;
+
+    @media (max-width: 650px) {
+        margin-top: 4%;
+        height: 350px;
+        width: inherit;
+    }
+}
+
+.intro-prod-cards div{
+    border-radius: 5px;
+    width: 100%;
+    height: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    padding: 20px;
+    background-color: var(--gray-900);
+    color: white;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &::before{
+        content: "";
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        border-radius: 5px;
+    }
+
+    & h2{
+        z-index: 2;
+    }
+
+    & h4{
+        color: var(--secondary);
+        z-index: 2;
+        margin-top: 10px;
+    }
+}
+
+.intro-prod-cards div:nth-child(1){
+    background-image: url(assets/google_pixel.png);
+    background-position: right bottom;
+
+    @media (max-width: 1200px) {
+        &::before{
+            background-color: rgba(0, 0, 0, .6);
+        }    
+    }
+}
+
+.intro-prod-cards div:nth-child(2){
+    background-image: url(assets/xiaomi_flipbuds.png);
+    background-position: left center;
+    background-color: var(--gray-50);
+    align-items: end;
+    color: black;
+
+    @media (max-width: 1200px) {
+        &::before{
+            background-color: rgba(255, 255, 255, .4);
+        }
+    }
+}
+
+.intro-prod-cards p {
+    color: var(--warn-400);
+    margin-bottom: 10px;
+    z-index: 2;
+}

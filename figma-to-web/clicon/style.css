@@ -11,6 +11,7 @@
     --gray-50: #F2F4F5;
     --gray-900: #191C1F;
     --gray-800: #303639;
+    --gray-900: #191C1F;
     --seperator-color: rgba(255, 255, 255, .3);
     --font: 'Public Sans', 'Times New Roman', Times, serif;
 }
@@ -28,7 +29,7 @@
         padding: 0 3.5rem;
     }
 
-    @media (min-width: 950px) {
+    @media (min-width: 1100px) {
         padding: 0 10rem;
     }
 }
