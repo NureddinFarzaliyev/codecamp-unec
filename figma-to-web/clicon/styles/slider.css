@@ -1,3 +1,7 @@
+
+
+/** First Slider */
+
 .slider{
     display: flex;
     overflow-x: hidden;
@@ -23,5 +27,52 @@
         transform: translateX(-200%);
     }98%{
         transform: translateX(-200%);
+    }
+}
+
+
+
+/** Glider Slider */
+
+.glide__slide{
+    display: flex;
+    justify-content: space-between;
+
+    & div {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+.glide__arrows{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.glide__arrow{
+    background-color: var(--primary);
+    color: white;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    font-size: 18px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.bottom-slider{
+    margin-top: 50px;
+
+    & h1{
+        text-align: center;
+        font-size: 32px;
+        margin-bottom: 30px;
     }
 }
