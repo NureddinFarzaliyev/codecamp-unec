@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="intro.css">
-    <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/intro.css">
+    <link rel="stylesheet" href="styles/slider.css">
+    <link rel="stylesheet" href="styles/deals.css">
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,7 +36,6 @@
     <!--* HEADER -->
     
     <header>
-        <!--* HEADER TOP -->
         <div class="header-top general-padding space-between">
             <div class="welcome">
                 Welcome to Clicon online eCommerce store.
@@ -57,7 +57,6 @@
             </div>
         </div>
 
-        <!--* HEADER MIDDLE -->
         <div class="header-middle general-padding space-between">
             <div class="logo">
                 <img src="assets/logo.png" alt="Clicon" height="48">
@@ -76,7 +75,6 @@
             </div>
         </div>
 
-        <!--* HEADER BOTTOM -->
         <nav class="space-between general-padding">
             <div class="menu">
                 <select name="categories">
@@ -105,8 +103,9 @@
         </nav>
     </header>
 
-    <section class="intro-section general-padding">
+    <!--* INTRO SECTION  -->
 
+    <section class="intro-section general-padding">
         <div class="intro-products">
             <div class="slider intro-slider">
                 <div class="slide intro-slide" data-bg="/assets/xbox.png">
@@ -138,6 +137,7 @@
                     <p>SUMMER SALES</p>
                     <h2>New Google Pixel 6 Pro</h2>
                     <button class="shop-now-btn">SHOP NOW <i class="fa-solid fa-arrow-right"></i></button>
+                    <div class="off-text off-text-big">29% OFF</div>
                 </div>
 
                 <div>
@@ -146,18 +146,149 @@
                     <button class="shop-now-btn">SHOP NOW <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
-
         </div>
-
-        <br>
-        <br>
-        <br>
-        <br>
 
         <div class="intro-features">
-
+            <div class="feature-card">
+                <i class="fa-solid fa-box"></i>
+                <div>
+                    <h4>FASTER DELIVERY</h4>
+                    <p>Delivery in 24H</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-trophy"></i>
+                <div>
+                    <h4>24 HOURS RETURN</h4>
+                    <p>100% money-back guarantee</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-credit-card"></i>
+                <div>
+                    <h4>SECURE PAYMENT</h4>
+                    <p>Your money is safe</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-headphones"></i>
+                <div>
+                    <h4>SUPPORT 24/7</h4>
+                    <p>Live contact message</p>
+                </div>
+            </div>
         </div>
     </section>
+
+    <!--* BEST DEALS SECTION -->
+
+    <section class="deals general-padding">
+        <div class="deals-header">
+            <div>
+                <h2>Best Deals</h2>
+                <div class="deals-end">
+                    <p>Deals end in</p>
+                    <span>16d : 21h : 57m : 23s</span>    
+                </div>
+            </div>
+            <div>
+                <a href="#">Browse All Products <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="deals-body">
+            <div class="deals-left">
+                <img src="assets/ps5.png" alt="playstation-5">
+                <div>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <span>(52.677)</span>
+                </div>
+                <h3>Playstation Series 5 SSD Console With Wireless Controller - EU Version</h3>
+                <div>
+                    <span>$865.99</span>
+                    <span>$442.12</span>
+                </div>
+                <p>Games built using the Xbox Series X|S development kit showcase unparalleled load times, visuals.</p>
+                <div class="deals-btns">
+                    <button><i class="fa-regular fa-heart"></i></button>
+                    <button><i class="fa-solid fa-cart-shopping"></i> ADD TO CART</button>
+                    <button><i class="fa-solid fa-eye"></i></button>
+                </div>
+                <div class="off-text off-text-small">32% OFF</div>
+                <div class="hot">HOT</div>
+            </div>
+
+            
+            <div class="deals-right">
+                <div class="deals-right-card">
+                    <img src="assets/prod-1.png" alt="Drone">
+                    <p>Bose Sport Earbuds - Wireless Earphones - Bluetooth In Ear...</p>
+                    <span>$2,300</span>
+
+                </div>
+                <div class="deals-right-card">
+                    <img src="assets/prod-2.png" alt="Drone">
+                    <p>Simple Mobile 4G LTE Prepaid Smartphone</p>
+                    <span>$1,300</span>
+                </div>
+                <div class="deals-right-card">
+                    <img src="assets/prod-3.png" alt="Drone">
+                    <p>4K UHD LED Smart TV with Chromecast Built-in</p>
+                    <span>$200</span>
+                </div>
+                <div class="deals-right-card">
+                    <img src="assets/prod-4.png" alt="Drone">
+                    <p>Sony DSCHX8 High Zoom Point & Shoot Camera</p>
+                    <span>$3,340</span>
+                </div>
+                <div class="deals-right-card">
+                    <img src="assets/prod-5.png" alt="Drone">
+                    <p>Bose Sport Earbuds - Wireless Earphones - Bluetooth In Ear...</p>
+                    <span>$2,800</span>
+                </div>
+                <div class="deals-right-card">
+                    <img src="assets/prod-6.png" alt="Drone">
+                    <p>Dell Optiplex 7000x7480 All-in-One Computer Monitor</p>
+                    <span>$1,999</span>
+                </div>
+                <div class="deals-right-card">
+                    <img src="assets/prod-7.png" alt="Drone">
+                    <p>2-Barrel Carburetor Carb 2100 Engine Increase Horsepower</p>
+                    <span>$300</span>
+                </div>
+                <div class="deals-right-card">
+                    <img src="assets/prod-8.png" alt="Drone">
+                    <p>4K UHD LED Smart TV with Chromecast Built-in</p>
+                    <span>$1,000</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
 </body>
 </html>

@@ -9,7 +9,8 @@
     --danger-500: #EE5858;
     --sold-400: #929FA5;
     --gray-50: #F2F4F5;
-    --gray-900: #191C1F;
+    --gray-300: #ADB7BC;
+    --gray-600: #5F6C72;
     --gray-800: #303639;
     --gray-900: #191C1F;
     --seperator-color: rgba(255, 255, 255, .3);
@@ -52,4 +53,40 @@ button{
 
 a{
     color: black;
+}
+
+/** DISCOUNT ITEMS */
+
+.off-text {
+    background-color: var(--warn-400);
+    text-align: center;
+    border-radius: 2px;
+    color: black;
+    font-weight: 600;
+    position: absolute;
+    
+}
+
+.off-text-big {
+    height: 40px;
+    width: 100px;
+    line-height: 40px;
+    top: 20px;
+    right: 20px;
+
+    @media (max-width: 450px) {
+        top: 7px;
+        right: 7px;
+        height: 30px;
+        width: 80px;
+        line-height: 30px;
+    }
+}
+
+.off-text-small {
+    width: 75px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: 400;
 }
