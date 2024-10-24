@@ -259,3 +259,45 @@
     top: 30px;
     font-weight: 600;
 }
+
+.card-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    top: 0px;
+    left: 0px;
+    transition: all .15s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    opacity: 0;
+}
+
+.card-overlay:hover{
+    opacity: 1;
+}
+
+.card-overlay button {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: white;
+    font-size: 20px;
+    color: black;
+    transition: background-color .15s;
+    font-weight: 600;
+
+    &:hover{
+        background-color: var(--primary);
+    }
+}
+
+.deals-img-container {
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
