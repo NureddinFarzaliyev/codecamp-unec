@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLICON - Online eCommerce Store</title>
     <!-- CSS -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/header.css">
@@ -15,7 +16,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d0041310db.js" crossorigin="anonymous"></script>
-    <title>CLICON - Online eCommerce Store</title>
 </head>
 <body>
 
@@ -277,85 +277,78 @@
         <div class="glide">
             <div class="glide__track" data-glide-el="track">
               <ul class="glide__slides">
-                <li class="glide__slide">
-                    <div>
+                    <li class="glide__slide">
                         <img src="assets/cat-1.png" alt="category-image">
                         <p>Computer & Laptop</p>
-                    </div>
-                    <div>
+                    </li>
+                    <li class="glide__slide">
                         <img src="assets/cat-2.png" alt="category-image">
                         <p>Phone</p>
-                    </div>
-                    <div>
+                    </li>
+                    <li class="glide__slide">
                         <img src="assets/cat-3.png" alt="category-image">
                         <p>Headphones</p>
-                    </div>
-                    <div>
+                    </li>
+                    <li class="glide__slide">
                         <img src="assets/cat-4.png" alt="category-image">
                         <p>Keyboard and Mouse</p>
-                    </div>
-                    <div>
+                    </li>
+                    <li class="glide__slide">
                         <img src="assets/cat-5.png" alt="category-image">
                         <p>Camera</p>
-                    </div>
-                    <div>
+                    </li>
+                    <li class="glide__slide">
                         <img src="assets/cat-6.png" alt="category-image">
                         <p>TV</p>
-                    </div>
-                </li>
-                <li class="glide__slide">
-                    <div>
+                    </li>
+                    <li class="glide__slide">
                         <img src="assets/cat-4.png" alt="category-image">
                         <p>Keyboard and Mouse</p>
-                    </div>
-                    <div>
+                    </li>
+                    <li class="glide__slide">
                         <img src="assets/cat-1.png" alt="category-image">
                         <p>Computer & Laptop</p>
-                    </div>
-                    <div>
+                    </li>
+                    <li class="glide__slide">
                         <img src="assets/cat-3.png" alt="category-image">
                         <p>Headphones</p>
-                    </div>
-                    <div>
+                    </li>
+                    <li class="glide__slide">
                         <img src="assets/cat-6.png" alt="category-image">
                         <p>TV</p>
-                    </div>
-                    <div>
+                    </li>
+                    <li class="glide__slide">
                         <img src="assets/cat-5.png" alt="category-image">
                         <p>Camera</p>
-                    </div>
-                    <div>
+                    </li>
+                    <li class="glide__slide">
                         <img src="assets/cat-2.png" alt="category-image">
                         <p>Phone</p>
-                    </div>
-                </li>
-                <li class="glide__slide">
-                    <div>
+                    </li>
+                    <li class="glide__slide">
                         <img src="assets/cat-2.png" alt="category-image">
                         <p>Phone</p>
-                    </div>
-                    <div>
+                    </li>
+                    <li class="glide__slide">
                         <img src="assets/cat-1.png" alt="category-image">
                         <p>Computer & Laptop</p>
-                    </div>
-                    <div>
+                    </li>
+                    <li class="glide__slide">
                         <img src="assets/cat-5.png" alt="category-image">
                         <p>Camera</p>
-                    </div>
-                    <div>
+                    </li>
+                    <li class="glide__slide">
                         <img src="assets/cat-6.png" alt="category-image">
                         <p>TV</p>
-                    </div>
-                    <div>
+                    </li>
+                    <li class="glide__slide">
                         <img src="assets/cat-3.png" alt="category-image">
                         <p>Headphones</p>
-                    </div>
-                    <div>
+                    </li>
+                    <li class="glide__slide">
                         <img src="assets/cat-4.png" alt="category-image">
                         <p>Keyboard and Mouse</p>
-                    </div>
-                    
-                </li>
+                    </li>
               </ul>
             </div>
 
@@ -370,7 +363,21 @@
     <!-- Script for Glider -->
     <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
     <script>
-        new Glide('.glide').mount()
+        new Glide('.glide',  {
+            type: 'carousel',
+            perView: 6,
+            breakpoints: {
+                1200: {
+                perView: 4 
+                },
+                768: {
+                perView: 2
+                },
+                480: {
+                perView: 1
+                }
+            }
+        }).mount()
     </script>
 </body>
 </html>
