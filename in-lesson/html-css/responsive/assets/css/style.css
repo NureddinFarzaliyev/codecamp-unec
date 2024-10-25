@@ -1,0 +1,75 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css);
+
+header{
+    background-color: pink;
+    width: 100vw;
+    height: 15vh;
+}
+
+footer{
+    background-color: blue;
+    width: 100vw;
+    height: 15vh;
+}
+
+main{
+    height: 70vh;
+    width: 100%;
+    display: flex;
+
+    .left {
+        width: 20%;
+        height: 100%;
+        background-color: yellow;
+    }
+
+    .right {
+        width: 20%;
+        height: 100%;
+        background-color: lime;
+    }
+
+    .mid {
+        width: 60%;
+        height: 100%;
+        background-color: #fff;
+    }
+
+}
+
+@media (max-width: 1200px){
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .mid {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        width: 100% !important;
+    }
+
+    .left, .right {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 600px) {
+
+    main {
+        flex-direction: column;
+        display: flex;
+
+        .left, .right, .mid {
+            width: 100%;
+        }
+
+        .mid {
+            order: -1;
+        }
+    }
+    
+}
