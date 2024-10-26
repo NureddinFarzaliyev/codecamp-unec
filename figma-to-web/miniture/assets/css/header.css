@@ -1,0 +1,95 @@
+
+.header-top {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    & div {
+        display: flex;
+        gap: 30px;
+
+        @media (max-width: 500px) {
+            gap: 15px
+        }
+        
+        & i {
+            cursor: pointer;
+            transition: color .25s;
+            font-size: 20px;
+            
+            &:hover{
+                color: var(--primary);
+            }
+        }
+    }
+
+    & img {
+        @media (max-width: 760px) {
+            height: 18px;
+        }
+    }
+
+    .fa-bars {
+        @media (min-width: 1025px) {
+            display: none;
+        }
+    }
+
+    .fa-heart {
+        @media (max-width: 1024px) {
+            display: none;
+        }
+    }
+
+    .fa-bag-shopping {
+        position: relative;
+        &::after {
+            content: '0';
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            font-size: 12px;
+            text-align: center;
+            line-height: 20px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            top: -10px;
+            right: -12px;
+            color: white;
+        }
+    }
+}
+
+.header-bottom {
+    position: sticky;
+    top: 0;
+    
+    height: 60px;
+    line-height: 60px;
+    font-family: var(--font);
+
+    & ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 90px;
+
+        & li {
+
+            & a {
+                transition: color .25s;
+            }
+
+            & :hover {
+                color: var(--primary);
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
+    
+}
