@@ -1,0 +1,8 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+:root{
+    --primary: #FFA832;
+    --text-primary: #181818;
+    --text-secondary: #464646;
+    --text-font: "Outfit", sans-serif;
+}
