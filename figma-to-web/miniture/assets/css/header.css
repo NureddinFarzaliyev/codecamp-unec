@@ -5,6 +5,7 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    position: relative;
 
     & div {
         display: flex;
@@ -26,6 +27,10 @@
     }
 
     & img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
         @media (max-width: 760px) {
             height: 18px;
         }
@@ -74,7 +79,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 90px;
+        gap: 60px;
 
         & li {
 

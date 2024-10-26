@@ -30,3 +30,13 @@ a {
     color: black;
     text-decoration: none;
 }
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+* {
+    font-family: var(--font);
+    color: var(--text-primary);
+}
