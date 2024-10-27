@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "@glidejs/glide": "^3.6.2"
+    "@glidejs/glide": "^3.6.2",
+    "aos": "^2.3.4"
   }
 }

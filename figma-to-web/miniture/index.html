@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Stylesheets -->
     <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/intro.css">
@@ -23,6 +24,9 @@
     <title>Miniture</title>
 </head>
 <body>
+
+    <!-- ! HEADER -->
+
     <header class="main-container">
         <div class="header-top container">
             <div>
@@ -49,8 +53,11 @@
         </nav>
     </header>
 
+    <!-- ! MAIN -->
+
     <main class="main-container">
-        <section class="intro container">
+
+        <section class="intro container" data-aos="fade-up" data-aos-duration="2000">
             <img src="https://miniture.b-cdn.net/wp-content/uploads/2023/10/m3_hero-788x1024.jpeg" alt="woodland-image">
             <div>
                 <span>Rustic Elegance</span>
@@ -61,8 +68,8 @@
         </section>
 
         <section class="cozy container">
-            <h1 class="slider-heading">1500+ cozy new arrivals</h1>
-            <div class="glide-big">
+            <h1 class="slider-heading" data-aos="fade-up" data-aos-duration="2000">1500+ cozy new arrivals</h1>
+            <div class="glide-big" data-aos="fade-up" data-aos-duration="2000">
                 <div class="glide__track" data-glide-el="track">
 
                   <ul class="glide__slides">
@@ -220,7 +227,7 @@
                 </div>
             </div>   
             
-            <div class="glide-small">
+            <div class="glide-small" data-aos="fade-up" data-aos-duration="2000">
                 <div class="glide__track" data-glide-el="track">
                   <ul class="glide__slides">
                     <li class="glide__slide">
@@ -286,11 +293,9 @@
             </div>              
         </section>
 
-        
-
         <section class="living-room container">
-            <h1 class="slider-heading">You are in Living Room</h1>
-            <div class="glide-container-big glide-big">
+            <h1 class="slider-heading" data-aos="fade-up" data-aos-duration="2000">You are in Living Room</h1>
+            <div class="glide-container-big glide-big" data-aos="fade-up" data-aos-duration="2000">
                 <div class="glide__track" data-glide-el="track">
                   <ul class="glide__slides">
                     <li class="glide__slide">
@@ -445,12 +450,12 @@
                     <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><i class="fa-solid fa-right-long"></i></button>
                 </div>
             </div>
-            <div class="more-btn">
+            <div class="more-btn" data-aos="fade-up" data-aos-duration="2000">
                 <button>View more products</button>
             </div> 
         </section>
 
-        <section class="sale-counter container">
+        <section class="sale-counter container" data-aos="fade-up" data-aos-duration="2000">
             <div class="sale-overlay"></div>
             <p>Sale up to 20% All items</p>
             <h2>Worldly Wanderlust Treasures</h2>
@@ -476,8 +481,8 @@
         </section>
 
         <section class="container">
-            <h1 class="slider-heading">More can't-miss fall deals</h1>
-            <div class="glide-big glide-fall">
+            <h1 class="slider-heading" data-aos="fade-up" data-aos-duration="2000">More can't-miss fall deals</h1>
+            <div class="glide-big glide-fall" data-aos="fade-up" data-aos-duration="2000">
                 <div class="glide__track" data-glide-el="track">
 
                   <ul class="glide__slides">
@@ -636,13 +641,17 @@
             </div>  
         </section>
 
-        
-
-
     </main>
 
+    <!-- ! SCRIPTS FOR GLIDER and AnimateOnScroll -->
+
     <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+    // Animate on Scroll
+    AOS.init();
+
+    // Glider
     new Glide('.glide-big', {
         type: 'carousel',
         perView: 4,
