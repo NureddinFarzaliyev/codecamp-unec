@@ -37,21 +37,6 @@
         width: 80%;
     }
 
-    & button {
-        width: 200px;
-        height: 60px;
-        border-radius: 30px;
-        font-size: 16px;
-        background-color: var(--primary);
-        color: white;
-        transition: background-color .25s;
-
-        &:hover {
-            background-color: var(--text-primary);
-        }
-    }
-
-
     @media (max-width: 990px) {
         flex-direction: column;
 
@@ -70,5 +55,19 @@
             margin-top: 20px;
         }
 
+    }
+}
+
+.intro-button {
+    width: 200px;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 16px;
+    background-color: var(--primary);
+    color: white;
+    transition: background-color .25s;
+
+    &:hover {
+        background-color: var(--text-primary);
     }
 }

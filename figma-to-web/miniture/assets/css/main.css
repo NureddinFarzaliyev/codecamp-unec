@@ -14,7 +14,7 @@
     align-items: center;
 
     .container {
-        width: 80%;
+        width: 70%;
 
         @media (max-width: 1400px) {
             width: 90%;
@@ -40,4 +40,8 @@ button {
 * {
     font-family: var(--font);
     color: var(--text-primary);
+}
+
+main {
+    margin-bottom: 150px;
 }

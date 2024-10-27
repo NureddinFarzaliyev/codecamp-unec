@@ -1,0 +1,85 @@
+.sale-counter {
+    background-image: url("/assets/img/bg.png");
+    margin: 90px 0px;
+    height: 500px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+
+    .sale-overlay{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 14, 59, 0.1);
+        z-index: -1;
+    }
+
+
+    & p {
+        font-size: 20px;
+        color: var(--text-secondary);
+    }
+
+    & h2 {
+        font-size: 48px;
+        width: 50%;
+        text-align: center;
+        font-weight: 500;
+
+        @media (max-width: 800px) {
+            font-size: 30px;
+            width: 100%;
+        }
+    }
+
+}
+
+
+.counter {
+    display: flex;
+    gap: 10px;
+
+    @media (max-width: 400px) {
+        gap: 3px;
+    }
+
+    & div {
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        border: solid .5px rgba(0, 0, 0, .3);
+    
+        @media (max-width: 800px) {
+            height: 75px;
+            width: 75px;
+        }
+    }
+
+    & b {
+        font-size: 24px;
+        font-weight: 600;
+
+        @media (max-width: 800px) {
+            font-size: 18px;
+        }
+    }
+
+    & span {
+        color: var(--text-secondary);
+
+        @media (max-width: 800px) {
+            font-size: 12px;
+        }
+    }
+}
