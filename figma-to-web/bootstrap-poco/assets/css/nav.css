@@ -1,0 +1,126 @@
+
+
+body {
+    background-color: #7B1010;
+}
+
+nav {
+    height: 100px;
+
+    > div > button {
+        background: none;
+        color: white;
+        border: none;
+        font-weight: 400;
+
+        & i {
+            font-size: 20px;
+        }
+
+        &:hover{
+            color: var(--primary);
+        }
+    }
+
+    .nr-desktop {
+        @media (max-width: 1024px) {
+            display: none !important;
+        }
+    }
+
+    .nr-mobile{
+        & button {
+            border: none !important;
+        }
+        @media (min-width: 1025px) {
+            display: none !important;
+        }
+    }
+
+    .menu-text{
+        @media (max-width: 1024px) {
+            display: none;
+        }
+    }
+
+    .nav-right button {
+        background: none;
+        border: 1.5px #fff solid;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+
+        & span {
+            font-size: 8px;
+        }
+
+        &:hover{
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+    }
+
+    & img {
+        height: 40px;
+
+        @media (max-width: 280px) {
+            height: 20px;
+        }
+    }
+
+}
+
+.accordion {
+    
+    & a {
+        font-size: 16px;
+        transition: .1s;
+        width: 100%;
+        display: inline-block;
+
+        &:hover{
+            color: var(--primary) !important;
+        }
+    }
+    
+    * {
+        border: none;
+    }
+
+
+}
+.accordion-button:hover{
+    color: var(--primary) !important;
+}
+
+.empty-accordion-button::after{
+    display: none;
+}
+
+
+.offcanvas{
+    z-index: 99999 !important;    
+}
+
+
+.mobile-nav {
+    height: 65px;
+    z-index: 10;
+
+    & span {
+        font-size: 12px;
+    }
+
+    & i {
+        font-size: 22px;
+    }
+
+    @media (min-width: 1025px) {
+        display: none !important;
+    }
+}
+
+.badge{
+    font-size: 8px !important;
+    top: 3px !important; 
+}

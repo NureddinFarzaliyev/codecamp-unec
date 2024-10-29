@@ -6,10 +6,186 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Stylesheets -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/nav.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- Fonts -->
+    <script src="https://kit.fontawesome.com/d0041310db.js" crossorigin="anonymous"></script>
     <title>Poco</title>
 </head>
 <body>
-    <h1>hello world</h1>   
+
+
+    <nav class="d-flex sticky-top">
+        <div class=" container-lg d-flex justify-content-between align-items-center">
+            <button class="menu d-flex align-items-center gap-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"> <i class="fa-solid fa-bars"></i> <span class="menu-text">Menu</span> </button>
+    
+            <div class="logo">
+                <img src="assets/img/logo.svg" alt="Poco">
+            </div>
+    
+            <div class="nav-right nr-desktop d-flex gap-2">
+                <button><i class="fa-solid fa-user text-light"></i></button>
+                <button>
+                    <i class="fa-solid fa-heart text-light position-relative">
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
+                            0
+                        </span>
+                    </i>  
+                </button>
+                <button>
+                    <i class="fa-solid fa-basket-shopping text-light position-relative">
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
+                            0
+                        </span>
+                    </i>  
+                </button>
+            </div>
+
+            <div class="nav-right nr-mobile">
+                <button><i class="fa-solid fa-phone text-light"></i></button>
+            </div>
+            
+            <div class="offcanvas offcanvas-start bg-black text-light" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-body">
+
+
+                    <div class="accordion">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header border-0 bg-black">
+                            <button class="fw-normal accordion-button collapsed bg-black text-light border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              Home
+                            </button>
+                          </h2>
+                          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body bg-black text-light border-0">
+                                <a href="#" class="text-light text-decoration-none my-2 ms-1">Home 1</a>
+                                <a href="#" class="text-light text-decoration-none my-2 ms-1">Home 2</a>
+                                <a href="#" class="text-light text-decoration-none my-2 ms-1">Home 3</a>
+                                <a href="#" class="text-light text-decoration-none my-2 ms-1">Home 4</a>
+                                <a href="#" class="text-light text-decoration-none my-2 ms-1">Home 5</a>
+                                <a href="#" class="text-light text-decoration-none my-2 ms-1">Home 6</a>
+                                <a href="#" class="text-light text-decoration-none my-2 ms-1">Home 7</a>
+                                <a href="#" class="text-light text-decoration-none my-2 ms-1">Home 8</a>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header border-0 bg-black">
+                            <button class="fw-normal accordion-button empty-accordion-button collapsed bg-black text-light border-0 shadow-none" type="button">
+                              Menu
+                            </button>
+                          </h2>
+                        </div>
+                    </div>
+
+                    <div class="accordion">
+                          <h2 class="accordion-header border-0 bg-black">
+                            <button class="fw-normal accordion-button empty-accordion-button collapsed bg-black text-light border-0 shadow-none" type="button">
+                              About
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div class="accordion">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header border-0 bg-black">
+                            <button class="fw-normal accordion-button collapsed bg-black text-light border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                              Shop
+                            </button>
+                          </h2>
+                          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body bg-black text-light border-0">
+                                <a href="#" class="text-light text-decoration-none my-2 ms-1">Shop 1</a>
+                                <a href="#" class="text-light text-decoration-none my-2 ms-1">Shop 2</a>
+                                <a href="#" class="text-light text-decoration-none my-2 ms-1">Shop 3</a>
+                                <a href="#" class="text-light text-decoration-none my-2 ms-1">Shop 4</a>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header border-0 bg-black">
+                            <button class="fw-normal accordion-button collapsed bg-black text-light border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              Blog
+                            </button>
+                          </h2>
+                          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body bg-black text-light border-0">
+                                <a href="#" class="text-light text-decoration-none my-2 ms-1">Blog 2</a>
+                                <a href="#" class="text-light text-decoration-none my-2 ms-1">Blog 3</a>
+                                <a href="#" class="text-light text-decoration-none my-2 ms-1">Blog 4</a>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header border-0 bg-black">
+                            <button class="fw-normal accordion-button collapsed bg-black text-light border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                              Page
+                            </button>
+                          </h2>
+                          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body bg-black text-light border-0">
+                                <a href="#" class="text-light text-decoration-none my-2 ms-1">Page 2</a>
+                                <a href="#" class="text-light text-decoration-none my-2 ms-1">Page 3</a>
+                                <a href="#" class="text-light text-decoration-none my-2 ms-1">Page 4</a>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion">
+                        <h2 class="accordion-header border-0 bg-black">
+                          <button class="fw-normal accordion-button empty-accordion-button collapsed bg-black text-light border-0 shadow-none" type="button">
+                            Contact
+                          </button>
+                      </h2>
+                  </div>
+
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <nav class="fixed-bottom bg-white mobile-nav d-flex align-items-center justify-content-center">
+        <div class="d-flex flex-column w-100 align-items-center gap-2 fw-bold">
+            <i class="fa-solid fa-shop"></i>
+            <span>Shop</span>
+        </div>
+        <div class="d-flex flex-column w-100 align-items-center gap-2 fw-bold">
+            <i class="fa-solid fa-user"></i>
+            <span>Account</span>
+        </div>
+        <div class="d-flex flex-column w-100 align-items-center gap-2 fw-bold">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>Search</span>
+        </div>
+        <div class="d-flex flex-column w-100 align-items-center gap-2 fw-bold">
+            <i class="fa-solid fa-heart position-relative">
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
+                    0
+                </span>
+            </i>
+            <span>Wishlist</span>
+        </div>
+        <div class="d-flex flex-column w-100 align-items-center gap-2 fw-bold">
+            <i class="fa-solid fa-basket-shopping position-relative">
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
+                    0
+                </span>
+            </i>
+            <span>Cart</span>
+        </div>
+    </nav>
+
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
