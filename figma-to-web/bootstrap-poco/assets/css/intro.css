@@ -1,0 +1,148 @@
+.carousel-item{
+    height: 900px;
+    background-color: green;
+}
+
+.carousel-item:nth-child(1){
+    background-color: var(--slide-pizza);
+}
+
+.carousel-item:nth-child(2){
+    background-color: var(--slide-italian);
+}
+
+.carousel-item:nth-child(3){
+    background-color: var(--slide-chicken);
+}
+
+.carousel-item > div {
+    height: 100%;
+}
+
+.slider-left {
+    color: white;
+    & h1 {
+        font-size: 72px;
+        line-height: 75px;
+        font-weight: 900;
+    }
+    & h2 {
+        font-weight: 900;
+        font-size: 42px;
+    }
+    & button {  
+        font-weight: 600;
+        font-size: 14px;
+        height: 50px;
+        width: 180px;
+    }
+    & i {
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        background-color: #00A149;
+        font-size: 30px;
+        text-align: center;
+        line-height: 60px;
+    }
+    & span {
+        font-size: 14px;
+        font-weight: 600;
+    }
+    & p{
+        color: var(--primary);
+        font-weight: 600;
+        font-size: 30px;
+        margin-top: -5px;
+    }
+}
+
+.slider-right{
+    position: relative;
+}
+
+.spinning_mint{
+    position: absolute;
+    bottom: -60px;
+    right: 20%;
+    animation: halfSpin 3s infinite;
+}
+
+@keyframes halfSpin {
+    0%, 100%{
+        transform: rotate(0);
+    }50%{
+        transform: rotate(180deg);
+    }
+}
+
+.carousel-item-bg{
+    pointer-events: none;
+    height: 100%;
+    width: 100%;
+
+    & > img {
+        position: absolute;
+    }
+
+    & > img:nth-child(1), & > img:nth-child(2){
+        bottom: -20px;
+        left: 50%;
+        rotate: 45deg;
+    }
+
+    & > img:nth-child(2){
+        rotate: -10deg;
+    }
+
+    & > img:nth-child(3){
+        top: 25%;
+        left: 35px;
+    }
+}
+
+
+/* Carousel item animations */
+
+
+.carousel-item {
+    & h1, & h2, & button, .contact-info, .slider-right {
+        opacity: 0;
+    }
+    
+    & h2 {
+        animation-delay: 1s !important;
+    }
+
+    & h2 {
+        animation-delay: 1.2s !important;
+    }
+
+    & button {
+        animation-delay: 2.2s !important;
+    }
+
+    .contact-info{
+        animation-delay: 3s !important;
+    }
+
+    .slider-right {
+        animation-delay: 1.5s !important;
+    }
+}
+
+.carousel-item.active {
+    
+    & h1, & h2, & button {
+        animation: fadeInLeft 2s forwards;
+    }
+
+    .contact-info {
+        animation: fadeInUp 2s forwards;
+    }
+
+    .slider-right {
+        animation: fadeIn 2s forwards;
+    }
+    
+}
