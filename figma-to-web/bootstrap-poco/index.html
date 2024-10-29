@@ -17,6 +17,7 @@
 </head>
 <body>
 
+    <!-- ! NAVIGATION -->
 
     <nav class="d-flex sticky-top">
         <div class=" container-lg d-flex justify-content-between align-items-center">
@@ -158,7 +159,7 @@
         </div>
     </nav>
 
-    <nav class="fixed-bottom bg-white mobile-nav d-flex align-items-center justify-content-center">
+    <nav class="bg-white mobile-nav d-flex align-items-center justify-content-center position-fixed bottom-0">
         <div class="d-flex flex-column w-100 align-items-center gap-2 fw-bold">
             <i class="fa-solid fa-shop"></i>
             <span>Shop</span>
@@ -189,23 +190,26 @@
         </div>
     </nav>
 
-    <main>
+    <!-- ! MAIN -->
 
-        <div id="carouselExampleIndicators" class="carousel slide">
+    <main>
+        <!-- ! CAROUSEL -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-
-                <div class="carousel-item active" >
+                <div class="carousel-item active" data-bs-interval="6000" >
                     <div class="carousel-item-bg position-absolute">
                         <img src="assets/img/veg_blur_1.png" alt="">
                         <img src="assets/img/veg_blur_1.png" alt="">
                         <img src="assets/img/veg_blur_5.png" alt="">
                     </div>
-                    <div class="container d-flex align-items-center justify-content-start">
+                    
+                    <div class="container d-flex align-items-center justify-content-start flex-row">
+
                         <div class="slider-left">
                             <h1>SUPPER DELICIOUS</h1>
                             <h2>SPECIAL PIZZA</h2>
@@ -227,7 +231,7 @@
                     </div>
                 </div>
 
-                <div class="carousel-item" >
+                <div class="carousel-item" data-bs-interval="6000" >
                     <div class="carousel-item-bg position-absolute">
                         <img src="assets/img/veg_blur_1.png" alt="">
                         <img src="assets/img/veg_blur_1.png" alt="">
@@ -255,7 +259,7 @@
                     </div>
                 </div>
 
-                <div class="carousel-item" >
+                <div class="carousel-item" data-bs-interval="6000" >
                     <div class="carousel-item-bg position-absolute">
                         <img src="assets/img/veg_blur_1.png" alt="">
                         <img src="assets/img/veg_blur_1.png" alt="">
@@ -282,20 +286,14 @@
 
                     </div>
                 </div>
-
-              
-                
             </div>
-            <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button> -->
           </div>
+        <!-- ! ORDER SECTION -->
+        <section class="order container">
+            <div class="col-12 col-sm-6 col-md-4">
 
+            </div>
+        </section>
 
     </main>
 
