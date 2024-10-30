@@ -101,6 +101,9 @@
 
     .card-container:nth-child(4) > div{
         background-color: #00A149;
+        @media (max-width: 850px) {
+            height: auto;
+        }
     }
 
     .card-container:nth-child(4) {
