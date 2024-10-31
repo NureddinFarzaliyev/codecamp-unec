@@ -1,3 +1,9 @@
+@import url(nav.css);
+@import url(intro.css);
+@import url(order.css);
+@import url(favorites.css);
+@import url(menu.css);
+
 :root {
     --primary: #FFC222;
     --slide-pizza: #7B1010;
