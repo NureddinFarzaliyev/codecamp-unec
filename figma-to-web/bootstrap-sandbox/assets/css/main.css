@@ -2,6 +2,10 @@
     --font: 'Urbanist', sans-serif;
     --gray-1: #1E2228;
     --gray-2: #303339;
+    --card-1: #E668B3;
+    --card-2: #A07CC5;
+    --card-3: #F78B77;
+    --card-4: #45C4A0;
 }
 
 a {
@@ -13,7 +17,12 @@ a {
     font-family: var(--font);
 }
 
-.hoverUp:hover{
-    transform: translateY(-20%);
+/* Global animations and hover states */
+
+.hoverUp{
     transition: .15s all;
+}
+
+.hoverUp:hover{
+    transform: translateY(-10%);
 }
