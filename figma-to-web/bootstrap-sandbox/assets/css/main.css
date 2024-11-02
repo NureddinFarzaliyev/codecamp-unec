@@ -1,0 +1,19 @@
+:root{
+    --font: 'Urbanist', sans-serif;
+    --gray-1: #1E2228;
+    --gray-2: #303339;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+* {
+    font-family: var(--font);
+}
+
+.hoverUp:hover{
+    transform: translateY(-20%);
+    transition: .15s all;
+}

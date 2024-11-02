@@ -1,0 +1,83 @@
+.intro-bg-container{
+    clip-path: ellipse(100% 80% at 50% 0%);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    overflow: hidden;
+    z-index: -1;
+
+    @media (max-width: 900px) {
+        clip-path: ellipse(170% 80% at 50% 0%);
+    }
+
+    .intro-background{
+        z-index: -1;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 110vw;
+        height: 100vh;
+    }
+
+    .intro-overlay {
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, .35);
+    }
+}
+
+
+
+
+nav {
+    height: 100px;
+    z-index: 2;
+    font-size: 18px;
+    
+    & a {
+        transition: all .2s;
+        & i {
+            font-size: 12px;
+        }
+        &:hover{
+            opacity: .8;
+        }
+    }
+
+    .offcanvas {
+        background-color: var(--gray-1) !important;
+        color: white;
+        padding: 20px;
+        width: 300px !important;
+
+        .offcanvas-header {
+            & h5 {
+                font-size: 30px;
+            }
+
+            & button {
+                background-color: var(--gray-2) !important;
+            }
+        }
+
+        .offcanvas-body{
+            font-size: 16px;
+            font-weight: 600;
+
+            & div {
+                cursor: pointer;
+            }
+
+            & i {
+                font-size: 12px;
+            }
+
+            .social-icons {
+                & i {
+                    font-size: 22px;
+                    margin-right: 10px;
+
+                }
+            }
+        }
+    }
+}
