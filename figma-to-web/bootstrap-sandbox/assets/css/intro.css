@@ -87,7 +87,7 @@ nav {
             font-size: 60px;
             width: 50%;
 
-            @media (max-width: 600px) {
+            @media (max-width: 830px) {
                 font-size: 40px;
                 width: 100%;
             }
@@ -97,7 +97,7 @@ nav {
             font-size: 24px;
             width: 50%;
 
-            @media (max-width: 600px) {
+            @media (max-width: 830px) {
                 font-size: 20px;
                 width: 100%;
             }
