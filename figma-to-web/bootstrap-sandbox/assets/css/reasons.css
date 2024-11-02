@@ -1,0 +1,67 @@
+.reasons {
+    color: var(--main-text);
+
+    & h1 {
+        width: 50%;
+
+        @media (max-width: 1300px) {
+            width: 70%;
+        }
+
+        @media (max-width: 800px) {
+            width: 100%;
+        }
+    }
+
+    .idea-cards {
+        & i {
+            font-size: 36px;
+        }
+
+        &>div{
+            transition: all .2s;
+            cursor: pointer;
+        }
+
+        &>div:hover{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        &>div:nth-child(1) i{
+            color: var(--card-1);
+        }
+
+        &>div:nth-child(2) i{
+            color: var(--card-2);
+        }
+
+        &>div:nth-child(3) i{
+            color: var(--card-4);
+        }
+    }
+
+    .list-unstyled .fa-circle-check{
+        color: var(--card-1);
+        margin-right: 5px;
+    }
+
+    .collect-ideas{
+        & p, & li {
+            font-size: 18px;
+        }
+    }
+
+    button {
+        background-color: var(--card-1);
+        color: white;
+
+        &:hover{
+            color: white;
+            background-color: var(--card-1);
+        }
+    }
+
+    .meeting-image{
+        width: 100%;
+    }
+}
