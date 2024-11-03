@@ -65,3 +65,68 @@
         width: 100%;
     }
 }
+
+.professional {
+    .stat-circle{
+        height: 200px;
+        width: 200px;
+        border-radius: 100px;
+        border: solid;
+        border-width: 13px;
+        transform: rotate(45deg);
+        position: relative;
+        
+        & div {
+            font-size: 42px;
+            transform: rotate(-45deg);
+            position: absolute;
+            top: 35px;
+            left: 35px;
+            color: var(--main-text);
+        }
+    }
+
+    .sc1{
+        border-color: var(--card-1) transparent transparent var(--card-1);
+    }
+
+    .sc2{
+        border-color: var(--card-3) transparent transparent var(--card-3);
+    }
+
+    h1 {
+        color: var(--main-text);
+    }
+
+    .statistics>div:nth-child(2) div>p {
+        color: var(--main-text);
+        top: 55%;
+    }
+
+    .stars i {
+        font-size: 12px;
+    }
+}
+
+.slider-section{
+    &>div>h1{
+      width: 60%;
+      color: var(--main-text);
+      
+      @media (max-width: 900px) {
+        width: 100%;
+      }
+    }
+
+    .glide__slide{
+        color: var(--main-text);
+        position: relative;
+
+        & p {
+            margin-top: -3px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
+}
+
