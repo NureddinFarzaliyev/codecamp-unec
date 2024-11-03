@@ -1,7 +1,3 @@
-@import url(/assets/css/intro.css);
-@import url(/assets/css/sections.css);
-
-
 :root{
     --font: 'Urbanist', sans-serif;
     --gray-1: #1E2228;
@@ -21,8 +17,6 @@ a {
 * {
     font-family: var(--font);
 }
-
-/* Global animations and hover states */
 
 .hoverUp{
     transition: .15s all;
