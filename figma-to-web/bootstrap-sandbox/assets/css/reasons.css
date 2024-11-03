@@ -25,19 +25,11 @@
 
         &>div:hover{
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            @media (max-width: 700px) {
+                box-shadow: none;   
+            }
         }
 
-        &>div:nth-child(1) i{
-            color: var(--card-1);
-        }
-
-        &>div:nth-child(2) i{
-            color: var(--card-2);
-        }
-
-        &>div:nth-child(3) i{
-            color: var(--card-4);
-        }
     }
 
     .list-unstyled .fa-circle-check{
@@ -75,6 +67,11 @@
         border-width: 13px;
         transform: rotate(45deg);
         position: relative;
+
+        @media (max-width:500px) {
+            height: 120px;
+            width: 120px;
+        }
         
         & div {
             font-size: 42px;
@@ -83,7 +80,14 @@
             top: 35px;
             left: 35px;
             color: var(--main-text);
+
+            @media (max-width: 500px) {
+                font-size: 20px;
+                top: 20px;
+                left: 20px;
+            }
         }
+
     }
 
     .sc1{
@@ -130,3 +134,82 @@
     }
 }
 
+.grid-section {
+    & h1 {
+        color: var(--main-text);
+    }
+
+    .grid-card {
+        & h5 {
+            color: var(--main-text);
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        & p {
+            width: 80%;
+        }
+    }
+}
+
+
+.community {
+    height: 375px;
+    background-image: url(/assets/img/bg16.png);
+    background-size: cover;
+    background-position: center;
+
+    & h2 {
+        font-size: 36px;
+        width: 50%;
+
+        @media (max-width: 780px) {
+            font-size: 24px;
+            width: 90%;
+        }
+    }
+
+    * {
+        z-index: 1;
+    }
+
+    .overlay {
+        background-color: rgba(0, 0, 0, .2);
+        z-index: 0;
+    }
+}
+
+footer {
+    color: var(--main-text);
+    & p {
+        margin: 3px;
+        opacity: 75%;
+    }
+
+    & input {
+        height: 50px;
+        width: 80%;
+        padding-left: 15px;
+        border: solid 1px rgba(0, 0, 0, .2);
+        border-radius: 10px 0 0 10px;
+    }
+
+    & button {
+        background-color: var(--card-2) !important;
+        color: white;
+        height: 50px;
+        width: 70px;
+        border: none;
+        border-radius: 0px 10px 10px 0px;
+    }
+
+    @media (max-width: 770px) {
+        & h5 {
+            margin-top: 20px;
+        }
+
+        & p {
+            margin-top: 5px;
+        }
+    }
+}

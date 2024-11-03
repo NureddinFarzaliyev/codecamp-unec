@@ -27,3 +27,19 @@ a {
 .hoverUp:hover{
     transform: translateY(-10%);
 }
+
+.color-1{
+    color: var(--card-1);
+}
+
+.color-2{
+    color: var(--card-2);
+}
+
+.color-3{
+    color: var(--card-3);
+}
+
+.color-4{
+    color: var(--card-4);
+}
