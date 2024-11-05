@@ -1,0 +1,40 @@
+:root {
+    --font: "Mulish", sans-serif;
+    --dark-bg: #1B1B1B;
+    --gray: #F4F4F4;
+    --primary: #0068C8;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font);
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    max-width: 1400px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0px 15px;
+
+    &>div {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
