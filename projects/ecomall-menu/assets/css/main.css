@@ -38,3 +38,22 @@ a {
 ul {
     list-style-type: none;
 }
+
+.rm-1350{
+    @media (max-width: 1350px) {
+        display: none;
+    }
+}
+
+.rm-768 {
+    @media (max-width: 768px) {
+        display: none !important;
+    }
+}
+
+.show-768 {
+    display: block !important;
+    @media (min-width: 768px) {
+        display: none !important;
+    }
+}

@@ -54,7 +54,7 @@
                 <img src="assets/img/logo.png" alt="ecomall" height="45">
             </div>
 
-            <div>
+            <div class="rm-768">
                 <div class="dropdown-container big-dd-container">
                     <span class="dropdown-button">Home <i class="fa-solid fa-chevron-down"></i></span>
                     <div class="dropdown-body">
@@ -315,22 +315,59 @@
             </div>
 
             <div>
-                <div>
-                    <i class="fa-regular fa-heart"></i>
+                <div class="show-768">
+                    <i class="fa-solid fa-magnifying-glass nav-icon"></i>
                 </div>
-                <div>
-                    <i class="fa-regular fa-user"></i>
-                    <div>
-                        <span>My Account</span>
-                        <p>Login</p>
+                <div class="rm-768">
+                    <i class="fa-regular fa-heart nav-icon"></i>
+                </div>
+                <div class="nav-icon">
+                    <div class="dropdown-container simple-dd-container input-dd">
+                        <span class="dropdown-button">
+                            <i class="fa-regular fa-user nav-icon"></i>
+                            <div class="rm-1350">
+                                <span>My Account</span>
+                                <p>Login</p>
+                            </div>
+                        </span>
+                        <div class="dropdown-body">
+                            <label>
+                                Username or email adress * 
+                                <input type="text">
+                            </label>
+                            <label>
+                                Password *
+                                <input type="text">
+                            </label>
+                            <div>
+                                <button>SIGN IN</button>
+                                <label>
+                                    <input type="checkbox" value="Remember Me"> Remember me
+                                </label>
+                            </div>
+                            <div>
+                                I'm new user. <a href="#">Create an Account.</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <div>
-                        <span>My Cart</span>
-                        <p>$0.00</p>
+                <div class="nav-icon">
+                    <div class="dropdown-container simple-dd-container input-dd cart-dd">
+                        <span class="dropdown-button">
+                            <i class="fa-solid fa-cart-shopping nav-icon"></i>
+                            <div class="rm-1350">
+                                <span>My Cart</span>
+                                <p>$0.00</p>
+                            </div>
+                        </span>
+                        <div class="dropdown-body">
+                            <i class="fa-solid fa-cart-shopping big-cart"></i>
+                            <p>Your cart is currently empty</p>
+                        </div>
                     </div>
+                </div>
+                <div class="show-768">
+                    <i class="fa-solid fa-bars nav-icon"></i>
                 </div>
             </div>
         </div>
