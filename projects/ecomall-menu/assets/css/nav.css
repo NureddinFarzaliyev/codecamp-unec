@@ -149,6 +149,7 @@ nav {
                 & h4 {
                     margin-bottom: 10px;
                     font-size: 18px;
+                    width: fit-content;
                 }
 
                 & h4:not(:nth-child(1)) {
@@ -156,6 +157,7 @@ nav {
                 }
 
                 & li {
+                    width: fit-content;
                     margin: 10px 0px;
                     cursor: pointer;
                     transition: color .3s;
@@ -174,13 +176,24 @@ nav {
                 position: relative;
                 border-radius: 10px;
                 overflow: hidden;
-                margin-top: 30px;
+                margin: 30px 3px 0px 3px;
+
                 .overlay, .overtext {
                     position: absolute;
                     top: 0;
                     height: 99%;
                     width: 100%;
                 }
+
+                & img {
+                    @media (max-width: 900px) {
+                        width: 150px;
+                    }
+                    @media (max-width: 1200px) {
+                        width: 200px;
+                    }
+                }
+
                 .overtext{
                     color: white;
                     pointer-events: none;
@@ -200,9 +213,16 @@ nav {
                     margin-top: 10px;
                 }
             }
+
+            .watch-img {
+                width: 50%;
+            }
+
+            .watch-img img {
+                width: 100%;
+            }
         }
     }
-
     
     .smartphone {
         margin: 10px 0px;
