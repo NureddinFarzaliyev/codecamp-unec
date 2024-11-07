@@ -8,6 +8,7 @@
     z-index: 999;
     position: absolute;
     top: 100%;
+    /* transform: scaleY(0); */
     animation: closeMenu .2s forwards;
     transform-origin: top;
     display: flex;
@@ -15,11 +16,15 @@
     & span {
         cursor: pointer;
         margin: 5px 0px;
-
         &:hover{
             color: var(--primary);
         }
     }
+}
+
+.from-right-dd-body {
+    left: 300px;
+    top: 0px;
 }
 
 .dropdown-button {
@@ -49,5 +54,38 @@
         transform: scaleY(.3);
     }100%{
         transform: scaleY(0);
+    }
+}
+
+.big-dd-container {
+    .dropdown-body {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: white;
+        padding: 20px;
+
+        &>div {
+
+            & h4 {
+                margin-bottom: 10px;
+                font-size: 18px;
+                width: fit-content;
+            }
+
+            & h4:not(:nth-child(1)) {
+                margin-top: 20px;
+            }
+
+            & li {
+                width: fit-content;
+                margin: 10px 0px;
+                cursor: pointer;
+                transition: color .3s;
+                
+                &:hover{
+                    color: var(--primary);
+                }
+            }
+        }
     }
 }

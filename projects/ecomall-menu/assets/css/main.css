@@ -13,6 +13,7 @@
 
 body {
     font-family: var(--font);
+    overflow-x: hidden;
 }
 
 .container {
@@ -37,6 +38,10 @@ a {
 
 ul {
     list-style-type: none;
+}
+
+button {
+    cursor: pointer;
 }
 
 .rm-1350{

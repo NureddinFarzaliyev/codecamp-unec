@@ -124,8 +124,6 @@ nav {
         &:hover{
             color: var(--primary);
         }
-
-        
     }
 
     .big-dd-container{
@@ -137,36 +135,8 @@ nav {
         }
 
         .dropdown-body {
-            display: flex;
-            justify-content: space-evenly;
-            background-color: white;
             width: 100vw;
             left: 0;
-            padding: 20px;
-
-            &>div {
-
-                & h4 {
-                    margin-bottom: 10px;
-                    font-size: 18px;
-                    width: fit-content;
-                }
-
-                & h4:not(:nth-child(1)) {
-                    margin-top: 20px;
-                }
-
-                & li {
-                    width: fit-content;
-                    margin: 10px 0px;
-                    cursor: pointer;
-                    transition: color .3s;
-                    
-                    &:hover{
-                        color: var(--primary);
-                    }
-                }
-            }
 
             & img {
                 cursor: pointer;
