@@ -243,10 +243,11 @@ const data = [
 
 const createCard = (card, parent) => {
     const cardItem = document.createElement('div')
+    cardItem.classList.add('card')
     cardItem.innerHTML = `
-    <b>$${card.price}</b> - 
-    <span>${card.title}</span> -
-    <i>${card.rating.rate}/5</i>
+    <b>$${card.price}</b>
+    <span>${card.title}</span>
+    <i>(${card.rating.rate}/5)</i>
     `
     parent.appendChild(cardItem)
 }
