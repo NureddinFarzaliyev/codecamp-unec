@@ -241,9 +241,6 @@ const data = [
     }
 ]
 
-// Filter according to price, rating and category
-console.log(data)
-
 const createCard = (card, parent) => {
     const cardItem = document.createElement('div')
     cardItem.innerHTML = `
@@ -258,15 +255,29 @@ const deleteContent = (id) => {
     document.querySelector(id).innerHTML = ""
 }
 
-const filterByPrice = (price) => {
-    deleteContent("#priceResults")
+// ! FILTERING BY SEPERATE VALUES
 
-    for(let i = 0; i < data.length; i++){
-        if (data[i].price <= price) {
-            createCard(data[i], document.querySelector("#priceResults"))
-        }
-    }
+// Filter for only price:
+const priceInput = document.querySelector("#price")
+const priceBtn = document.querySelector("#priceBtn")
+
+const filterByPrice = (price) => {
+  deleteContent("#priceResults")
+
+  for(let i = 0; i < data.length; i++){
+      if (data[i].price <= price) {
+          createCard(data[i], document.querySelector("#priceResults"))
+      }
+  }
 }
+
+priceBtn.addEventListener('click', () => {
+    filterByPrice(priceInput.value)
+})
+
+// Filter by only Rating
+const ratingInput = document.querySelector("#rating")
+const ratingBtn = document.querySelector("#ratingBtn")
 
 const filterByRating = (rating) => {
   deleteContent("#ratingResults")
@@ -278,6 +289,14 @@ const filterByRating = (rating) => {
   }
 }
 
+ratingBtn.addEventListener('click', () => {
+    filterByRating(ratingInput.value)
+})
+
+// Filter by only category
+const categoryInput = document.querySelector('#category')
+const categoryBtn = document.querySelector('#categoryBtn')
+
 const filterByCategory = (category) => {
   deleteContent("#categoryResults")
 
@@ -288,28 +307,47 @@ const filterByCategory = (category) => {
   }
 }
 
-// Filter for only price:
-const priceInput = document.querySelector("#price")
-const priceBtn = document.querySelector("#priceBtn")
-
-priceBtn.addEventListener('click', () => {
-    filterByPrice(priceInput.value)
-})
-
-// Filter by only Rating
-const ratingInput = document.querySelector("#rating")
-const ratingBtn = document.querySelector("#ratingBtn")
-
-ratingBtn.addEventListener('click', () => {
-    filterByRating(ratingInput.value)
-})
-
-// Filter by only category
-const categoryInput = document.querySelector('#category')
-const categoryBtn = document.querySelector('#categoryBtn')
-
 categoryBtn.addEventListener('click', () => {
     if(categoryInput.value !== ''){
         filterByCategory(categoryInput.value)
     }
+})
+
+// ! FILTERING BY ALL VALUES
+const filterData = (price, rating, category) => {
+  let results = [...data]
+
+  if(price){
+    for(let i = 0; i < results.length; i++){
+      if (results[i].price > price) {
+        results[i] = undefined
+      }
+    }
+  }
+
+  if(rating){
+    for(let i = 0; i < results.length; i++){
+      if (results[i] !== undefined && results[i].rating.rate > rating) {
+        results[i] = undefined
+      }
+    }
+  }
+
+  if(category){
+    for(let i = 0; i < results.length; i++){
+      if (results[i] !== undefined && results[i].category !== category) {
+        results[i] = undefined
+      }
+    }
+  }
+  
+  for (let i = 0; i < results.length; i++) {
+    results[i] !== undefined && createCard(results[i], document.querySelector("#all"))
+  }
+} 
+
+const container = document.querySelector("#all")
+
+allBtn.addEventListener('click', () => {
+  filterData(priceInput.value, ratingInput.value, categoryInput.value)
 })
