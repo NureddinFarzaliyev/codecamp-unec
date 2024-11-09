@@ -241,114 +241,131 @@ const data = [
     }
 ]
 
-const createCard = (card, parent) => {
-    const cardItem = document.createElement('div')
-    cardItem.innerHTML = `
-    <b>$${card.price}</b> - 
-    <span>${card.title}</span> -
-    <i>${card.rating.rate}/5</i>
-    `
-    parent.appendChild(cardItem)
-}
+// ! FOR LOOP
+const filterDataFor = (price, rating, category) => {
+    let results = [...data]
 
-const deleteContent = (id) => {
-    document.querySelector(id).innerHTML = ""
-}
-
-// ! FILTERING BY SEPERATE VALUES
-
-// Filter for only price:
-const priceInput = document.querySelector("#price")
-const priceBtn = document.querySelector("#priceBtn")
-
-const filterByPrice = (price) => {
-  deleteContent("#priceResults")
-
-  for(let i = 0; i < data.length; i++){
-      if (data[i].price <= price) {
-          createCard(data[i], document.querySelector("#priceResults"))
-      }
-  }
-}
-
-priceBtn.addEventListener('click', () => {
-    filterByPrice(priceInput.value)
-})
-
-// Filter by only Rating
-const ratingInput = document.querySelector("#rating")
-const ratingBtn = document.querySelector("#ratingBtn")
-
-const filterByRating = (rating) => {
-  deleteContent("#ratingResults")
-  
-  for(let i = 0; i < data.length; i++){
-      if (data[i].rating.rate <= rating) {
-          createCard(data[i], document.querySelector("#ratingResults"))
-      }
-  }
-}
-
-ratingBtn.addEventListener('click', () => {
-    filterByRating(ratingInput.value)
-})
-
-// Filter by only category
-const categoryInput = document.querySelector('#category')
-const categoryBtn = document.querySelector('#categoryBtn')
-
-const filterByCategory = (category) => {
-  deleteContent("#categoryResults")
-
-  for (let i = 0; i < data.length; i++) {
-    if(category === data[i].category){
-      createCard(data[i], document.querySelector("#categoryResults"))
-    }    
-  }
-}
-
-categoryBtn.addEventListener('click', () => {
-    if(categoryInput.value !== ''){
-        filterByCategory(categoryInput.value)
+    if(price){
+        for(let i = 0; i < results.length; i++){
+            if (results[i].price > price) {
+                results[i] = undefined
+            }
+        }
     }
-})
 
-// ! FILTERING BY ALL VALUES
-const filterData = (price, rating, category) => {
-  let results = [...data]
-  deleteContent("#all")
-
-  if(price){
-    for(let i = 0; i < results.length; i++){
-      if (results[i].price > price) {
-        results[i] = undefined
-      }
+    if(rating){
+        for(let i = 0; i < results.length; i++){
+            if (results[i] !== undefined && results[i].rating.rate > rating) {
+                results[i] = undefined
+            }
+        }
     }
-  }
 
-  if(rating){
-    for(let i = 0; i < results.length; i++){
-      if (results[i] !== undefined && results[i].rating.rate > rating) {
-        results[i] = undefined
-      }
+    if(category){
+        for(let i = 0; i < results.length; i++){
+            if (results[i] !== undefined && results[i].category !== category) {
+                results[i] = undefined
+            }
+        }
     }
-  }
 
-  if(category){
-    for(let i = 0; i < results.length; i++){
-      if (results[i] !== undefined && results[i].category !== category) {
-        results[i] = undefined
-      }
+    for (let i = 0; i < results.length; i++) {
+        results[i] !== undefined && console.log(results[i])
     }
-  }
-  
-  for (let i = 0; i < results.length; i++) {
-    results[i] !== undefined && createCard(results[i], document.querySelector("#all"))
-  }
 } 
+// filterDataFor(100, 4, 'electronics')
 
-const container = document.querySelector("#all")
+// ! FOR-IN LOOP
+const filterDataForIn = (price, rating, category) => {
+    let results = [...data]
 
-allBtn.addEventListener('click', () => {
-  filterData(priceInput.value, ratingInput.value, categoryInput.value)
-})
+    if(price){
+        for(i in results){
+            if (results[i].price > price) {
+                results[i] = undefined
+            }
+        }
+    }
+
+    if(rating){
+        for(i in results){
+            if (results[i] !== undefined && results[i].rating.rate > rating) {
+                results[i] = undefined
+            }
+        }
+    }
+
+    if(category){
+        for(i in results){
+            if (results[i] !== undefined && results[i].category !== category) {
+                results[i] = undefined
+            }
+        }
+    }
+
+    for (i in results) {
+        results[i] !== undefined && console.log(results[i])
+    }
+} 
+// filterDataForIn(100, 4, 'electronics')
+
+// ! FOR-OF LOOP
+const filterDataForOf = (price, rating, category) => {
+    let results = [...data]
+
+    try {
+        if(!price || !rating || !category){
+            throw new Error("All values must be given");
+        }
+        for(k of results){
+            if(k.price <= price && k.rating.rate <= rating && k.category === category){
+                console.log(k)
+            }
+        }
+    } catch (error) {
+        console.error(error)
+    }
+
+} 
+// filterDataForOf(100, 4, 'electronics')
+
+// ! WHILE LOOP
+const filterDataWhile = (price, rating, category) => {
+    let results = [...data]
+    
+    if(price){
+        let i = 0
+        while (i < results.length) {
+            if (results[i].price > price) {
+                results[i] = undefined            }
+            i++
+        }
+    }
+
+    if(rating){
+        let i = 0
+        while (i < results.length) {
+            if (results[i] !== undefined && results[i].rating.rate > rating) {
+                results[i] = undefined
+            }
+            i++
+        }
+    }
+
+    if(category){
+        let i = 0
+        while(i < results.length){
+            if (results[i] !== undefined && results[i].category !== category) {
+                results[i] = undefined
+            }
+            i++
+        }
+    }
+
+    let k = 0
+    while (k < results.length) {
+        results[k] !== undefined && console.log(results[k])
+        k++
+    }
+}
+// filterDataWhile(100, 4, 'electronics')

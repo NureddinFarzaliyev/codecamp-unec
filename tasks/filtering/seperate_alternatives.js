@@ -241,114 +241,76 @@ const data = [
     }
 ]
 
-const createCard = (card, parent) => {
-    const cardItem = document.createElement('div')
-    cardItem.innerHTML = `
-    <b>$${card.price}</b> - 
-    <span>${card.title}</span> -
-    <i>${card.rating.rate}/5</i>
-    `
-    parent.appendChild(cardItem)
-}
+const price = 10
+const rating = 2
+const category = "women's clothing"
 
-const deleteContent = (id) => {
-    document.querySelector(id).innerHTML = ""
-}
-
-// ! FILTERING BY SEPERATE VALUES
-
-// Filter for only price:
-const priceInput = document.querySelector("#price")
-const priceBtn = document.querySelector("#priceBtn")
-
-const filterByPrice = (price) => {
-  deleteContent("#priceResults")
-
-  for(let i = 0; i < data.length; i++){
-      if (data[i].price <= price) {
-          createCard(data[i], document.querySelector("#priceResults"))
-      }
-  }
-}
-
-priceBtn.addEventListener('click', () => {
-    filterByPrice(priceInput.value)
-})
-
-// Filter by only Rating
-const ratingInput = document.querySelector("#rating")
-const ratingBtn = document.querySelector("#ratingBtn")
-
-const filterByRating = (rating) => {
-  deleteContent("#ratingResults")
-  
-  for(let i = 0; i < data.length; i++){
-      if (data[i].rating.rate <= rating) {
-          createCard(data[i], document.querySelector("#ratingResults"))
-      }
-  }
-}
-
-ratingBtn.addEventListener('click', () => {
-    filterByRating(ratingInput.value)
-})
-
-// Filter by only category
-const categoryInput = document.querySelector('#category')
-const categoryBtn = document.querySelector('#categoryBtn')
-
-const filterByCategory = (category) => {
-  deleteContent("#categoryResults")
-
-  for (let i = 0; i < data.length; i++) {
-    if(category === data[i].category){
-      createCard(data[i], document.querySelector("#categoryResults"))
-    }    
-  }
-}
-
-categoryBtn.addEventListener('click', () => {
-    if(categoryInput.value !== ''){
-        filterByCategory(categoryInput.value)
+//! For Loop
+for(let i = 0; i < data.length; i++){
+    if (data[i].price <= price) {
+        // console.log(data[i])
     }
-})
+}
 
-// ! FILTERING BY ALL VALUES
-const filterData = (price, rating, category) => {
-  let results = [...data]
-  deleteContent("#all")
-
-  if(price){
-    for(let i = 0; i < results.length; i++){
-      if (results[i].price > price) {
-        results[i] = undefined
-      }
+for(let i = 0; i < data.length; i++){
+    if (data[i].rating <= rating) {
+        // console.log(data[i])
     }
-  }
+}
 
-  if(rating){
-    for(let i = 0; i < results.length; i++){
-      if (results[i] !== undefined && results[i].rating.rate > rating) {
-        results[i] = undefined
-      }
+//! While Loop
+let index = 0
+while(index < data.length){
+    if(data[index].price <= price) {
+        // console.log(data[index])
     }
-  }
-
-  if(category){
-    for(let i = 0; i < results.length; i++){
-      if (results[i] !== undefined && results[i].category !== category) {
-        results[i] = undefined
-      }
+    index ++
+}
+index = 0
+while(index < data.length){
+    if(data[index].rating.rate <= rating) {
+        // console.log(data[index])
     }
-  }
-  
-  for (let i = 0; i < results.length; i++) {
-    results[i] !== undefined && createCard(results[i], document.querySelector("#all"))
-  }
-} 
+    index ++
+}
 
-const container = document.querySelector("#all")
+//! Do-While Loop
+let j = 0
+do {
+    if(data[j].price <= price) {
+        // console.log(data[j])
+    }
+    j ++
+} while (j < data.length);
+j = 0
+do {
+    if(data[j].rating.rate <= rating) {
+        // console.log(data[j])
+    }
+    j ++
+} while (j < data.length);
 
-allBtn.addEventListener('click', () => {
-  filterData(priceInput.value, ratingInput.value, categoryInput.value)
-})
+
+//!  For-In loop
+for(k in data){
+    if(data[k].price <= price) {
+        // console.log(data[k])
+    }
+}
+for(k in data){
+    if(data[k].rating.rate <= rating) {
+        // console.log(data[k])
+    }
+}
+
+//! For-Of Loop
+for(l of data){
+    if(l.price <= price) {
+        // console.log(l)
+    }
+}
+for(l of data){
+    if(l.rating.rate <= rating) {
+        // console.log(l)
+    }
+}
