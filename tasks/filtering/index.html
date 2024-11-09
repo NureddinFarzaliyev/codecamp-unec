@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Filtering Data</title>
+</head>
+<body>
+    
+    <div>
+        <strong for="price">Enter Maximal Price:</strong> <br>
+        <input type="number" name="price" id="price">
+        <button id="priceBtn">Filter by Price</button>
+        <div id="priceResults"></div>
+    </div>
+    
+    <div>
+        <strong for="rating">Enter Maximal Rating:</strong> <br>
+        <input type="number" name="rating" id="rating" max="5">
+        <button id="ratingBtn">Filter by Rating</button>
+        <div id="ratingResults"></div>
+    </div>
+    
+    <div>
+        <strong for="category">Enter Category:</strong> <br>
+        <select name="category" id="category">
+            <option value="">Choose Category</option>
+            <option value="men's clothing">Men's Clothing</option>
+            <option value="jewelery">Jewelery</option>
+            <option value="electronics">Electronics</option>
+            <option value="women's clothing">Women's Clothing</option>
+        </select>
+        <button id="categoryBtn">Filter by Category</button>
+        <div id="categoryResults"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
