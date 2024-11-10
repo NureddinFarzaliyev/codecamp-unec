@@ -269,6 +269,13 @@ const filterDataFor = (price, rating, category) => {
         }
     }
 
+    deleteContent("#priceResults")
+
+    for(let i = 0; i < data.length; i++){
+        if (data[i].price <= price) {
+            createCard(data[i], document.querySelector("#priceResults"))
+        }
+    }
     for (let i = 0; i < results.length; i++) {
         results[i] !== undefined && console.log(results[i])
     }
