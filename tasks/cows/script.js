@@ -22,17 +22,13 @@ const main = (days) => {
     
     for(let i = 1;  i <= days; i++){
         milk_today = cows * cow_efficiency
-        daily_income = milk_price * milk_today
         total_milk += milk_today
+        daily_income = milk_price * milk_today
         budget += daily_income
         total_income += daily_income
-        cows_today = 0;
-
-        while (budget >= cow_price) {
-            budget -= cow_price
-            cows++
-            cows_today ++
-        }
+        cows_today = Math.floor(budget/cow_price)
+        budget -= cows_today * cow_price
+        cows += cows_today
         
         labels.push(i)
         cowsData.push(cows)
