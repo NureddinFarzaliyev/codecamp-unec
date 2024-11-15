@@ -10,8 +10,10 @@ const main = (days) => {
     const cow_price = 300
     const milk_price = 3
     const cow_efficiency = 3
+    const chicken_price = 15000
 
     let cows = 1
+    let chicken = 0
     let cows_today = 0
     let total_milk = 0
     let milk_today = 0
@@ -26,9 +28,14 @@ const main = (days) => {
         daily_income = milk_price * milk_today
         budget += daily_income
         total_income += daily_income
-        cows_today = Math.floor(budget/cow_price)
-        budget -= cows_today * cow_price
-        cows += cows_today
+        if(daily_income >= chicken_price){
+            chicken++
+            budget-=chicken_price
+        }else{
+            cows_today = Math.floor(budget/cow_price)
+            budget -= cows_today * cow_price
+            cows += cows_today
+        }
         
         labels.push(i)
         cowsData.push(cows)
@@ -42,12 +49,13 @@ const main = (days) => {
     🐮 Cows Bought Today: <b>${cows_today}</b> <br/>
     🍼 Today Milked Milk: <b>${milk_today}</b> litres <br/> 
     🥛 Total Amount of Milk: <b>${total_milk}</b> litres <br/>
-    💵 Money Earned Today: <b>${daily_income}</b>$ <br/>
-    💸 Money Spent Today: <b>${cows_today * cow_price}</b>$ <br/> 
-    🫰 Daily Revenue: <b>${daily_income - cows_today * cow_price}</b>$ <br/>
-    💲 Current Budget: <b>${budget}$</b> <br/>
-    📈 Total Income: <b>${total_income}$</b> <br/>
-    📉 Total Expense: <b>${cows * cow_price - 300}$</b> <br/>
+    🐔 Chicken Farms: <b>${chicken}</b> <br/>
+    💵 Money Earned Today: $<b>${daily_income}</b> <br/>
+    💸 Money Spent Today: $<b>${cows_today * cow_price}</b> <br/> 
+    🫰 Daily Revenue: $<b>${daily_income - cows_today * cow_price}</b> <br/>
+    💲 Current Budget: $<b>${budget}</b> <br/>
+    📈 Total Income: $<b>${total_income}</b> <br/>
+    📉 Total Expense: $<b>${cows * cow_price - 300}</b> <br/>
     `
 }
 
