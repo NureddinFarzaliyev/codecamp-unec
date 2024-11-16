@@ -30,6 +30,13 @@ nav {
     height: 100px;
     z-index: 2;
     font-size: 18px;
+
+    .lang-btn{
+        right: 10%;
+        @media (max-width: 1300px) {
+            right: 30px;
+        }
+    }
     
     & a {
         transition: all .2s;

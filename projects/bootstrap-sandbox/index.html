@@ -24,9 +24,9 @@
 
     <nav class="container d-flex align-items-center justify-content-between justify-content-lg-around">
         <div class="d-none d-lg-block">
-            <a href="#" class="px-2 fw-semibold">Demos <i class="fa-solid fa-chevron-down"></i></a>
-            <a href="#" class="px-2 fw-semibold">Pages <i class="fa-solid fa-chevron-down"></i></a>
-            <a href="#" class="px-2 fw-semibold">Projects <i class="fa-solid fa-chevron-down"></i></a>
+            <a href="#" class="px-2 fw-semibold"><span></span> <i class="fa-solid fa-chevron-down"></i></a>
+            <a href="#" class="px-2 fw-semibold"><span></span> <i class="fa-solid fa-chevron-down"></i></a>
+            <a href="#" class="px-2 fw-semibold"><span></span> <i class="fa-solid fa-chevron-down"></i></a>
         </div>
         <div>
             <img src="assets/img/logo.png" alt="Sandbox">
@@ -37,9 +37,9 @@
               </button>              
         </div>
         <div class="d-none d-lg-block">
-            <a href="#" class="px-2 fw-semibold">Blog <i class="fa-solid fa-chevron-down"></i></a>
-            <a href="#" class="px-2 fw-semibold">Blocks <i class="fa-solid fa-chevron-down"></i></a>
-            <a href="#" class="px-2 fw-semibold">Documentation <i class="fa-solid fa-chevron-down"></i></a>
+            <a href="#" class="px-2 fw-semibold"><span></span> <i class="fa-solid fa-chevron-down"></i></a>
+            <a href="#" class="px-2 fw-semibold"><span></span> <i class="fa-solid fa-chevron-down"></i></a>
+            <a href="#" class="px-2 fw-semibold"><span></span> <i class="fa-solid fa-chevron-down"></i></a>
         </div>
 
         <div class="offcanvas offcanvas-start bg-black" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
@@ -48,13 +48,13 @@
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body d-flex flex-column justify-content-between">
-                <div>
-                    <div class="d-flex align-items-center justify-content-between w-100 my-3"><span>Demos</span><i class="fa-solid fa-chevron-down"></i></div>
-                    <div class="d-flex align-items-center justify-content-between w-100 my-3"><span>Pages</span><i class="fa-solid fa-chevron-down"></i></div>
-                    <div class="d-flex align-items-center justify-content-between w-100 my-3"><span>Project</span><i class="fa-solid fa-chevron-down"></i></div>
-                    <div class="d-flex align-items-center justify-content-between w-100 my-3"><span>Blog</span><i class="fa-solid fa-chevron-down"></i></div>
-                    <div class="d-flex align-items-center justify-content-between w-100 my-3"><span>Blocks</span><i class="fa-solid fa-chevron-down"></i></div>
-                    <div class="d-flex align-items-center justify-content-between w-100 my-3"><span>Documentation</span><i class="fa-solid fa-chevron-down"></i></div>
+                <div class="mobile-nav">
+                    <div class="d-flex align-items-center justify-content-between w-100 my-3"><span></span><i class="fa-solid fa-chevron-down"></i></div>
+                    <div class="d-flex align-items-center justify-content-between w-100 my-3"><span></span><i class="fa-solid fa-chevron-down"></i></div>
+                    <div class="d-flex align-items-center justify-content-between w-100 my-3"><span></span><i class="fa-solid fa-chevron-down"></i></div>
+                    <div class="d-flex align-items-center justify-content-between w-100 my-3"><span></span><i class="fa-solid fa-chevron-down"></i></div>
+                    <div class="d-flex align-items-center justify-content-between w-100 my-3"><span></span><i class="fa-solid fa-chevron-down"></i></div>
+                    <div class="d-flex align-items-center justify-content-between w-100 my-3"><span></span><i class="fa-solid fa-chevron-down"></i></div>
                 </div>
                 <div>
                     <p>info@email.com</p>
@@ -69,6 +69,7 @@
                 </div>
             </div>
           </div>
+          <button class="btn btn-warning fw-bold lang-btn position-absolute" id="lang-btn"></button>
     </nav>
 
     <section class="intro container">
@@ -84,7 +85,7 @@
                         <i class="fa-solid fa-file-lines fs-1 mb-2"></i>
                         <h2 class="fs-5">Content Marketing</h2>
                         <p class="fs-6 opacity-75">Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.</p>
-                        <a href="#" class="fs-6 fw-semibold">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#" class="fs-6 fw-semibold"><span>Learn More</span> <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="col col-12 col-md-6 col-xl-3">
@@ -92,7 +93,7 @@
                         <i class="fa-solid fa-users fs-1 mb-2"></i>
                         <h2 class="fs-5">Social Engagement</h2>
                         <p class="fs-6 opacity-75">Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.</p>
-                        <a href="#" class="fs-6 fw-semibold">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#" class="fs-6 fw-semibold"><span>Learn More</span> <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="col col-12 col-md-6 col-xl-3">
@@ -100,7 +101,7 @@
                         <i class="fa-solid fa-lightbulb fs-1 mb-2"></i>
                         <h2 class="fs-5">Identity & Branding</h2>
                         <p class="fs-6 opacity-75">Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.</p>
-                        <a href="#" class="fs-6 fw-semibold">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#" class="fs-6 fw-semibold"><span>Learn More</span> <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="col col-12 col-md-6 col-xl-3">
@@ -108,7 +109,7 @@
                         <i class="fa-solid fa-box fs-1 mb-2"></i>
                         <h2 class="fs-5">Product Design</h2>
                         <p class="fs-6 opacity-75">Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras justo.</p>
-                        <a href="#" class="fs-6 fw-semibold">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#" class="fs-6 fw-semibold"><span>Learn More</span> <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -398,5 +399,6 @@
             }
         }).mount();
     </script>
+    <script defer type="module" src="script.js"></script>
 </body>
 </html>
