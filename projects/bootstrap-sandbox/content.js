@@ -34,7 +34,7 @@ export const data = {
             3: { en: "Product Design", az: "Məhsul Dizaynı" }
         },
         '.reasons h5': {
-            0: { en: "Collect Ideas", az: "Ideaya Toplamaq" },
+            0: { en: "Collect Ideas", az: "İdeya Toplamaq" },
             1: { en: "Data Analysis", az: "Data Analizi" },
             2: { en: "Finalize Product", az: "Məhsulu Yekunlaşdırmaq" }
         },
@@ -66,10 +66,7 @@ export const data = {
             9: { en: "Projects", az: "Proyektlər" },
             10: { en: "Terms of Use", az: "İstifadə Qaydaları" },
             11: { en: "Privacy Policy", az: "Gizlilik Siyasəti" },
-            12: { 
-                en: "Subscribe to our newsletter to get our news & deals delivered to you.",
-                az: "Yenilik və xəbərlərimizi sizə çatdırmağımız üçün xəbər lentimizə abunə olun."
-            }
+            12: { en: "Subscribe to our newsletter to get our news & deals delivered to you.", az: "Yenilik və xəbərlərimizi sizə çatdırmağımız üçün xəbər lentimizə abunə olun."}
         }
 
     },
