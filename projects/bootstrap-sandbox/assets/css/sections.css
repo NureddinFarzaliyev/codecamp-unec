@@ -21,6 +21,12 @@
         &>div{
             transition: all .2s;
             cursor: pointer;
+            
+            &>div{
+                border-radius: 5px;
+                overflow: hidden;
+                background-color: white;
+            }
         }
 
         &>div:hover{
@@ -102,7 +108,7 @@
         color: var(--main-text);
     }
 
-    .statistics>div:nth-child(2) div>p {
+    .stat-p {
         color: var(--main-text);
         top: 55%;
     }

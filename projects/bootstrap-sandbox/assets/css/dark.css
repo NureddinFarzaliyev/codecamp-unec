@@ -1,0 +1,24 @@
+body.dark{
+    background-color: var(--dark-bg);
+
+    h1,h3,h4,h5,p,li, 
+    .grid-card h5, 
+    .stat-circle>div, 
+    .stat-p, 
+    .intro .cards .cardc, 
+    .reasons .idea-cards > div > div,
+    .intro button, 
+    .community button,
+    footer input{
+        color: white;
+    }
+
+    .intro .cards .cardc, 
+    .reasons .idea-cards > div > div,
+    .intro button,
+    .community button,
+    footer input {
+        background-color: var(--dark-card);
+    }
+
+}

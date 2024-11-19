@@ -32,9 +32,16 @@ nav {
     font-size: 18px;
 
     .lang-btn{
-        right: 10%;
+        right: 8%;
         @media (max-width: 1300px) {
             right: 30px;
+        }
+    }
+
+    #theme-btn{
+        right: 11%;
+        @media (max-width: 1350px) {
+            right: 80px;
         }
     }
     
@@ -115,7 +122,7 @@ nav {
     .cards {
         /* first card */
         .cardc {
-            background-color: white !important;
+            background-color: white;
             padding: 40px;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 

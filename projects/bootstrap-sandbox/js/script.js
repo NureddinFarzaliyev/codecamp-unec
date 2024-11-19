@@ -1,3 +1,5 @@
+//! Changing Language
+
 import { LANGUAGES, data } from "./content.js";
 
 const setLanguage = (lang) => { 
@@ -15,3 +17,13 @@ const setLanguage = (lang) => {
 const langBtn = document.querySelector('#lang-btn');
 langBtn.addEventListener('click', () => {setLanguage(langBtn.textContent)})
 setLanguage(LANGUAGES.EN) // Set Default Language
+
+//! Changing Theme
+
+const themeBtn = document.querySelector("#theme-btn")
+const body = document.querySelector('body')
+themeBtn.addEventListener('click', () => {
+    body.classList.toggle('dark')
+    themeBtn.innerHTML = body.classList.contains('dark') ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>'
+    document.querySelector('footer img').src = body.classList.contains('dark') ? 'assets/img/logo.png' : 'assets/img/logo-dark.png'
+})
