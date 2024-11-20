@@ -48,6 +48,14 @@ export const data = {
             2: { en: "Rapid Solutions", az: "Cəld Həllər" },
             3: { en: "Top-Notch Support", az: "Keyfiyyətli Dəstək" }
         },
+        '.login-section .btn-secondary': {
+            0: {en: "Login", az: "Daxil Ol"},
+            1: {en: "Sign Up", az: "Qeydiyyatdan Keç"}
+        },
+        '.login-section h1': {
+            0: {en: "Login", az: "Daxil Ol"},
+            1: {en: "Sign Up", az: "Qeydiyyatdan Keç"}
+        },
         'footer h5': {
             0: { en: "Get in Touch", az: "Əlaqəyə Keç" },
             1: { en: "Learn More", az: "Məlumat" },
@@ -73,6 +81,7 @@ export const data = {
     elements: {
         // Intro and Nav Section
         '#lang-btn': {en: LANGUAGES.AZ, az: LANGUAGES.EN},
+        '#login-btn': {en: "Join Us", az: "Bizə Qoşul"},
         '.intro.container h1': { en: "We bring solutions to make life easier.", az: "Həyatı asanlaşdıran həllər gətiririk." },
         '.intro.container p': { en: "We are a creative company that focuses on long term relationships with customers.", az: "Biz müştərilərlə uzunmüddətli əlaqələrə fokuslanmış yaradıcı şirkətik." },
         '.intro.container button': { en: "Read More", az: "Ətraflı oxu" },

@@ -9,7 +9,9 @@ body.dark{
     .reasons .idea-cards > div > div,
     .intro button, 
     .community button,
-    footer input{
+    footer input,
+    #login-close,
+    .form-check{
         color: white;
     }
 
@@ -17,8 +19,9 @@ body.dark{
     .reasons .idea-cards > div > div,
     .intro button,
     .community button,
-    footer input {
+    footer input,
+    .login-section,
+    .login-section button{
         background-color: var(--dark-card);
     }
-
 }

@@ -30,20 +30,6 @@ nav {
     height: 100px;
     z-index: 2;
     font-size: 18px;
-
-    .lang-btn{
-        right: 8%;
-        @media (max-width: 1300px) {
-            right: 30px;
-        }
-    }
-
-    #theme-btn{
-        right: 11%;
-        @media (max-width: 1350px) {
-            right: 80px;
-        }
-    }
     
     & a {
         transition: all .2s;
@@ -91,6 +77,14 @@ nav {
                 }
             }
         }
+    }
+
+    #theme-btn {
+        margin-right: 50px;
+    }
+
+    #login-btn {
+        margin-left: 50px;
     }
 }
 
