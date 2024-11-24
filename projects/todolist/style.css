@@ -146,6 +146,12 @@ main{
             transition: .3s background-color;
             margin: 0px 0px 5px 0px;
 
+            p {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+
             &:hover{
                 background-color: var(--background-hover);
                 & button {
