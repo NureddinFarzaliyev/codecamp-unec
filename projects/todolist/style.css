@@ -1,0 +1,220 @@
+:root{
+    --bg-gradient: linear-gradient(#67E6CB, #4A7EE7);
+    --primary: #8E49E8;
+    --secondary: #8E0DE8;
+    --accent: #E74C3C;
+    --background: #ffffff;
+    --background-secondary: #F2F2F2;
+    --background-hover: #E3E6E7;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    overflow: hidden;
+    background-image: var(--bg-gradient);
+    font-family: 'Poppins';
+}
+
+@keyframes fadeTaskDown {
+    0%{
+        transform: translateY(-40px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.fade-task-down{
+    animation: fadeTaskDown .4s;
+}
+
+@keyframes fadeTaskRight {
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(110%);
+    }
+}
+
+.removed-task{
+    text-decoration: line-through;
+    opacity: .5;
+    animation: fadeTaskRight .4s forwards;
+}
+
+@keyframes fadeTaskUp {
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-55px);
+    }
+}
+
+.fade-task-up{
+    animation: fadeTaskUp .4s ;
+}
+
+.task-done{
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, .5);
+}
+
+main{
+    width: 400px;
+    height: 450px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--background);
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+
+    @media (max-width: 450px) {
+        width: 90%;
+    }
+
+    h1{
+        font-weight: 600;
+    }
+
+    .hidden {
+        display: none !important;
+    }
+
+    .input-container{
+        display: flex;
+        gap: 5px;
+        input{
+            height: 40px;
+            padding: 0px 10px;
+            font-size: 16px;
+            width: 87%;
+            border-radius: 3px;
+            border: solid .5px rgba(60, 64, 67, 0.5);
+        }
+        button{
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary);
+            border: none;
+            border-radius: 3px;
+            color: white;
+            font-size: 25px;
+            transition: .2s background-color, .2s opacity;
+            &:hover{
+                background-color: var(--secondary);
+            }
+
+            &[disabled]{
+                opacity: .5;
+            }
+        }
+    }
+
+
+    .tasks-container{
+        list-style-type: none;
+        height: 200px;
+        overflow-x: hidden;
+        width: 100%;
+        overflow-y: scroll;
+
+        & li{
+            background-color: var(--background-secondary);
+            padding: 10px;
+            border-radius: 3px;
+            position: relative;
+            height: 50px;
+            line-height: 27px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: .3s background-color;
+            margin: 0px 0px 5px 0px;
+
+            &:hover{
+                background-color: var(--background-hover);
+                & button {
+                    transform: translateX(0);
+                    &:hover{
+                        background-size: 60%;
+                    }
+                }
+            }
+            
+            button {
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 50px;
+                width: 50px;
+                background-color: var(--accent);
+                border: none;
+                cursor: pointer;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                transform: translateX(60px);
+                transition: .3s;
+                background-image: url(img/5981684251543238936.svg);
+                background-size: 50%;
+                background-repeat: no-repeat;
+                background-position: center;
+                
+            }
+        }
+    }
+
+    .all-done{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+        animation: fadeTaskDown .2s forwards;
+
+        h1{
+            font-size: 48px;
+        }
+
+        p{
+            opacity: .7;
+        }
+    }
+
+    .info-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        button {
+            height: 25px;
+            padding: 0px 10px;
+            cursor: pointer;
+            background-color: var(--primary);
+            border: none;
+            border-radius: 3px;
+            color: white;
+            transition: .2s background-color;
+
+            &:hover{
+                background-color: var(--secondary);
+            }
+        }
+    }
+
+}
+
