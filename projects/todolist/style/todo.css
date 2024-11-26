@@ -1,5 +1,6 @@
 :root{
-    --bg-gradient: linear-gradient(#67E6CB, #4A7EE7);
+    /* --bg-gradient: linear-gradient(#67E6CB, #4A7EE7); */
+    --bg-gradient: linear-gradient(#1e3c72, #3467be);
     --primary: #8E49E8;
     --secondary: #8E0DE8;
     --accent: #E74C3C;
@@ -174,7 +175,7 @@ main{
                 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
                 transform: translateX(60px);
                 transition: .3s;
-                background-image: url(img/5981684251543238936.svg);
+                background-image: url(../img/5981684251543238936.svg);
                 background-size: 50%;
                 background-repeat: no-repeat;
                 background-position: center;

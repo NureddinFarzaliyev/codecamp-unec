@@ -1,4 +1,4 @@
-const input = document.querySelector('input[type="text"')
+const input = document.querySelector('input[type="text"]')
 const form = document.querySelector('form')
 const taskList = document.querySelector('ul')
 const allDone = document.querySelector('.all-done')

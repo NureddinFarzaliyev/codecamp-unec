@@ -1,0 +1,85 @@
+#auth {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: white;
+
+    #loginForm {
+        display: flex;
+        flex-direction: column;
+        padding: 30px 0px;
+    }
+
+    & input{
+        font-size: 16px;
+        height: 50px;
+        padding: 0px 10px;
+        border-radius: 10px;
+        margin: 5px 0px;
+        background: none;
+        border: solid 1px rgba(255, 255, 255, .5);
+        color: white;
+        font-weight: 600;
+        transition: .2s;
+    }
+
+    & input:hover{
+        border: solid 1px rgba(255, 255, 255, 1);
+    }
+    
+    & input:focus{
+        scale: 1.05;
+    }
+
+    .login-btn {
+        font-size: 16px;
+        height: 50px;
+        margin: 20px 0px;
+        cursor: pointer;
+        background: none;
+        border: solid 1px rgba(255, 255, 255, .5);
+        border-radius: 10px;
+        color: white;
+        transition: .2s;
+        width: 100%;
+    }
+
+    .login-btn:hover, .login-btn:focus {
+        background-color: white;
+        color: black;
+        scale: 1.05;
+    }
+
+    .eye-input-container{
+        width: 100%;
+        position: relative;
+
+        & input {
+            width: 100%;
+        }
+
+        & div {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 30px;
+            width: 30px;
+            right: 10px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: rgba(255, 255, 255, .5);
+            transition: .5s;
+        }
+
+        & div:hover{
+            color: rgba(255, 255, 255, 1);
+        }
+    }
+
+
+}
