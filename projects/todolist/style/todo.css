@@ -22,47 +22,6 @@ body{
     font-family: 'Poppins';
 }
 
-@keyframes fadeTaskDown {
-    0%{
-        transform: translateY(-40px);
-    }
-    100%{
-        transform: translateY(0);
-    }
-}
-
-.fade-task-down{
-    animation: fadeTaskDown .4s;
-}
-
-@keyframes fadeTaskRight {
-    0%{
-        transform: translateX(0px);
-    }
-    100%{
-        transform: translateX(110%);
-    }
-}
-
-.removed-task{
-    text-decoration: line-through;
-    opacity: .5;
-    animation: fadeTaskRight .4s forwards;
-}
-
-@keyframes fadeTaskUp {
-    0%{
-        transform: translateY(0px);
-    }
-    100%{
-        transform: translateY(-55px);
-    }
-}
-
-.fade-task-up{
-    animation: fadeTaskUp .4s ;
-}
-
 .task-done{
     text-decoration: line-through;
     color: rgba(0, 0, 0, .5);

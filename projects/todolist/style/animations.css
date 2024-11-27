@@ -1,0 +1,63 @@
+/* ! General Animations */
+
+@keyframes fadeOut {
+    0%{opacity: 100%; display: block;}
+    100%{opacity: 0%; display: none;}
+}
+
+.fade-out{
+    animation: fadeOut .5s forwards !important;
+}
+
+@keyframes fadeIn {
+    0%{opacity: 0%;}
+    100%{opacity: 100%;}
+}
+
+.fade-in{
+    animation: fadeIn .5s forwards !important;
+}
+
+
+/*! Animations for Todo Container */
+
+@keyframes fadeTaskDown {
+    0%{
+        transform: translateY(-40px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.fade-task-down{
+    animation: fadeTaskDown .4s;
+}
+
+@keyframes fadeTaskRight {
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(110%);
+    }
+}
+
+.removed-task{
+    text-decoration: line-through;
+    opacity: .5;
+    animation: fadeTaskRight .4s forwards;
+}
+
+@keyframes fadeTaskUp {
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-55px);
+    }
+}
+
+.fade-task-up{
+    animation: fadeTaskUp .4s ;
+}

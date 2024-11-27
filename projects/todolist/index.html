@@ -10,24 +10,106 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d0041310db.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style/auth.css">
+    <link rel="stylesheet" href="./style/animations.css">
 </head>
 <body>
+    <div class="progress">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
 
-    <div id="auth"> 
-        <h1>Welcome to Todo App 👋</h1>
-        <p>Please login or register in order to use the app.</p>
+    <div id="auth">
 
-        <form id="loginForm">
-            <input type="text" placeholder="Username">
-            <div class="eye-input-container">
-                <input type="password" placeholder="Password">
-                <div><i class="fa-regular fa-eye"></i></div>
+
+        <section class="login-section">
+            <div class="welcome">
+                <h1>Welcome to Todo App 👋</h1>
+                <p>Please login or register in order to use the app.</p>
+            </div> 
+    
+            <form id="loginForm">
+                <input type="text" placeholder="Username">
+                <div class="eye-input-container">
+                    <input type="password" placeholder="Password">
+                    <div><i class="fa-regular fa-eye"></i></div>
+                </div>
+                
+                <!-- choose another classname for javascript -->
+                <button class="login-btn">Login</button>
+            </form>
+    
+            <div id="create-account-text"><div>Don't have an account? 😔</div> <div id="create-account-btn">Create one! 😍</div></div>
+        </section>
+
+        <section class="register-intro">
+            <h1>Let's create a brand new account for you! 😎</h1>
+            <p>Don't worry, it'll not take much time.</p>
+        </section>
+
+        <section class="choose-username">
+            <div>
+                <h1>Think of a cool username for yourself!</h1>
+                <p>This username will be shown publicly on your profile. You'll also log in to your profile using this username.</p>
+                <input type="text" placeholder="Nice Username">
+                <button class="login-btn username-btn">Next 👉</button>
             </div>
-            
-            <button class="login-btn">Login</button>
-        </form>
+        </section>
 
-        <p>Don't have an account? <u>Create one!</u></p>
+        <section class="choose-password">
+            <div>
+                <h1>Create a strong password 💪</h1>
+                <p>Create secure password for your profile. Strong passwords usually include lowercase and uppercase letters, numbers, special characters.</p>
+                <div class="eye-input-container">
+                    <input type="password" placeholder="Strong Password">
+                    <div><i class="fa-regular fa-eye"></i></div>
+                </div>
+                <div class="eye-input-container">
+                    <input type="password" placeholder="Repeat Password">
+                    <div><i class="fa-regular fa-eye"></i></div>
+                </div>
+                <button class="login-btn password-btn">Next 👉</button>
+            </div>
+        </section>
+
+        <section class="choose-profile">
+            <div>
+                <h1>Choose an Avatar</h1>
+                <p>Please choose one of the avatars which will appear on your profile.</p>
+                <div class="avatar-choices">
+                    <label>
+                        <input type="radio" name="avatar" value="0" >
+                        <img src="./img/avatar_0.png" alt="male" height="150">
+
+                    </label>
+                    <label>
+                        <input type="radio" name="avatar" value="2" checked>
+                        <img src="./img/avatar_2.jpg" alt="none" height="150">
+                    </label>
+                    <label>
+                        <input type="radio" name="avatar" value="1" >
+                        <img src="./img/avatar_1.png" alt="female" height="150">
+                    </label>
+                </div>
+                <button class="login-btn avatar-btn">Next 👉</button>
+            </div>
+        </section>
+
+        <section class="done-register">
+            <div>
+                <h1>Registration is done! ✅</h1>
+                <p>This will be how your profile looks in Todo App. Review your information. Then submit, or register again with updated information.</p>
+                <div class="profile-information">
+                    <img src="img/avatar_1.png" alt="your_avatar" height="200">
+                    <h1>Username</h1>
+                </div>
+                <button class="login-btn submit-btn" type="submit">Register ✅</button>
+                <button class="login-btn reset-btn" type="reset">Start Again 🔁</button>
+            </div>
+        </section>
+
+
     </div>
 
     <main>
@@ -52,8 +134,8 @@
     </main>
 
 
-    <script src="./js/todo.js"></script>
     <script src="./js/auth.js"></script>
     <script src="./js/authAnim.js"></script>
+    <script src="./js/todo.js"></script>
 </body>
 </html>
