@@ -23,7 +23,7 @@ const changeProgressBar = (index) => {
     document.querySelector(`.progress > div:nth-child(${index})`).style.backgroundColor = "rgba(255, 255, 255, 1)"
 }
 
-const changeToNextSection = (buttonSelector, fromSelector, toSelector, toProgressIndex, extraAnimFn) => {
+const changeToNextSection = (buttonSelector, fromSelector, toSelector, toProgressIndex, callback, callbackDelay) => {
     document.querySelector(buttonSelector).addEventListener('click', () => {
         fadeOutElement(document.querySelector(fromSelector))
         if(toProgressIndex) changeProgressBar(toProgressIndex)
@@ -31,10 +31,13 @@ const changeToNextSection = (buttonSelector, fromSelector, toSelector, toProgres
         setTimeout(() => {
             fadeInElement(document.querySelector(toSelector))
         }, DURATION);
-        if(extraAnimFn){
+
+        if(callback && callbackDelay){
             setTimeout(() => {
-                extraAnimFn()
-            }, DURATION*3);
+                callback()
+            }, DURATION*callbackDelay);
+        }else{
+            callback()
         }
     })
 }
@@ -59,7 +62,11 @@ document.querySelector('#create-account-btn').addEventListener('click', () => {
     }, DURATION*5);
 })  
 
-changeToNextSection('.username-btn', '.choose-username', '.choose-password', 2)
-changeToNextSection('.password-btn', '.choose-password', '.choose-profile', 3)
+changeToNextSection('.username-btn', '.choose-username', '.choose-password', 2, () => {
+    console.log(document.querySelector('.choose-username input').value)
+})
+changeToNextSection('.password-btn', '.choose-password', '.choose-profile', 3, () => {
+    console.log(document.querySelector('.choose-password input').value)
+} )
 changeToNextSection('.avatar-btn', '.choose-profile', '.done-register', 4)
-changeToNextSection('.submit-btn', '.done-register', '.register-loading', 0, () => {location.reload()})
+changeToNextSection('.submit-btn', '.done-register', '.register-loading', 0, () => {location.reload()}, 3)
