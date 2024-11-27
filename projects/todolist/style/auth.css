@@ -49,7 +49,11 @@
         width: 100%;
     }
 
-    .login-btn:hover, .login-btn:focus {
+    .login-btn:disabled{
+        cursor: not-allowed;
+    }
+
+    .login-btn:hover:not(.login-btn:disabled), .login-btn:focus {
         background-color: white;
         color: black;
         scale: 1.05;
@@ -174,6 +178,10 @@
     display: none;
 }
 
+.register-loading{
+    display: none;
+}
+
 .choose-username, .choose-password, .choose-profile, .done-register{
     &>div{
         display: flex;
@@ -204,6 +212,11 @@
         }
     }
 
+}
+
+.same-password-message{
+    position: absolute;
+    bottom: -50px;
 }
 
 .choose-profile {
@@ -291,5 +304,17 @@
 
     .reset-btn{
         margin-top: 0px !important;
+    }
+}
+
+.register-loading {
+    & h1 {
+        font-size: 64px;
+    }
+
+    & p {
+        margin-top: 20px;
+        font-size: 24px;
+        font-weight: 400;
     }
 }

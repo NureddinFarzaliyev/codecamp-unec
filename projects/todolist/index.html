@@ -30,9 +30,9 @@
             </div> 
     
             <form id="loginForm">
-                <input type="text" placeholder="Username">
+                <input type="text" placeholder="Username" autocomplete="off">
                 <div class="eye-input-container">
-                    <input type="password" placeholder="Password">
+                    <input type="password" placeholder="Password" autocomplete="off">
                     <div><i class="fa-regular fa-eye"></i></div>
                 </div>
                 
@@ -52,8 +52,10 @@
             <div>
                 <h1>Think of a cool username for yourself!</h1>
                 <p>This username will be shown publicly on your profile. You'll also log in to your profile using this username.</p>
-                <input type="text" placeholder="Nice Username">
-                <button class="login-btn username-btn">Next 👉</button>
+                <form>
+                    <input type="text" placeholder="Nice Username" autocomplete="off">
+                    <button class="login-btn username-btn">Next 👉</button>
+                </form>
             </div>
         </section>
 
@@ -69,6 +71,7 @@
                     <input type="password" placeholder="Repeat Password">
                     <div><i class="fa-regular fa-eye"></i></div>
                 </div>
+                <p class="same-password-message"></p>
                 <button class="login-btn password-btn">Next 👉</button>
             </div>
         </section>
@@ -106,6 +109,13 @@
                 </div>
                 <button class="login-btn submit-btn" type="submit">Register ✅</button>
                 <button class="login-btn reset-btn" type="reset">Start Again 🔁</button>
+            </div>
+        </section>
+
+        <section class="register-loading">
+            <div>
+                <h1>🎉</h1>
+                <p>You've Registered Successfully! Welcome!</p>
             </div>
         </section>
 
