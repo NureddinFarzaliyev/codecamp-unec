@@ -36,12 +36,27 @@ input:focus, button:focus{
 main{
     
     nav{
-        height: 140px;
+        height: 110px;
         width: 100vw;
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 0px 50px;
+
+        .language-change button {
+            padding: 10px 15px;
+            font-size: 14px;
+            background: var(--primary);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: .3s background-color;
+
+            &:hover{
+                background-color: var(--secondary);
+            }
+        }
 
         .profile {
             display: flex;
@@ -50,6 +65,11 @@ main{
             color: white;
             font-weight: bold;
             font-size: 24px;
+
+            & img {
+                border-radius: 50%;
+                overflow: hidden;
+            }
 
             & button {
                 background: none;

@@ -10,6 +10,12 @@ let userData = {
 
 const currentUsers = localStorage.getItem('users') ? JSON.parse(localStorage.getItem('users')) : []
 
+const handleDoneRegister = () => {
+    document.querySelector('.done-register img').src = `./img/avatar_${userData.avatar}.png`
+    document.querySelector('.profile-information h1').textContent = userData.username
+    console.log(userData.username)
+}
+
 export const checkUsername = (username) => {
     for(let user of currentUsers){
         if(user.username == username) return false
@@ -40,6 +46,8 @@ export const handleAvatar = () => {
             userData.avatar = avatar.value
         }
     }
+
+    handleDoneRegister()
 }
 
 export const handleRegister = () => {
