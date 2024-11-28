@@ -214,9 +214,17 @@
 
 }
 
-.same-password-message{
+.same-password-message, .same-username-message, .login-message{
     position: absolute;
     bottom: -50px;
+}
+
+.login-message{
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 78px;
+    font-weight: bold;
+    color: darkred;
 }
 
 .choose-profile {

@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="./style/todo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/bcryptjs@2.4.3/dist/bcrypt.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d0041310db.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bcryptjs/2.4.3/bcrypt.min.js" integrity="sha512-DNI/FJdkfyeuPUal7lDkRVg0mFY2n4IZJJYqPbQWLL0COxLi6G6nmf5gr1vW1Bd4wYC09hOvZVsSclfXxUTU/w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="./style/auth.css">
     <link rel="stylesheet" href="./style/animations.css">
 </head>
@@ -38,6 +40,7 @@
                 
                 <!-- choose another classname for javascript -->
                 <button class="login-btn">Login</button>
+                <p class="login-message"></p>
             </form>
     
             <div id="create-account-text"><div>Don't have an account? 😔</div> <div id="create-account-btn">Create one! 😍</div></div>
@@ -56,6 +59,7 @@
                     <input type="text" placeholder="Nice Username" autocomplete="off">
                     <button class="login-btn username-btn">Next 👉</button>
                 </form>
+                <p class="same-username-message"></p>
             </div>
         </section>
 
@@ -88,7 +92,7 @@
                     </label>
                     <label>
                         <input type="radio" name="avatar" value="2" checked>
-                        <img src="./img/avatar_2.jpg" alt="none" height="150">
+                        <img src="./img/avatar_2.png" alt="none" height="150">
                     </label>
                     <label>
                         <input type="radio" name="avatar" value="1" >
@@ -123,29 +127,43 @@
     </div>
 
     <main>
-        <h1>Todo App</h1>
-        <form class="input-container">
-            <input type="text" placeholder="Add your new todo" required>
-            <button>+</button>
-        </form>
-        <ul class="tasks-container">
-            <div class="all-done">
-                <h1>🥳</h1>
-                <p>You have no tasks!</p>
-            </div>
-        </ul>
-        <div class="info-container">
-            <p>You have <span>0</span> pending tasks</p>
+        <nav>
             <div>
-                <button class="complete-all-btn">Complete All</button>
-                <button class="delete-all-btn">Delete All</button>
+                language
+            </div>
+            <div class="profile">
+                <button class="logout-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+                <h1></h1>
+                <img src="./img/avatar_2.png" alt="avatar" height="80">
+            </div>
+        </nav>
+
+        <div>
+            <h1>Todo App</h1>
+            <form class="input-container">
+                <input type="text" placeholder="Add your new todo" required>
+                <button>+</button>
+            </form>
+            <ul class="tasks-container">
+                <div class="all-done">
+                    <h1>🥳</h1>
+                    <p>You have no tasks!</p>
+                </div>
+            </ul>
+            <div class="info-container">
+                <p>You have <span>0</span> pending tasks</p>
+                <div>
+                    <button class="complete-all-btn">Complete All</button>
+                    <button class="delete-all-btn">Delete All</button>
+                </div>
             </div>
         </div>
     </main>
 
 
-    <script src="./js/authPage.js"></script>
-    <script src="./js/authAnim.js"></script>
+    <script src="./js/authPage.js" type="module"></script>
+    <script src="./js/authAnim.js" type="module"></script>
     <script src="./js/todo.js"></script>
+    <script src="./js/auth.js" type="module"></script>
 </body>
 </html>

@@ -27,21 +27,65 @@ body{
     color: rgba(0, 0, 0, .5);
 }
 
+input:focus, button:focus{
+    outline: none;
+}
+
+
+
 main{
-    width: 400px;
-    height: 450px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background-color: var(--background);
-    padding: 25px;
-    border-radius: 5px;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    justify-content: space-between;
+    
+    nav{
+        height: 140px;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 50px;
+
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+
+            & button {
+                background: none;
+                border: none;
+                padding: 5px;
+                font-size: 26px;
+                color: white;
+                opacity: .5;
+                cursor: pointer;
+                transition: .5s opacity;
+                transform: rotate(180deg);
+
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    
+    
+    &>div{
+        width: 400px;
+        height: 450px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: var(--background);
+        padding: 25px;
+        border-radius: 5px;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: space-between;
+    }
 
     @media (max-width: 450px) {
         width: 90%;

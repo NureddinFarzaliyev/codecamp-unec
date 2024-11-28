@@ -1,6 +1,8 @@
+import { handleUsername, handlePassword, handleAvatar, handleRegister } from "./auth.js";
+
 const DURATION = 500
 
-const fadeOutElement = (element) => {
+export const fadeOutElement = (element) => {
     element.classList.add('fade-out')
     setTimeout(() => {
         element.style.display = 'none'
@@ -62,11 +64,12 @@ document.querySelector('#create-account-btn').addEventListener('click', () => {
     }, DURATION*5);
 })  
 
-changeToNextSection('.username-btn', '.choose-username', '.choose-password', 2, () => {
-    console.log(document.querySelector('.choose-username input').value)
+changeToNextSection('.username-btn', '.choose-username', '.choose-password', 2, handleUsername)
+changeToNextSection('.password-btn', '.choose-password', '.choose-profile', 3, handlePassword)
+changeToNextSection('.avatar-btn', '.choose-profile', '.done-register', 4, handleAvatar)
+changeToNextSection('.submit-btn', '.done-register', '.register-loading', 0, () => {
+    handleRegister()
+    setTimeout(() => {
+        location.reload()
+    }, DURATION*5);
 })
-changeToNextSection('.password-btn', '.choose-password', '.choose-profile', 3, () => {
-    console.log(document.querySelector('.choose-password input').value)
-} )
-changeToNextSection('.avatar-btn', '.choose-profile', '.done-register', 4)
-changeToNextSection('.submit-btn', '.done-register', '.register-loading', 0, () => {location.reload()}, 3)

@@ -1,3 +1,4 @@
+import { checkUsername } from "./auth.js";
 
 // Check if logged in and update state 
 
@@ -32,13 +33,8 @@ const checkInputValue = (value) => {
     return false
 }
 
-// TODO: 
-const checkIfUserExists = (username) => {
-    return true
-}
-
 // Prevent default for all buton
-document.querySelectorAll('button').forEach((button) => {
+document.querySelectorAll('button:not(.input-container button)').forEach((button) => {
     button.addEventListener('click', (e) => {
         e.preventDefault()
     })
@@ -46,12 +42,20 @@ document.querySelectorAll('button').forEach((button) => {
 
 // register username button
 const usernameBtn = document.querySelector('.username-btn')
+const usernameMsg = document.querySelector('.same-username-message')
 usernameBtn.disabled = true
 document.querySelector('.choose-username input').addEventListener('keyup', (e) => {
     if(checkInputValue(e.target.value)){
-        usernameBtn.disabled = false
+        if(checkUsername(e.target.value) === true){
+            usernameBtn.disabled = false
+            usernameMsg.textContent = ''
+        }else{
+            usernameMsg.textContent = 'Please choose another username.'
+            usernameBtn.disabled = true
+        }
     }else{
         usernameBtn.disabled = true
+        usernameMsg.textContent = ''
     }
 })
 
@@ -82,14 +86,14 @@ document.querySelectorAll('.choose-password input')[1].addEventListener('keyup',
 // Login section button
 const loginBtn = document.querySelector('.login-btn')
 loginBtn.disabled = true
-let logInput1; let logInput2
+let logInput1 = ''; let logInput2 = ''
 document.querySelectorAll('#loginForm input')[0].addEventListener('keyup', (e) => {
     logInput1 = e.target.value
-    if(logInput1 && logInput2) loginBtn.disabled = false
+    loginBtn.disabled = logInput1 === '' || logInput2 === ''
 })
 
 document.querySelectorAll('#loginForm input')[1].addEventListener('keyup', (e) => {
     logInput2 = e.target.value
-    if(logInput1 && logInput2) loginBtn.disabled = false
+    loginBtn.disabled = logInput1 === '' || logInput2 === ''
 })
 
