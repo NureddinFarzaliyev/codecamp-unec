@@ -22,9 +22,11 @@
         <div></div>
     </div>
 
+    <div class="language-change">
+        <button></button>
+    </div>
+
     <div id="auth">
-
-
         <section class="login-section">
             <div class="welcome">
                 <h1>Welcome to Todo App 👋</h1>
@@ -43,7 +45,7 @@
                 <p class="login-message"></p>
             </form>
     
-            <div id="create-account-text"><div>Don't have an account? 😔</div> <div id="create-account-btn">Create one! 😍</div></div>
+            <div id="create-account-text"><div class="dont-account">Don't have an account? 😔</div> <div id="create-account-btn">Create one! 😍</div></div>
         </section>
 
         <section class="register-intro">
@@ -54,7 +56,7 @@
         <section class="choose-username">
             <div>
                 <h1>Think of a cool username for yourself!</h1>
-                <p>This username will be shown publicly on your profile. You'll also log in to your profile using this username.</p>
+                <p class="username-description">This username will be shown publicly on your profile. You'll also log in to your profile using this username.</p>
                 <form>
                     <input type="text" placeholder="Nice Username" autocomplete="off">
                     <button class="login-btn username-btn">Next 👉</button>
@@ -66,7 +68,7 @@
         <section class="choose-password">
             <div>
                 <h1>Create a strong password 💪</h1>
-                <p>Create secure password for your profile. Strong passwords usually include lowercase and uppercase letters, numbers, special characters.</p>
+                <p class="password-description">Create secure password for your profile. Strong passwords usually include lowercase and uppercase letters, numbers, special characters.</p>
                 <div class="eye-input-container">
                     <input type="password" placeholder="Strong Password">
                     <div><i class="fa-regular fa-eye"></i></div>
@@ -105,7 +107,7 @@
 
         <section class="done-register">
             <div>
-                <h1>Registration is done! ✅</h1>
+                <h1 class="done-message">Registration is done! ✅</h1>
                 <p>This will be how your profile looks in Todo App. Review your information. Then submit, or register again with updated information.</p>
                 <div class="profile-information">
                     <img src="img/avatar_1.png" alt="your_avatar" height="200">
@@ -128,9 +130,6 @@
 
     <main>
         <nav>
-            <div class="language-change">
-                <button>EN</button>
-            </div>
             <div class="profile">
                 <button class="logout-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
                 <h1></h1>
@@ -139,7 +138,7 @@
         </nav>
 
         <div>
-            <h1>Todo App</h1>
+            <h1 class="todo-header">Todo App</h1>
             <form class="input-container">
                 <input type="text" placeholder="Add your new todo" required>
                 <button>+</button>
@@ -151,7 +150,7 @@
                 </div>
             </ul>
             <div class="info-container">
-                <p>You have <span>0</span> pending tasks</p>
+                <div class="pending-count"><p class="pending-1">You have</p> <span>0</span><p class="pending-2"> pending tasks</p></div>
                 <div>
                     <button class="complete-all-btn">Complete All</button>
                     <button class="delete-all-btn">Delete All</button>
@@ -165,5 +164,7 @@
     <script src="./js/authAnim.js" type="module"></script>
     <script src="./js/todo.js"></script>
     <script src="./js/auth.js" type="module"></script>
+    <script src="./js/lang.js" type="module"></script>
+    <script src="./js/langContent.js" type="module"></script>
 </body>
 </html>

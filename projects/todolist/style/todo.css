@@ -31,6 +31,23 @@ input:focus, button:focus{
     outline: none;
 }
 
+.language-change button {
+    padding: 10px 15px;
+    font-size: 14px;
+    background: var(--primary);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: .3s background-color;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+
+    &:hover{
+        background-color: var(--secondary);
+    }
+}
 
 
 main{
@@ -40,23 +57,8 @@ main{
         width: 100vw;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: end;
         padding: 0px 50px;
-
-        .language-change button {
-            padding: 10px 15px;
-            font-size: 14px;
-            background: var(--primary);
-            border: none;
-            border-radius: 5px;
-            color: white;
-            cursor: pointer;
-            transition: .3s background-color;
-
-            &:hover{
-                background-color: var(--secondary);
-            }
-        }
 
         .profile {
             display: flex;
@@ -117,6 +119,10 @@ main{
 
     .hidden {
         display: none !important;
+    }
+
+    .pending-count *{
+        display: inline;
     }
 
     .input-container{
@@ -223,6 +229,8 @@ main{
             opacity: .7;
         }
     }
+
+    
 
     .info-container{
         display: flex;
