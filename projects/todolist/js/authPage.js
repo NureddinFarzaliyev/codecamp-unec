@@ -97,3 +97,6 @@ document.querySelectorAll('#loginForm input')[1].addEventListener('keyup', (e) =
     loginBtn.disabled = logInput1 === '' || logInput2 === ''
 })
 
+document.querySelector('.reset-btn').addEventListener('click', () => {
+    location.reload()
+})

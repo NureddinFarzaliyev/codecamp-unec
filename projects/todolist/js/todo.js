@@ -110,7 +110,6 @@ const removeAll = () => {
 }
 
 form.onsubmit = (e) => {
-    console.log('hii')
     e.preventDefault()
     createTask(input.value)
     animateDown()

@@ -13,7 +13,6 @@ const currentUsers = localStorage.getItem('users') ? JSON.parse(localStorage.get
 const handleDoneRegister = () => {
     document.querySelector('.done-register img').src = `./img/avatar_${userData.avatar}.png`
     document.querySelector('.profile-information h1').textContent = userData.username
-    console.log(userData.username)
 }
 
 export const checkUsername = (username) => {

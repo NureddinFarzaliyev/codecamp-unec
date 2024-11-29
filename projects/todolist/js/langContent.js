@@ -17,6 +17,7 @@ export const data = {
     '.username-description': {en: "This username will be shown publicly on your profile. You'll also log in to your profile using this username.", az: "İstifadəçi adı profilinizdə göstəriləcək. Əlavə olaraq profilinizə bu istifadəçi adı ilə daxil olacaqsınız."},
     '.username-btn': {en: "Next 👉", az: "Növbəti 👉"},
     '.password-btn': {en: "Next 👉", az: "Növbəti 👉"},
+    '.avatar-btn': {en: "Next 👉", az: "Növbəti 👉"},
     '.choose-password h1': {en: "Create a strong password 💪", az: "Güclü bir parol yaradın 💪"},
     '.password-description': {en: "Create secure password for your profile. Strong passwords usually include lowercase and uppercase letters, numbers, special characters.", az: "Profiliniz üçün təhlükəsiz parol yaradın. Təhlükəsiz parollarda adətən böyük, kiçik hərflər, rəqəmlər, xüsusi simvollar olur."},
     '.choose-profile h1':  {en: "Choose an Avatar", az: "Profil Şəkli Seç"},
@@ -25,7 +26,7 @@ export const data = {
     '.done-register p': {en: "This will be how your profile looks in Todo App. Review your information. Then submit, or register again with updated information.", az: "Proqramda profiliniz belə görünəcək. İnformasiyanı nəzərdən keçirin. Təsdiqləyin və ya yenilənmiş məlumatla yenidən qeydiyyatdan keçin."},
     '.submit-btn': {en: "Register ✅", az: "Təsdiqlə ✅"},
     '.reset-btn': {en: "Start Again 🔁", az: "Yenidən Başla 🔁"},
-    '.register-loading': {en: "You've Registered Successfully! Welcome!", az: "Uğurla qeydiyyatdan keçdiniz. Xoş gəldiniz!"},
+    '.register-loading p': {en: "You've Registered Successfully! Welcome!", az: "Uğurla qeydiyyatdan keçdiniz. Xoş gəldiniz!"},
     '.all-done p': {en: "You have no tasks!", az: "Tapşırığınız yoxdur!"},
     '.pending-1': {en: "You have", az: " "},
     '.pending-2': {en: " pending tasks", az: " tapşırığınız var"}
