@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'Digital7';
+    src: url('./digital-7-mono.ttf');
+}
+
+body {
+    background-color: #020413;
+}
+
+.hands div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    
+}
+
+.hands div:not(.mid-point){
+    transform: translateY(-50%);
+    height: 5px;
+    transform-origin: center left;
+    border-radius: 5px;
+    transform: translateY(1px);
+}
+
+
+.second-hand, .minute-hand, .hour-hand {
+    background-color: rgba(255, 255, 255, .8);
+}
+
+.second-hand {
+    width: 250px;   
+    rotate: -90deg;
+}
+
+.minute-hand {
+    width: 200px;
+    rotate: -90deg;
+
+}
+
+.hour-hand {
+    width: 150px;
+    rotate: -90deg;
+}
+
+.mid-point{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255);
+    transform: translate(-50%, -50%);
+}
+
+.hand-number {
+    background-image: linear-gradient(to right,rgba(0,0,0,0) 85%, rgba(255, 255, 255, .3) 85%);
+    width: 300px;
+    z-index: -1;
+    border-radius: 0px !important;
+}
+
+.hand-number:nth-child(1){
+    background-image: linear-gradient(to right,rgba(0,0,0,0) 85%, rgba(255, 255, 255) 85%);
+    rotate: 0deg;
+}
+.hand-number:nth-child(2){
+    rotate: 30deg;
+}
+.hand-number:nth-child(3){
+    rotate: 60deg;
+}
+.hand-number:nth-child(4){
+    background-image: linear-gradient(to right,rgba(0,0,0,0) 85%, rgba(255, 255, 255) 85%);
+    rotate: 90deg;
+}
+.hand-number:nth-child(5){
+    rotate: 120deg;
+}
+.hand-number:nth-child(6){
+    rotate: 150deg;
+}
+.hand-number:nth-child(7){
+    background-image: linear-gradient(to right,rgba(0,0,0,0) 85%, rgba(255, 255, 255) 85%);
+    rotate: 180deg;
+}
+.hand-number:nth-child(8){
+    rotate: 210deg;
+}
+.hand-number:nth-child(9){
+    rotate: 240deg;
+}
+.hand-number:nth-child(10){
+    background-image: linear-gradient(to right,rgba(0,0,0,0) 85%, rgba(255, 255, 255) 85%);
+    rotate: 270deg;
+}
+.hand-number:nth-child(11){
+    rotate: 300deg;
+}
+.hand-number:nth-child(12){
+    rotate: 330deg;
+}
+
+.digital {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-family: Digital7, monospace;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 50px;
+    color: white;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    /* color: #01FD16;
+    text-shadow: 0 0 5px #01FD16CC; */
+}
+
+
+
+
