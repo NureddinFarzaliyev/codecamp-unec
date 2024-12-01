@@ -42,9 +42,6 @@ form {
         font-size: 20px;
         transition-duration: .2s;
 
-        @media (max-width: 600px) {
-            width: 80vw;
-        }
 
         &:hover, &:focus{
             border-color: white;
@@ -60,6 +57,10 @@ form {
         color: white;
         transition-duration: .2s;
 
+        @media (max-width: 600px) {
+            width: 50px;
+        }
+
         &:hover{
             border-color: white;
         }
@@ -72,6 +73,10 @@ form {
     flex-wrap: wrap;
     padding: 20px;
     justify-content: center;
+
+    @media (max-width: 800px) {
+        width: 100vw;
+    }
 
     .category{
         background-color: white;
