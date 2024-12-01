@@ -74,7 +74,7 @@ const setItems = (products) => {
 }
 
 const setCategories = (categories) => {
-    categories = [{name: "All", url: "https://dummyjson.com/products"} , ...categories]
+    categories = [{name: "Show All", url: "https://dummyjson.com/products?limit=100"} , ...categories]
     categories.forEach(category => {createCategory(category)})
 }
 
