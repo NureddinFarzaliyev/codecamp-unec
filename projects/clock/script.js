@@ -13,4 +13,4 @@ setInterval(() => {
     const currentDate = new Date()
     document.querySelector('.time').textContent = currentDate.toLocaleTimeString() 
     document.querySelector('.day').textContent = currentDate.toLocaleDateString()
-}, 1000)
+}, 100)
