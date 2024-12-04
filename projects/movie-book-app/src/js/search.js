@@ -57,6 +57,9 @@ const fetchMovies = (query) => {
 
 searchForm.onsubmit = (e) => {
     e.preventDefault()
+
+    if(searchInput.value === '') return
+    
     const query = searchInput.value
     const type = searchTypeInput.value
 

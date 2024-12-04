@@ -14,8 +14,8 @@ export const checkIfBookInWishlist = (bookId, addBtn, removeBtn) => {
     }
 }
 
-export const addBooksToPage = (bookArr, container) => {
-    container.innerHTML = ''
+export const addBooksToPage = (bookArr, container, preventReset) => {
+    if(!preventReset) container.innerHTML = ''
     bookArr.forEach(book => {
         const bookCard = document.createElement('div')
         bookCard.classList.add('bg-amber-800', 'text-white', 'p-2', 'm-1')
@@ -100,7 +100,7 @@ const recommendBooks = (query, container) => {
 }
 
 
-const getMovieData = (id) => {
+export const getMovieData = (id, callback) => {
     const url = `https://api.themoviedb.org/3/movie/${id}?language=en-US`;
     const options = {
     method: 'GET',
@@ -112,7 +112,7 @@ const getMovieData = (id) => {
 
     fetch(url, options)
     .then(res => res.json())
-    .then(json => showDetailedMovieData(json))
+    .then(json => callback(json))
     .catch(err => console.error(err));
 }
 
@@ -124,7 +124,7 @@ export const addMoviesToPage = (movieArr, container) => {
         container.appendChild(movieCard)
 
         movieCard.addEventListener('click', (e) => {
-            getMovieData(movieCard.getAttribute('data-id'))
+            getMovieData(movieCard.getAttribute('data-id'), showDetailedMovieData)
         })
     }) 
 }

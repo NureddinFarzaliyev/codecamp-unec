@@ -8,6 +8,14 @@
 </head>
 <body>
 
+  <div class="movie-info bg-red-500 hidden absolute top-0 m-5 p-10 rounded-md">
+    <div class="movie-data"></div>
+    <div class="book-data"></div>
+    <button class="add">add to wishlist</button>
+    <button class="remove">remove from wishlist</button>
+    <button class="close">X</button>
+  </div>
+
   <section class="explore hidden">
 
     <div class="top-movies-container">
@@ -23,15 +31,7 @@
     
   </section>
   
-  <div class="movie-info bg-red-500 hidden absolute top-0 m-5 p-10 rounded-md">
-    <div class="movie-data"></div>
-    <div class="book-data"></div>
-    <button class="add">add to wishlist</button>
-    <button class="remove">remove from wishlist</button>
-    <button class="close">X</button>
-  </div>
-
-  <section class="search m-20">
+  <section class="search m-20 hidden">
     <form id="search-form">
       <input type="text" name="search" id="search-input" class="bg-slate-500">
       <select name="search" id="search-type">
@@ -50,10 +50,20 @@
     </div>
   </section>
 
+  <section class="wishlist">
+    <div class="wishlist-container">
+      <div class="wishlist-movies"></div>
+      <div class="wishlist-books"></div>
+    </div>
+
+  
+
+
 
 
   <script src="./src/js/search.js" type="module"></script>
   <script src="./src/js/main.js" type="module"></script>
+  <script src="./src/js/wishlist.js" type="module"></script>
   <script src="./src/js/utils.js" type="module"></script>
 </body>
 </html>
