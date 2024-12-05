@@ -21,7 +21,7 @@ const fetchBooks = (query, searchType) => {
             accept: 'application/json',
         }
     };
-    e.preventDefault()
+    // e.preventDefault()
 
     fetch(url, options)
     .then(res => res.json())

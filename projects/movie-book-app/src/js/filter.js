@@ -35,25 +35,25 @@ document.querySelector('form.filter-movies').onsubmit = (e) => {
     filterFn()
 }
 
+const toggleInputActive = (input) => {
+    if(input.value.length !== 0) input.classList.add('active-filter-input')
+    else input.classList.remove('active-filter-input')
+}
+
 const ratingInputHandler = (input) => {
     input.oninput = () => {
         input.value = input.value.replace(/[^0-9.]/g, '')
         if(input.value.length > 3) input.value = input.value.slice(0, 3)
         if(input.value > 10) input.value = 10
-        if(input.value.length !== 0) input.classList.add('active-filter-input')
-        else input.classList.remove('active-filter-input')
+        toggleInputActive(input)
     }
 }
-
 
 const yearInputHandler = (input) => {
     input.oninput = () => {
         input.value = input.value.replace(/[^0-9]/g, '')
-        if(input.value.length > 4){
-            input.value = input.value.slice(0, 4)
-        }
-        if(input.value.length !== 0) input.classList.add('active-filter-input')
-        else input.classList.remove('active-filter-input')
+        if(input.value.length > 4) input.value = input.value.slice(0, 4)
+        toggleInputActive(input)
     }
 }
 
