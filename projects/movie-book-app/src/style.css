@@ -35,3 +35,34 @@ nav {
         box-shadow: #047857 0px 0px 10px;
     }
 }
+
+.movie-card-img{
+    position: relative;
+    overflow: hidden;
+}
+
+.movie-card-img::after{
+    content: "";
+    position: absolute;
+    top: -200px;
+    right: -150px;
+    height: 200px;
+    width: 500px;
+    rotate: 35deg;
+    opacity: .2;
+    transition: all .5s;
+    background: linear-gradient(
+        to top,
+        transparent 0%,
+        rgba(200, 200, 200, 0.4) 5%,
+        rgba(255, 255, 255, 0.2) 15%,
+        rgba(255, 255, 255, 0.1) 100%
+    );
+
+    
+}
+
+.movie-card-img:hover::after {
+    opacity: .7;
+    top: -100px;
+}

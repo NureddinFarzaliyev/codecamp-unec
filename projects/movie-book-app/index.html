@@ -13,7 +13,7 @@
 
   <div class="fixed nav-bg-gradient h-20 w-full self-center z-[0] top-0"></div>
 
-  <nav class="py-4 px-10 bg-emerald-700 text-white rounded-md flex flex-col sm:flex-row gap-2 sm:gap-0 justify-between items-center shadow-2xl fixed self-center w-[98vw]">
+  <nav class="py-4 px-10 bg-emerald-700 text-white rounded-md flex flex-col sm:flex-row gap-2 sm:gap-0 justify-between items-center shadow-2xl fixed self-center w-[98vw] z-[100]">
     <h1 class="font-bold text-2xl sm:text-3xl">MovieBook.</h1>
     
     <ul class="flex gap-5 font-semibold">
@@ -36,10 +36,10 @@
   </nav>
 
   <!-- ! MAIN SECTION -->
-  <main class="pt-20">
+  <main class="pt-20 pb-40">
 
     <!-- ! MOVIE INFORMATION POPUP -->
-    <div class="movie-info bg-red-500 hidden absolute top-0 m-5 p-10 rounded-md">
+    <div class="movie-info bg-red-500 hidden absolute top-0 m-5 p-10 rounded-md z-[200]">
       <div class="movie-data"></div>
       <div class="book-data"></div>
       <button class="add">add to wishlist</button>
@@ -48,7 +48,7 @@
     </div>
   
     <!-- ! EXPLORE SECTION -->
-    <section class="explore hidden">
+    <section class="explore">
       <div class="flex flex-col items-center sm:flex-row gap-10 py-10 sm:px-20 my-10">
         <i class="fa-regular fa-compass text-emerald-500 text-9xl"></i>
         <div>
@@ -58,7 +58,7 @@
       </div>
 
       <div class="filtering">
-        <h2 class="text-white text-2xl font-bold">Filter Movies</h2>
+        <h2 class="text-white text-3xl font-bold">Filter Movies</h2>
         <form class="filter-movies text-white my-5 flex flex-col gap-4 md:grid grid-cols-2 lg:flex lg:flex-row">
           <div>
             <label for="min-avg">Minimum Average: </label>
@@ -81,18 +81,24 @@
       </div>
   
       <div class="top-movies-container mt-10">
-        <div class="top-movies"></div>
-        <button class="load-more bg-green-900 text-white p-2">Load more</button>
+        <h1 class="my-5 text-white font-bold text-3xl">Top Movies</h1>
+        <div class="top-movies grid gap-5 grid-cols-2 min-[450px]:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8"></div>
+        <div class="flex items-center justify-center mt-10">
+          <button class="load-more border border-emerald-700 hover:bg-emerald-700 text-white px-6 py-3 rounded-md btn-glow transition-all font-bold">Load More</button>
+        </div>
       </div>
   
       <div class="popular-movies-container">
-        <div class="popular-movies"></div>
-        <button class="load-more bg-green-900 text-white p-2">Load more</button>
+        <h1 class="my-5 text-white font-bold text-3xl">Popular Movies</h1>
+        <div class="popular-movies grid gap-3 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8"></div>
+        <div class="flex items-center justify-center mt-10">
+          <button class="load-more border border-emerald-700 hover:bg-emerald-700 text-white px-6 py-3 rounded-md btn-glow transition-all font-bold">Load More</button>
+        </div>
       </div>
     </section>
     
     <!-- ! SEARCH SECTION -->
-    <section class="search">
+    <section class="search hidden">
       <div class="flex flex-col items-center sm:flex-row gap-10 py-10 sm:px-20 my-10">
         <i class="fa-solid fa-magnifying-glass text-emerald-500 text-9xl"></i>
         <div>
@@ -108,17 +114,17 @@
           <option value="book-title">Book Title</option>
           <option value="book-author">Book Author</option>
         </select>
-        <input type="text" placeholder="Search for movies or books" name="search" id="search-input" class="w-full shrink input-glow shadow-md mr-5 ml-2 h-16 rounded-full bg-transparent border border-emerald-400 outline-none transition-all text-white text-xl font-semibold pl-36 md:pl-44">
+        <input type="text" autocomplete="off" placeholder="Search for movies or books" name="search" id="search-input" class="w-full shrink input-glow shadow-md mr-5 ml-2 h-16 rounded-full bg-transparent border border-emerald-400 outline-none transition-all text-white text-xl font-semibold pl-36 md:pl-44">
         <button type="submit" class="absolute right-12 top-[50%] translate-y-[-50%]"><i class="fa-solid fa-magnifying-glass text-white text-2xl opacity-70 hover:opacity-100 transition-all"></i></button>
       </form>
   
-      <div class="results">
-      </div>
-      <div class="search-loading hidden">
-        Loading...
+      <div class="results grid gap-5 grid-cols-2 min-[450px]:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 mt-14"></div>
+
+      <div class="search-loading hidden mt-5 text-white text-center text-4xl">
+        <i class="fa-solid fa-spinner animate-spin"></i>
       </div>
     </section>
-  
+    
     <!-- ! WISHLIST SECTION -->
     <section class="wishlist hidden">
       <div class="flex flex-col items-center sm:flex-row gap-10 py-10 sm:px-20 my-10">
@@ -130,8 +136,8 @@
       </div>
 
       <div class="wishlist-container">
-        <div class="wishlist-movies"></div>
-        <div class="wishlist-books"></div>
+        <div class="wishlist-movies grid gap-5 grid-cols-2 min-[450px]:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 mt-14"></div>
+        <div class="wishlist-books grid gap-5 grid-cols-2 min-[450px]:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 mt-14"></div>
       </div>
     </section>
   </main>

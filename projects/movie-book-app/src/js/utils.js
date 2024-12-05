@@ -121,13 +121,16 @@ export const addMoviesToPage = (movieArr, container) => {
         movieCard.setAttribute("data-id", movie.id)
         movieCard.setAttribute("data-avg", movie.vote_average)
         movieCard.setAttribute("data-date", movie.release_date)
-        movieCard.classList.add('bg-amber-900', 'text-white', 'p-2', 'm-1', 'movie-card')
+        movieCard.classList.add('movie-card')
 
         movieCard.innerHTML = `
-        <h1>${movie.title}</h1>
-        <p>${movie.vote_average}</p>
-        <p>${movie.release_date}</p>
+        <div class="w-fit movie-card-img rounded-lg shadow-xl hover:scale-105 cursor-pointer transition-all duration-300">
+            <img class="movie-img"
+            src="${movie.poster_path ? `https://image.tmdb.org/t/p/w200${movie.poster_path}` : `https://placehold.co/200x300/000000/ffffff?text=${movie.title.split(' ').join('+')}`}"
+            alt=${movie.title} />
+        </div>
         `
+
         container.appendChild(movieCard)
 
         movieCard.addEventListener('click', (e) => {

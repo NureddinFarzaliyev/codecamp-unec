@@ -20,6 +20,8 @@ export const filterFn = () => {
     const minYear = document.querySelector('input[name="min-year"]').value ? document.querySelector('input[name="min-year"]').value : 0
     const maxYear = document.querySelector('input[name="max-year"]').value ? document.querySelector('input[name="max-year"]').value : 9999
 
+    console.log("FILTERED")
+
     const filterCallback = (movie) => {
         const movieAvg = movie.getAttribute('data-avg')
         const movieYear = movie.getAttribute('data-date').split('-')[0]
