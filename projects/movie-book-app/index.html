@@ -8,6 +8,14 @@
 </head>
 <body>
 
+  <nav class="p-2 m-2 bg-emerald-700 text-white">
+    <ul class="flex gap-2">
+      <li><button class="explore-nav-btn">Explore</button></li>
+      <li><button class="search-nav-btn">Search</button></li>
+      <li><button class="wishlist-nav-btn">Wishlist</button></li>
+    </ul>
+  </nav>
+
   <div class="movie-info bg-red-500 hidden absolute top-0 m-5 p-10 rounded-md">
     <div class="movie-data"></div>
     <div class="book-data"></div>
@@ -16,7 +24,19 @@
     <button class="close">X</button>
   </div>
 
-  <section class="explore hidden">
+  <section class="explore ">
+
+    <div class="filtering">
+      
+      <form class="filter-movies">
+        <input name="min-avg" type="text" placeholder="Min Avg">
+        <input name="max-avg" type="text" placeholder="Max Avg">
+        <input name="min-year" type="text" placeholder="Min Year">
+        <input name="max-year" type="text" placeholder="Max Year">
+        <button type="submit">Filter</button>
+      </form>
+
+    </div>
 
     <div class="top-movies-container">
       <div class="top-movies"></div>
@@ -27,8 +47,6 @@
       <div class="popular-movies"></div>
       <button class="load-more bg-green-900 text-white p-2">Load more</button>
     </div>
-
-    
   </section>
   
   <section class="search m-20 hidden">
@@ -48,13 +66,15 @@
     <div class="search-loading hidden">
       Loading...
     </div>
+    
   </section>
 
-  <section class="wishlist">
+  <section class="wishlist hidden">
     <div class="wishlist-container">
       <div class="wishlist-movies"></div>
       <div class="wishlist-books"></div>
     </div>
+  </section>
 
   
 
@@ -65,5 +85,7 @@
   <script src="./src/js/main.js" type="module"></script>
   <script src="./src/js/wishlist.js" type="module"></script>
   <script src="./src/js/utils.js" type="module"></script>
+  <script src="./src/js/nav.js" type="module"></script>
+  <script src="./src/js/filter.js" type="module"></script>
 </body>
 </html>

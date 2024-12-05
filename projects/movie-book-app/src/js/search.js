@@ -21,6 +21,7 @@ const fetchBooks = (query, searchType) => {
             accept: 'application/json',
         }
     };
+    e.preventDefault()
 
     fetch(url, options)
     .then(res => res.json())
@@ -29,6 +30,7 @@ const fetchBooks = (query, searchType) => {
 }
 
 const showResults = (data, searchType) => {
+    console.log(data)
     searchLoading.classList.add('hidden')
     searchInput.disabled = false
     searchTypeInput.disabled = false
@@ -38,8 +40,8 @@ const showResults = (data, searchType) => {
     else if(searchType === searchTypes.movie) addMoviesToPage(data.results, searchResults)
 }
 
-const fetchMovies = (query) => {
-    const url = `https://api.themoviedb.org/3/search/movie?query=${query}&include_adult=false&language=en-US&page=1`;
+const fetchMovies = (query, page) => {
+    const url = `https://api.themoviedb.org/3/search/movie?query=${query}&include_adult=false&language=en-US&page=${page ? page : 1}`;
     const options = {
     method: 'GET',
     headers: {
@@ -63,7 +65,6 @@ searchForm.onsubmit = (e) => {
     const query = searchInput.value
     const type = searchTypeInput.value
 
-    console.log(query, type)
     searchResults.innerHTML = ''
     searchLoading.classList.remove('hidden')
 

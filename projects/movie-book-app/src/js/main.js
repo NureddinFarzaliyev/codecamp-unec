@@ -1,4 +1,5 @@
 import { addMoviesToPage, showAddBtn, showRemoveBtn } from "./utils.js"
+import { filterFn } from "./filter.js";
 
 const setMovies = (page, category, containerSelector) => {
     const url = `https://api.themoviedb.org/3/movie/${category ? category : 'top_rated'}?language=en-US&page=${page ? page : 1}`;
@@ -12,7 +13,10 @@ const setMovies = (page, category, containerSelector) => {
 
     fetch(url, options)
     .then(res => res.json())
-    .then(json => addMoviesToPage(json.results, document.querySelector(containerSelector)))
+    .then(json => {
+        addMoviesToPage(json.results, document.querySelector(containerSelector))
+        filterFn()
+    })
     .catch(err => console.error(err));
 }
 
@@ -44,6 +48,7 @@ setMovies(topPage, 'top_rated', '.top-movies')
 let popularPage = 1
 setMovies(popularPage, 'popular', '.popular-movies')
 
+
 // Load more top movies
 document.querySelector('.top-movies-container .load-more').addEventListener('click', (e) => {
     e.preventDefault()
@@ -56,4 +61,5 @@ document.querySelector('.popular-movies-container .load-more').addEventListener(
     e.preventDefault()
     popularPage++
     setMovies(popularPage, 'popular', '.popular-movies')
-})  
+})
+

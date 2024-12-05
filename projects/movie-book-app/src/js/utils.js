@@ -68,7 +68,7 @@ const showDetailedMovieData = (movieObj) => {
     console.log(movieObj)
     currentMovieContainer.classList.remove('hidden')
     currentMovieContainer.setAttribute('data-id', movieObj.id)
-    
+
     const currentMovies = JSON.parse(localStorage.getItem('movies'))
     if(currentMovies.every((item) => item != movieObj.id)) showAddBtn()
     else showRemoveBtn()
@@ -99,7 +99,6 @@ const recommendBooks = (query, container) => {
     .catch(err => console.error(err));
 }
 
-
 export const getMovieData = (id, callback) => {
     const url = `https://api.themoviedb.org/3/movie/${id}?language=en-US`;
     const options = {
@@ -120,11 +119,36 @@ export const addMoviesToPage = (movieArr, container) => {
     movieArr.forEach(movie => {
         const movieCard = document.createElement('div')
         movieCard.setAttribute("data-id", movie.id)
-        movieCard.innerHTML = `<h1>${movie.title}</h1>`
+        movieCard.setAttribute("data-avg", movie.vote_average)
+        movieCard.setAttribute("data-date", movie.release_date)
+        movieCard.classList.add('bg-amber-900', 'text-white', 'p-2', 'm-1', 'movie-card')
+
+        movieCard.innerHTML = `
+        <h1>${movie.title}</h1>
+        <p>${movie.vote_average}</p>
+        <p>${movie.release_date}</p>
+        `
         container.appendChild(movieCard)
 
         movieCard.addEventListener('click', (e) => {
             getMovieData(movieCard.getAttribute('data-id'), showDetailedMovieData)
         })
     }) 
+}
+
+
+export const fetchGenres = (callback) => {
+    const url = 'https://api.themoviedb.org/3/genre/movie/list?language=en';
+    const options = {
+    method: 'GET',
+    headers: {
+        accept: 'application/json',
+        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNzExMjU1ODhkMmRlOGJhMzAzNTQ1M2M0OTZiZjVmYSIsIm5iZiI6MTY3NjExNzkzMS44NzY5OTk5LCJzdWIiOiI2M2U3ODdhYjZjODQ5MjAwODUxYTVkMzciLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.A98yFTn6CRpr79JnVi1jIVYdFDFTQynlb-X8vkngvM4'
+    }
+    };
+
+    fetch(url, options)
+    .then(res => res.json())
+    .then(json => callback(json))
+    .catch(err => console.error(err));
 }
