@@ -5,78 +5,138 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./src/style.css">
   <title>Document</title>
+  <script src="https://kit.fontawesome.com/d0041310db.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="bg-bg flex flex-col p-3 md:px-20">
 
-  <nav class="p-2 m-2 bg-emerald-700 text-white">
-    <ul class="flex gap-2">
-      <li><button class="explore-nav-btn">Explore</button></li>
-      <li><button class="search-nav-btn">Search</button></li>
-      <li><button class="wishlist-nav-btn">Wishlist</button></li>
+  <div class="fixed nav-bg-gradient h-20 w-full self-center z-[0] top-0"></div>
+
+  <nav class="py-4 px-10 bg-emerald-700 text-white rounded-md flex flex-col sm:flex-row gap-2 sm:gap-0 justify-between items-center shadow-2xl fixed self-center w-[98vw]">
+    <h1 class="font-bold text-2xl sm:text-3xl">MovieBook.</h1>
+    
+    <ul class="flex gap-5 font-semibold">
+      <li>
+      <button class="explore-nav-btn py-2 px-3 rounded-md transition-colors duration-300 border border-transparent hover:border-white active">
+        <i class="fa-regular fa-compass sm:mr-1"></i> <span class="hidden sm:inline-block">Explore</span>
+      </button>
+      </li>
+      <li>
+      <button class="search-nav-btn py-2 px-3 rounded-md transition-colors duration-300 border border-transparent hover:border-white">
+        <i class="fa-solid fa-magnifying-glass sm:mr-1"></i> <span class="hidden sm:inline-block">Search</span>
+      </button>
+      </li>
+      <li>
+      <button class="wishlist-nav-btn py-2 px-3 rounded-md transition-colors duration-300 border border-transparent hover:border-white">
+        <i class="fa-regular fa-heart sm:mr-1"></i> <span class="hidden sm:inline-block">Wishlist</span>
+      </button>
+      </li>
     </ul>
   </nav>
 
-  <div class="movie-info bg-red-500 hidden absolute top-0 m-5 p-10 rounded-md">
-    <div class="movie-data"></div>
-    <div class="book-data"></div>
-    <button class="add">add to wishlist</button>
-    <button class="remove">remove from wishlist</button>
-    <button class="close">X</button>
-  </div>
+  <main class="pt-20">
 
-  <section class="explore ">
-
-    <div class="filtering">
-      
-      <form class="filter-movies">
-        <input name="min-avg" type="text" placeholder="Min Avg">
-        <input name="max-avg" type="text" placeholder="Max Avg">
-        <input name="min-year" type="text" placeholder="Min Year">
-        <input name="max-year" type="text" placeholder="Max Year">
-        <button type="submit">Filter</button>
-      </form>
-
+    <div class="movie-info bg-red-500 hidden absolute top-0 m-5 p-10 rounded-md">
+      <div class="movie-data"></div>
+      <div class="book-data"></div>
+      <button class="add">add to wishlist</button>
+      <button class="remove">remove from wishlist</button>
+      <button class="close">X</button>
     </div>
-
-    <div class="top-movies-container">
-      <div class="top-movies"></div>
-      <button class="load-more bg-green-900 text-white p-2">Load more</button>
-    </div>
-
-    <div class="popular-movies-container">
-      <div class="popular-movies"></div>
-      <button class="load-more bg-green-900 text-white p-2">Load more</button>
-    </div>
-  </section>
   
-  <section class="search m-20 hidden">
-    <form id="search-form">
-      <input type="text" name="search" id="search-input" class="bg-slate-500">
-      <select name="search" id="search-type">
-        <option value="movie">Movie</option>
-        <option value="book">Book</option>
-        <option value="book-title">Book Title</option>
-        <option value="book-author">Book Author</option>
-      </select>
-      <button type="submit">Search</button>
-    </form>
+    <section class="explore">
 
-    <div class="results">
-    </div>
-    <div class="search-loading hidden">
-      Loading...
-    </div>
+      <div class="flex flex-col items-center sm:flex-row gap-10 py-10 sm:px-20 my-10">
+        <i class="fa-regular fa-compass text-emerald-500 text-9xl"></i>
+        <div>
+          <h1 class="text-white text-4xl font-bold">Explore</h1>
+          <p class="text-white text-lg mt-2 lg:w-[50%]">Explore new movies based on most popular and top rated movies in the world. Find new books similar to the movies and add these books and films into your wishlist. Use filters in order to find movies based on your interests. </p>
+        </div>
+      </div>
+
+      <div class="filtering">
+        <h2 class="text-white text-2xl font-bold">Filter Movies</h2>
+        <form class="filter-movies text-white my-5 flex flex-col gap-4 md:grid grid-cols-2 lg:flex lg:flex-row">
+          <div>
+            <label for="min-avg">Minimum Average: </label>
+            <input autocomplete="off" id="min-avg" name="min-avg" type="text" placeholder="0.0" class="mr-5 ml-2 h-10 w-10 rounded-full bg-transparent border border-emerald-400 text-center outline-none transition-all">
+          </div>
+          <div>
+            <label for="max-avg">Maximum Average: </label>
+            <input autocomplete="off" id="max-avg" name="max-avg" type="text" placeholder="10" class="mr-5 ml-2 h-10 w-10 rounded-full bg-transparent border border-emerald-400 text-center outline-none transition-all">
+          </div>
+          <div>
+            <label for="min-year">Oldest: </label>
+            <input autocomplete="off" id="min-year" name="min-year" type="text" placeholder="0000" class="mr-5 ml-2 h-10 w-14 rounded-full bg-transparent border border-emerald-400 text-center outline-none transition-all">
+          </div>
+          <div>
+            <label for="max-year">Newest: </label>
+            <input autocomplete="off" id="max-year" name="max-year" type="text" placeholder="9999" class="mr-5 ml-2 h-10 w-14 rounded-full bg-transparent border border-emerald-400 text-center outline-none transition-all">
+          </div>
+          <button type="submit" class="btn-glow lg:ml-4 border border-emerald-700 h-10 w-28 rounded-xl text-center font-bold hover:bg-emerald-700 transition-all"><i class="fa-solid fa-filter mr-1"></i> Filter</button>
+        </form>
+      </div>
+  
+      <div class="top-movies-container mt-10">
+        <div class="top-movies"></div>
+        <button class="load-more bg-green-900 text-white p-2">Load more</button>
+      </div>
+  
+      <div class="popular-movies-container">
+        <div class="popular-movies"></div>
+        <button class="load-more bg-green-900 text-white p-2">Load more</button>
+      </div>
+    </section>
     
-  </section>
+    <section class="search hidden">
 
-  <section class="wishlist hidden">
-    <div class="wishlist-container">
-      <div class="wishlist-movies"></div>
-      <div class="wishlist-books"></div>
-    </div>
-  </section>
+      <div class="flex flex-col items-center sm:flex-row gap-10 py-10 sm:px-20 my-10">
+        <i class="fa-solid fa-magnifying-glass text-emerald-500 text-9xl"></i>
+        <div>
+          <h1 class="text-white text-4xl font-bold">Search</h1>
+          <p class="text-white text-lg mt-2 lg:w-[50%]">Search a huge database of movies and books. Search for movies and get recommendations of similar books to these movies. You can also search individual books by their titles, author names or keywords. </p>
+        </div>
+      </div>
+
+      <form id="search-form">
+        <input type="text" name="search" id="search-input" class="bg-slate-500">
+        <select name="search" id="search-type">
+          <option value="movie">Movie</option>
+          <option value="book">Book</option>
+          <option value="book-title">Book Title</option>
+          <option value="book-author">Book Author</option>
+        </select>
+        <button type="submit">Search</button>
+      </form>
+  
+      <div class="results">
+      </div>
+      <div class="search-loading hidden">
+        Loading...
+      </div>
+    </section>
+  
+    <section class="wishlist hidden">
+
+      <div class="flex flex-col items-center sm:flex-row gap-10 py-10 sm:px-20 my-10">
+        <i class="fa-regular fa-heart text-emerald-500 text-9xl"></i>
+        <div>
+          <h1 class="text-white text-4xl font-bold">Your Wishlist</h1>
+          <p class="text-white text-lg mt-2 lg:w-[50%]">Add movies and books to your wishlist in order to watch or read them later. You can also find books similar to movies from this tab by clickin on the movie poster. </p>
+        </div>
+      </div>
+
+      <div class="wishlist-container">
+        <div class="wishlist-movies"></div>
+        <div class="wishlist-books"></div>
+      </div>
+    </section>
+
+
+
+  </main>
 
   
+
 
 
 

@@ -23,6 +23,7 @@ export const filterFn = () => {
     const filterCallback = (movie) => {
         const movieAvg = movie.getAttribute('data-avg')
         const movieYear = movie.getAttribute('data-date').split('-')[0]
+
         return movieAvg >= minAvg && movieAvg <= maxAvg && movieYear >= minYear && movieYear <= maxYear
     }
 
@@ -33,3 +34,30 @@ document.querySelector('form.filter-movies').onsubmit = (e) => {
     e.preventDefault()
     filterFn()
 }
+
+const ratingInputHandler = (input) => {
+    input.oninput = () => {
+        input.value = input.value.replace(/[^0-9.]/g, '')
+        if(input.value.length > 3) input.value = input.value.slice(0, 3)
+        if(input.value > 10) input.value = 10
+        if(input.value.length !== 0) input.classList.add('active-filter-input')
+        else input.classList.remove('active-filter-input')
+    }
+}
+
+
+const yearInputHandler = (input) => {
+    input.oninput = () => {
+        input.value = input.value.replace(/[^0-9]/g, '')
+        if(input.value.length > 4){
+            input.value = input.value.slice(0, 4)
+        }
+        if(input.value.length !== 0) input.classList.add('active-filter-input')
+        else input.classList.remove('active-filter-input')
+    }
+}
+
+ratingInputHandler(document.querySelector('input[name="min-avg"]'))
+ratingInputHandler(document.querySelector('input[name="max-avg"]'))
+yearInputHandler(document.querySelector('input[name="min-year"]'))
+yearInputHandler(document.querySelector('input[name="max-year"]'))
