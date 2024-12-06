@@ -32,7 +32,6 @@ const fetchBooks = (query, searchType) => {
 }
 
 const showResults = (data, searchType) => {
-    console.log(data)
     searchLoading.classList.add('hidden')
     searchInput.disabled = false
     searchTypeInput.disabled = false
