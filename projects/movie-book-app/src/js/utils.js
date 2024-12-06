@@ -16,19 +16,51 @@ export const checkIfBookInWishlist = (bookId, addBtn, removeBtn) => {
 
 export const addBooksToPage = (bookArr, container, preventReset) => {
     if(!preventReset) container.innerHTML = ''
-    bookArr.forEach(book => {
+    bookArr.forEach(async book => {
         const bookCard = document.createElement('div')
-        bookCard.classList.add('bg-amber-800', 'text-white', 'p-2', 'm-1')
-        
+
+        const bookName = document.createElement('div')
+        const bookInformation = document.createElement('div')
+        const bookRight = document.createElement('div')
+
         bookCard.innerHTML = `
-        <h1 class="font-bold">${book.title}</h1>
+        <div>
+        <img class="book-img w-64 shrink-0 rounded-md" src="https://covers.openlibrary.org/b/id/${book.covers ? book.covers[0] : book.cover_i}-L.jpg" alt=${book.title} width="200" />
+        </div>
+        `
+        bookName.innerHTML += `
+        <h1 class="font-bold text-3xl">${book.title}</h1>
+        `
+        const authorEl = document.createElement('h2')
+        authorEl.classList.add('text-lg', 'font-semibold', 'my-3')
+    
+        if(book.authors){
+            fetchAuthor(book.authors[0].author.key, (author) => {
+                authorEl.innerHTML = author
+            })
+        }else{
+            authorEl.innerHTML = book.author_name[0]
+        }
+
+        bookInformation.innerHTML = `
+        <p class="mb-3">${book.description ? book.description.value ? book.description.value : book.description : ''}</p>
         `
 
+        bookRight.classList.add('w-[90%]', 'ml-8')
+        bookRight.appendChild(bookName)
+        bookRight.appendChild(authorEl)
+        bookRight.appendChild(bookInformation)
+
+        bookCard.classList.add('bg-fg', 'text-white', 'flex', 'flex-col', 'gap-2', 'items-center', 'md:items-start' , 'md:flex-row', 'my-4', 'p-5', 'rounded-md', 'shadow-md')
+        bookCard.appendChild(bookRight)
+
+
+
         const addBtn = document.createElement('button')
-        addBtn.innerHTML = 'Add to list'
+        addBtn.innerHTML = '<button class="text-3xl font-bold color-emerald-700 p-2 border-emerald-700 rounded-full border-2 text-emerald-700"><i class="fa-solid fa-heart-circle-plus"></i></button>'
 
         const removeBtn = document.createElement('button')
-        removeBtn.innerHTML = 'Remove from list'
+        removeBtn.innerHTML = '<button class="text-3xl foRemove from listnt-bold color-emerald-700 p-2 border-red-800 rounded-full border-2 text-red-800"><i class="fa-solid fa-heart-circle-minus"></i></button>'
 
         addBtn.addEventListener('click', () => {
             const currentBooks = JSON.parse(localStorage.getItem('books'))
@@ -43,13 +75,12 @@ export const addBooksToPage = (bookArr, container, preventReset) => {
         })
 
         
-        bookCard.appendChild(removeBtn)
-        bookCard.appendChild(addBtn)
+        bookRight.appendChild(removeBtn)
+        bookRight.appendChild(addBtn)
 
         checkIfBookInWishlist(book.key, addBtn, removeBtn)
         
         container.appendChild(bookCard)
-        
     }) 
 }
 
@@ -65,8 +96,15 @@ export const showRemoveBtn = () => {
 }
 
 const showDetailedMovieData = (movieObj) => {
-    console.log(movieObj)
+    currentMovieContainer.classList.add('comein-anim')
     currentMovieContainer.classList.remove('hidden')
+    document.querySelector('body').classList.add('overflow-hidden', 'h-screen')
+
+
+    setTimeout(() => {
+        currentMovieContainer.classList.remove('comein-anim')
+    }, 200);
+
     currentMovieContainer.setAttribute('data-id', movieObj.id)
 
     const currentMovies = JSON.parse(localStorage.getItem('movies'))
@@ -80,12 +118,16 @@ const showDetailedMovieData = (movieObj) => {
 
     recommendBooks(bookQuery, currentBookData)
 
-    currentMovieData.innerHTML = `${movieObj.title}`
+    currentMovieData.innerHTML = `
+    <div class="flex justify-between items-center">
+        <h1 class="text-4xl font-bold text-white">${movieObj.title}</h1>
+    </div>
+    `
 }
 
 const recommendBooks = (query, container) => {
-    container.innerHTML = 'Books Loading'
-    const url = `https://openlibrary.org/search.json?q=${query}&limit=5`
+    container.innerHTML = '<i class="fa-solid fa-spinner animate-spin text-6xl text-white absolute top-40 left-[48%]"></i>'
+    const url = `https://openlibrary.org/search.json?q=${query}&limit=6`
     const options = {
         method: 'GET',
         headers: {
@@ -153,5 +195,20 @@ export const fetchGenres = (callback) => {
     fetch(url, options)
     .then(res => res.json())
     .then(json => callback(json))
+    .catch(err => console.error(err));
+}
+
+const fetchAuthor = async (id, callback) => {
+    const url = `https://openlibrary.org${id}.json`
+    const options = {
+        method: 'GET',
+        headers: {
+            accept: 'application/json',
+        }
+    };
+
+    fetch(url, options)
+    .then(res => res.json())
+    .then(json => callback(json.name))
     .catch(err => console.error(err));
 }

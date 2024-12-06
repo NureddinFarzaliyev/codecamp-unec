@@ -10,9 +10,7 @@
 <body class="bg-bg flex flex-col p-3 md:px-20">
 
   <!-- ! NAVBAR SECTION -->
-
   <div class="fixed nav-bg-gradient h-20 w-full self-center z-[0] top-0"></div>
-
   <nav class="py-4 px-10 bg-emerald-700 text-white rounded-md flex flex-col sm:flex-row gap-2 sm:gap-0 justify-between items-center shadow-2xl fixed self-center w-[98vw] z-[100]">
     <h1 class="font-bold text-2xl sm:text-3xl">MovieBook.</h1>
     
@@ -39,16 +37,20 @@
   <main class="pt-20 pb-40">
 
     <!-- ! MOVIE INFORMATION POPUP -->
-    <div class="movie-info bg-red-500 hidden absolute top-0 m-5 p-10 rounded-md z-[200]">
-      <div class="movie-data"></div>
-      <div class="book-data"></div>
-      <button class="add">add to wishlist</button>
-      <button class="remove">remove from wishlist</button>
-      <button class="close">X</button>
+    <div class="movie-info overflow-y-scroll bg-fg hidden fixed inset-0 m-10 p-10 rounded-md z-[200] flex-col items-center justify-center big-shadow">
+      <div class="flex items-center gap-5">
+        <div class="movie-data"></div>
+        <button class="add text-3xl font-bold color-emerald-700 p-2 border-emerald-700 rounded-full border-2 text-emerald-700"><i class="fa-solid fa-heart-circle-plus"></i></button>
+        <button class="remove text-3xl font-bold color-emerald-700 p-2 border-red-800 rounded-full border-2 text-red-800"><i class="fa-solid fa-heart-circle-minus"></i></button>
+      </div>
+      <div class="book-data md:grid md:grid-cols-2 xl:grid-cols-3">
+        
+      </div>
+      <button class="close absolute top-5 right-5 text-white text-3xl opacity-80 hover:opacity-100 hover:text-emerald-700 transition-all"><i class="fa-regular fa-circle-xmark"></i></button>
     </div>
   
     <!-- ! EXPLORE SECTION -->
-    <section class="explore">
+    <section class="explore hidden">
       <div class="flex flex-col items-center sm:flex-row gap-10 py-10 sm:px-20 my-10">
         <i class="fa-regular fa-compass text-emerald-500 text-9xl"></i>
         <div>
@@ -118,7 +120,8 @@
         <button type="submit" class="absolute right-12 top-[50%] translate-y-[-50%]"><i class="fa-solid fa-magnifying-glass text-white text-2xl opacity-70 hover:opacity-100 transition-all"></i></button>
       </form>
   
-      <div class="results grid gap-5 grid-cols-2 min-[450px]:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 mt-14"></div>
+      <div class="movie-results grid gap-5 grid-cols-2 min-[450px]:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 mt-14"></div>
+      <div class="book-results mt-14 md:grid md:grid-cols-2 xl:grid-cols-3 gap-3"></div>
 
       <div class="search-loading hidden mt-5 text-white text-center text-4xl">
         <i class="fa-solid fa-spinner animate-spin"></i>
@@ -126,7 +129,7 @@
     </section>
     
     <!-- ! WISHLIST SECTION -->
-    <section class="wishlist hidden">
+    <section class="wishlist">
       <div class="flex flex-col items-center sm:flex-row gap-10 py-10 sm:px-20 my-10">
         <i class="fa-regular fa-heart text-emerald-500 text-9xl"></i>
         <div>
@@ -136,8 +139,10 @@
       </div>
 
       <div class="wishlist-container">
-        <div class="wishlist-movies grid gap-5 grid-cols-2 min-[450px]:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 mt-14"></div>
-        <div class="wishlist-books grid gap-5 grid-cols-2 min-[450px]:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 mt-14"></div>
+        <h1 class="font-bold text-3xl mb-4 mt-14 text-white">Your Watchlist</h1>
+        <div class="wishlist-movies grid gap-5 grid-cols-2 min-[450px]:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8"></div>
+        <h1 class="font-bold text-3xl mb-4 mt-14 text-white">Your Reading List</h1>
+        <div class="wishlist-books"></div>
       </div>
     </section>
   </main>

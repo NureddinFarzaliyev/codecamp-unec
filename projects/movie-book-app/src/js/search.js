@@ -3,7 +3,9 @@ import { addBooksToPage, addMoviesToPage } from "./utils"
 const searchInput = document.querySelector('#search-input')
 const searchTypeInput = document.querySelector('#search-type')
 const searchForm = document.querySelector('#search-form')
-const searchResults = document.querySelector('.results')
+// const searchResults = document.querySelector('.results')
+const bookResults = document.querySelector('.book-results')
+const movieResults = document.querySelector('.movie-results')
 const searchLoading = document.querySelector('.search-loading')
 
 const searchTypes = {
@@ -36,8 +38,8 @@ const showResults = (data, searchType) => {
     searchTypeInput.disabled = false
     searchForm.querySelector('button[type="submit"]').disabled = false
 
-    if(searchType === searchTypes.book || searchType === searchTypes.bookAuthor || searchType === searchTypes.bookTitle) addBooksToPage(data.docs, searchResults)
-    else if(searchType === searchTypes.movie) addMoviesToPage(data.results, searchResults)
+    if(searchType === searchTypes.book || searchType === searchTypes.bookAuthor || searchType === searchTypes.bookTitle) addBooksToPage(data.docs, bookResults)
+    else if(searchType === searchTypes.movie) addMoviesToPage(data.results, movieResults)
 }
 
 const fetchMovies = (query, page) => {
@@ -65,7 +67,9 @@ searchForm.onsubmit = (e) => {
     const query = searchInput.value
     const type = searchTypeInput.value
 
-    searchResults.innerHTML = ''
+    // searchResults.innerHTML = ''
+    bookResults.innerHTML = ''
+    movieResults.innerHTML = ''
     searchLoading.classList.remove('hidden')
 
     searchInput.disabled = true

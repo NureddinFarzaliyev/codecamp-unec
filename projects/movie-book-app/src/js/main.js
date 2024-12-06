@@ -24,7 +24,12 @@ const currentMovieContainer = document.querySelector('.movie-info')
 
 // Close detailed movie information when clicked on cross
 document.querySelector('.movie-info button.close').addEventListener('click', () => {
-    currentMovieContainer.classList.add('hidden')
+    currentMovieContainer.classList.add('goout-anim')
+    document.querySelector('body').classList.remove('overflow-hidden', 'h-screen')
+    setTimeout(() => {
+        currentMovieContainer.classList.add('hidden')
+        currentMovieContainer.classList.remove('goout-anim')
+    }, 200);
 })
 
 // Add movie to localhost when the button is clicked

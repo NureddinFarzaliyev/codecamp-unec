@@ -66,3 +66,37 @@ nav {
     opacity: .7;
     top: -100px;
 }
+
+@keyframes comeIn {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes goOut {
+    from {
+        opacity: 1;
+        scale: 1;
+    }
+    to {
+        opacity: 0;
+        scale: 0.5;
+    }
+}
+
+.comein-anim {
+    animation: comeIn .2s ease-out;
+}
+
+.goout-anim {
+    animation: goOut .2s ease-in;
+}
+
+.big-shadow {
+    box-shadow: 0 0 200px 2000px rgba(0, 0, 0, .8);
+}
