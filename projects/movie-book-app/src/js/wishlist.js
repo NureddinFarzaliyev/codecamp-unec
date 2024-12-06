@@ -2,12 +2,15 @@ const booksContainer = document.querySelector('.wishlist-books')
 const moviesContainer = document.querySelector('.wishlist-movies')
 import { addMoviesToPage, getMovieData, addBooksToPage } from "./utils.js"
 
-const displayWishlist = () => {
+export const displayWishlist = () => {
     const movies = JSON.parse(localStorage.getItem('movies'))
     const books = JSON.parse(localStorage.getItem('books'))
 
-    getMoviesById(movies)
-    getBooksById(books)
+    booksContainer.innerHTML = ''
+    moviesContainer.innerHTML = ''
+
+    if(movies) getMoviesById(movies)
+    if(books) getBooksById(books)
 }
 
 const getMoviesById = (idArr) => {

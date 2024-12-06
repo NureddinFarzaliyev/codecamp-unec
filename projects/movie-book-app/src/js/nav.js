@@ -1,3 +1,5 @@
+import { displayWishlist } from "./wishlist";
+
 const exploreBtn = document.querySelector('.explore-nav-btn');
 const searchBtn = document.querySelector('.search-nav-btn');
 const wishlistBtn = document.querySelector('.wishlist-nav-btn');
@@ -14,3 +16,5 @@ navBtns.forEach((btn) => {
     document.querySelector(`.${btn.classList[0].split('-')[0]}`).classList.remove('hidden');
   });
 });
+
+wishlistBtn.addEventListener('click', displayWishlist)

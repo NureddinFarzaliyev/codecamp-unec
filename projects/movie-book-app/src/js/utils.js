@@ -46,7 +46,7 @@ export const addBooksToPage = (bookArr, container, preventReset) => {
         <p class="mb-3">${book.description ? book.description.value ? book.description.value : book.description : ''}</p>
         `
 
-        bookRight.classList.add('w-[90%]', 'ml-8')
+        bookRight.classList.add('w-[90%]', 'md:w-[60%]', 'ml-8')
         bookRight.appendChild(bookName)
         bookRight.appendChild(authorEl)
         bookRight.appendChild(bookInformation)
@@ -108,8 +108,10 @@ const showDetailedMovieData = (movieObj) => {
     currentMovieContainer.setAttribute('data-id', movieObj.id)
 
     const currentMovies = JSON.parse(localStorage.getItem('movies'))
-    if(currentMovies.every((item) => item != movieObj.id)) showAddBtn()
-    else showRemoveBtn()
+    if(currentMovies){
+        if(currentMovies.every((item) => item != movieObj.id)) showAddBtn()
+        else showRemoveBtn()
+    }else showAddBtn()
 
     let bookQuery = ''
     for(let i = 0; i < movieObj.genres.length; i++) {
