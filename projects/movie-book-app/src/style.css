@@ -27,6 +27,12 @@ nav {
     }
 }
 
+.btn-red-glow {
+    &:hover{
+        box-shadow: #991b1b 0px 0px 20px;
+    }
+}
+
 .input-glow {
     &:focus{
         box-shadow: #047857 0px 0px 20px;

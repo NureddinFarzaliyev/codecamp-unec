@@ -38,10 +38,10 @@
 
     <!-- ! MOVIE INFORMATION POPUP -->
     <div class="movie-info overflow-y-scroll bg-fg hidden fixed inset-0 m-10 p-10 rounded-md z-[200] flex-col items-center justify-center big-shadow">
-      <div class="flex items-center gap-5">
+      <div class="flex items-start gap-5">
+        <button class="add text-3xl font-bold color-emerald-700 p-2 btn-glow transition-all hover:scale-105 active:scale-95 hover:bg-emerald-700 hover:text-white border-emerald-700 rounded-full border-2 text-emerald-700"><i class="fa-solid fa-heart-circle-plus"></i></button>
+        <button class="remove text-3xl font-bold color-emerald-700 p-2 btn-red-glow transition-all hover:scale-105 active:scale-95 border-red-800 hover:bg-red-800 hover:text-white rounded-full border-2 text-red-800"><i class="fa-solid fa-heart-circle-minus"></i></button>
         <div class="movie-data"></div>
-        <button class="add text-3xl font-bold color-emerald-700 p-2 border-emerald-700 rounded-full border-2 text-emerald-700"><i class="fa-solid fa-heart-circle-plus"></i></button>
-        <button class="remove text-3xl font-bold color-emerald-700 p-2 border-red-800 rounded-full border-2 text-red-800"><i class="fa-solid fa-heart-circle-minus"></i></button>
       </div>
       <div class="book-data md:grid md:grid-cols-2 xl:grid-cols-3">
         
@@ -86,7 +86,7 @@
         <h1 class="my-5 text-white font-bold text-3xl">Top Movies</h1>
         <div class="top-movies grid gap-5 grid-cols-2 min-[450px]:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8"></div>
         <div class="flex items-center justify-center mt-10">
-          <button class="load-more border border-emerald-700 hover:bg-emerald-700 text-white px-6 py-3 rounded-md btn-glow transition-all font-bold">Load More</button>
+          <button class="load-more border border-emerald-700 hover:bg-emerald-700 text-white px-6 py-3 rounded-md btn-glow transition-all font-bold active:scale-90">Load More</button>
         </div>
       </div>
   
@@ -94,7 +94,7 @@
         <h1 class="my-5 text-white font-bold text-3xl">Popular Movies</h1>
         <div class="popular-movies grid gap-5 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8"></div>
         <div class="flex items-center justify-center mt-10">
-          <button class="load-more border border-emerald-700 hover:bg-emerald-700 text-white px-6 py-3 rounded-md btn-glow transition-all font-bold">Load More</button>
+          <button class="load-more border border-emerald-700 hover:bg-emerald-700 text-white px-6 py-3 rounded-md btn-glow transition-all font-bold active:scale-90">Load More</button>
         </div>
       </div>
     </section>

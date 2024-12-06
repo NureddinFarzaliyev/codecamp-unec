@@ -25,14 +25,14 @@ export const addBooksToPage = (bookArr, container, preventReset) => {
 
         bookCard.innerHTML = `
         <div>
-        <img class="book-img w-64 shrink-0 rounded-md" src="https://covers.openlibrary.org/b/id/${book.covers ? book.covers[0] : book.cover_i}-L.jpg" alt=${book.title} width="200" />
+        <img class="book-img w-32 shrink-0 rounded-md" src="https://covers.openlibrary.org/b/id/${book.covers ? book.covers[0] : book.cover_i}-L.jpg" alt=${book.title} width="200" />
         </div>
         `
         bookName.innerHTML += `
-        <h1 class="font-bold text-3xl">${book.title}</h1>
+        <h1 class="font-bold text-2xl">${book.title}</h1>
         `
         const authorEl = document.createElement('h2')
-        authorEl.classList.add('text-lg', 'font-semibold', 'my-3')
+        authorEl.classList.add('text-lg', 'font-semibold', 'my-1')
     
         if(book.authors){
             fetchAuthor(book.authors[0].author.key, (author) => {
@@ -51,16 +51,16 @@ export const addBooksToPage = (bookArr, container, preventReset) => {
         bookRight.appendChild(authorEl)
         bookRight.appendChild(bookInformation)
 
-        bookCard.classList.add('bg-fg', 'text-white', 'flex', 'flex-col', 'gap-2', 'items-center', 'md:items-start' , 'md:flex-row', 'my-4', 'p-5', 'rounded-md', 'shadow-md')
+        bookCard.classList.add('bg-fg', 'text-white', 'flex', 'flex-col', 'gap-2', 'items-center', 'md:items-start' , 'md:flex-row', 'my-4', 'p-5', 'rounded-md')
         bookCard.appendChild(bookRight)
 
 
 
         const addBtn = document.createElement('button')
-        addBtn.innerHTML = '<button class="text-3xl font-bold color-emerald-700 p-2 border-emerald-700 rounded-full border-2 text-emerald-700"><i class="fa-solid fa-heart-circle-plus"></i></button>'
+        addBtn.innerHTML = '<button class="text-3xl font-bold color-emerald-700 p-2 border-emerald-700 rounded-full border-2 text-emerald-700 btn-glow transition-all hover:scale-105 active:scale-95 hover:bg-emerald-700 hover:text-white"><i class="fa-solid fa-heart-circle-plus"></i></button>'
 
         const removeBtn = document.createElement('button')
-        removeBtn.innerHTML = '<button class="text-3xl foRemove from listnt-bold color-emerald-700 p-2 border-red-800 rounded-full border-2 text-red-800"><i class="fa-solid fa-heart-circle-minus"></i></button>'
+        removeBtn.innerHTML = '<button class="text-3xl foRemove from listnt-bold color-emerald-700 p-2 border-red-800 rounded-full border-2 text-red-800 btn-red-glow transition-all hover:scale-105 active:scale-95 hover:bg-red-800 hover:text-white"><i class="fa-solid fa-heart-circle-minus"></i></button>'
 
         addBtn.addEventListener('click', () => {
             const currentBooks = JSON.parse(localStorage.getItem('books'))
@@ -96,6 +96,7 @@ export const showRemoveBtn = () => {
 }
 
 const showDetailedMovieData = (movieObj) => {
+    console.log(movieObj)
     currentMovieContainer.classList.add('comein-anim')
     currentMovieContainer.classList.remove('hidden')
     document.querySelector('body').classList.add('overflow-hidden', 'h-screen')
@@ -121,14 +122,16 @@ const showDetailedMovieData = (movieObj) => {
     recommendBooks(bookQuery, currentBookData)
 
     currentMovieData.innerHTML = `
-    <div class="flex justify-between items-center">
-        <h1 class="text-4xl font-bold text-white">${movieObj.title}</h1>
+    <div class="text-white">
+        <h1 class="text-4xl font-bold text-white mb-2">${movieObj.title}</h1>
+        <span>${movieObj.runtime} mins</span>
+        <p class="lg:w-[70%] mt-1">${movieObj.overview}</p>
     </div>
     `
 }
 
 const recommendBooks = (query, container) => {
-    container.innerHTML = '<i class="fa-solid fa-spinner animate-spin text-6xl text-white absolute top-40 left-[48%]"></i>'
+    container.innerHTML = '<i class="fa-solid fa-spinner animate-spin text-6xl text-white absolute top-64 left-[48%]"></i>'
     const url = `https://openlibrary.org/search.json?q=${query}&limit=6`
     const options = {
         method: 'GET',
@@ -165,7 +168,7 @@ export const addMoviesToPage = (movieArr, container) => {
         movieCard.setAttribute("data-id", movie.id)
         movieCard.setAttribute("data-avg", movie.vote_average)
         movieCard.setAttribute("data-date", movie.release_date)
-        movieCard.classList.add('movie-card')
+        movieCard.classList.add('movie-card', 'active:scale-95', 'transition-all')
 
         movieCard.innerHTML = `
         <div class="w-fit movie-card-img rounded-lg shadow-xl hover:scale-105 cursor-pointer transition-all duration-300">
