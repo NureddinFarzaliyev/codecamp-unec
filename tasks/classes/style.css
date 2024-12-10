@@ -1,0 +1,150 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+.info {
+    font-weight: bold;
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    
+    & p {
+        border: 2px black solid;
+        border-radius: 10px;
+        padding: 10px 20px;
+        margin: 5px;
+    }
+}
+
+.rule {
+    text-align: center;
+}
+
+input[type="text"]{
+    padding: 0px 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: solid 1px rgba(0, 0, 0, .5);
+    outline: none;
+    transition: all .2s;
+
+    &:hover{
+        border-color: rgba(0, 0, 0, .8);
+    }
+
+    &:focus{
+        border-color: black;
+    }
+}
+
+input[name="name"]{
+    height: 40px;
+    width: 200px;
+}
+
+button {
+    background: none;
+    border: solid 1px rgba(0, 0, 0, .5); 
+    border-radius: 10px;
+    cursor: pointer;
+    transition-duration: .2s;
+    
+    &:hover:not(:disabled){
+        border-color: black;
+    }
+
+    &:active:not(:disabled){
+        scale: 0.9;
+    }
+
+    &:disabled{
+        opacity: 0.6;
+    }
+}
+
+.name-btn {
+    border: none;
+    height: 40px;
+    width: 40px;
+    font-size: 36px;
+
+    &:hover{
+        scale: 1.1;
+    }
+}
+
+
+.username {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.dice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.roll{
+    height: 60px;
+    width: 60px;
+    font-size: 40px;
+}
+
+.roll-value{
+    height: 60px;
+    min-width: 200px;
+    text-align: center;
+    font-size: 32px !important;
+}
+
+.boxes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & div {
+        margin: 20px;
+        position: relative;
+
+        & p {
+            position: absolute;
+            width: max-content;
+            text-align: center;
+            background-color: rgba(0, 0, 0, .9);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        & button {
+            height: 200px;
+            width: 200px;
+            font-size: 100px;
+        }
+
+        & span {
+            position: absolute;
+            bottom: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-weight: bold;
+            font-size: 20px;
+        }
+    }
+}
