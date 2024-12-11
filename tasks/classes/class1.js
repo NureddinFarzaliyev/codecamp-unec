@@ -147,7 +147,9 @@ class LuckGame extends Game{
         console.log(`-${pts}PTS`)
         this.removePoints(pts)
 
-        if (dice <= 5) {
+        if(dice === 1){
+            result = 0
+        }else if (dice <= 7) {
             result = pts * 0.5
         } else if (dice <= 10) {
             result = pts
