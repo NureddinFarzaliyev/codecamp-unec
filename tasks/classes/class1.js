@@ -1,5 +1,3 @@
-// Losing mechanism when points are below 0
-
 const showToast = (message, isSuccess) => {
     Toastify({
         text: message,
