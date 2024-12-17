@@ -25,8 +25,8 @@ class App extends Component {
       <div className='container'>
         <h1 className={this.state.counter <= 0 ? 'no-text-glow' : ''}>{this.state.counter}</h1>
         <div>
-          <button onClick={this.increment}>+</button>
           <button onClick={this.decrement} disabled={this.state.counter <= 0}>-</button>
+          <button onClick={this.increment}>+</button>
         </div>
       </div>
     )

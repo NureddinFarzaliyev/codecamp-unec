@@ -59,7 +59,7 @@ button{
     }
 }
 
-button:nth-child(2){
+button:nth-child(1){
     background-color: #ff4c4c;
 
     &:hover:not(:disabled){
@@ -68,7 +68,7 @@ button:nth-child(2){
 
 }
 
-button:nth-child(1){
+button:nth-child(2){
     background-color: #4caf50;
 
     &:hover{
