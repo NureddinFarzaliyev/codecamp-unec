@@ -6,7 +6,9 @@
     background-image: linear-gradient(to bottom right, #FF053B, #FF426C);
     box-shadow: 0 3px 5px 3px rgba(255, 5, 59, .5);
     z-index: 0;
+}
 
+.button-circle{
     &::after {
         content: '';
         position: absolute;
