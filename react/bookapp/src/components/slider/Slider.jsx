@@ -25,7 +25,7 @@ export class Slider extends Component {
 
     render() {
     return (
-        <div className='flex md:gap-1 lg:gap-5 items-center'>
+        <div className='flex md:gap-1 lg:gap-3 items-center'>
             <SliderBtn fn={this.prevSlide} style={{left: "0"}}> <FaChevronLeft /> </SliderBtn>
             <div className='shadow-lg'>
                 {this.props.slides[this.state.currentSlide]}
