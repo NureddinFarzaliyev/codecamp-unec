@@ -9,6 +9,7 @@
 }
 
 .button-circle{
+    position: relative;
     &::after {
         content: '';
         position: absolute;
@@ -23,8 +24,8 @@
 
     &:hover{
         &::after {
-            height: 200px;
-            width: 200px;
+            height: 350%;
+            width: 150%;
         }
     }
     
