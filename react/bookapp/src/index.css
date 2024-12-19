@@ -73,3 +73,7 @@
         color: white;
     }
 }
+
+.overlay {
+    box-shadow: 0 0 2000px 2000px rgba(0, 0, 0, .8);
+}

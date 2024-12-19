@@ -17,6 +17,7 @@ class Nav extends Component {
 
   changeMobileNav = () => {
     this.setState({showMobileNav: !this.state.showMobileNav})
+    document.body.style.overflow = this.state.showMobileNav === true ? 'auto' : 'hidden'
   } 
 
   render() {
@@ -24,8 +25,8 @@ class Nav extends Component {
       <Container>
       <div className='flex items-center justify-between h-20'>
         <img src={Logo} alt="" /> <NavList /> <LoginBtn hideOnMobile={true} />
-        <button onClick={this.changeMobileNav} className='flex xl:hidden h-9 w-9 bg-accent text-2xl text-white items-center justify-center'>{this.state.showMobileNav === true ? <RxCross1/> : <RxHamburgerMenu />}</button>
-        <div className={`absolute top-0 left-0 ${this.state.showMobileNav === true ? 'come-in' : 'get-out'}`}><MobileNav /></div>
+        <button onClick={this.changeMobileNav} className='flex xl:hidden h-9 w-9 bg-accent text-2xl text-white items-center justify-center z-[1000]'>{this.state.showMobileNav === true ? <RxCross1/> : <RxHamburgerMenu />}</button>
+        <div className={`absolute top-0 left-0 z-[100] ${this.state.showMobileNav === true ? 'come-in overlay' : 'get-out'}`}><MobileNav /></div>
       </div>
       </Container>
     )
