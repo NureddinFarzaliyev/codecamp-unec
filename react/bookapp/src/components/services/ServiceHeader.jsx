@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { CiLocationOn } from "react-icons/ci";
-import ratingStar from './../../../public/rating.png'
-import profile from './../../../public/johndoe.png'
+import ratingStar from './../../img/rating.png'
+import profile from './../../img/johndoe.png'
 
 export class ServiceHeader extends Component {
   render() {

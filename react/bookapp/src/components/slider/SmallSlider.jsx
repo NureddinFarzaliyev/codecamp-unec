@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import Container from '../ui/Container'
 import Slider from './Slider'
-import cardImg1 from '../../../public/slide-img-4.png'
-import cardImg2 from '../../../public/slide-img-5.png'
-import cardImg3 from '../../../public/slide-img-6.png'
-import avatar from '../../../public/avatar-1.jpg'
+import cardImg1 from '../../img/slide-img-4.png'
+import cardImg2 from '../../img/slide-img-5.png'
+import cardImg3 from '../../img/slide-img-6.png'
+import avatar from '../../img/avatar-1.jpg'
 import { CiLocationOn } from 'react-icons/ci'
 
 export class SmallSlider extends Component {

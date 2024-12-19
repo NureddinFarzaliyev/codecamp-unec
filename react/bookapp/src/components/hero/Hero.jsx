@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import bgHero from './../../../public/bg-hero.png'
+import bgHero from './../../img/bg-hero.png'
 import Container from './../ui/Container'
 
 export class Hero extends Component {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Logo from '../../../public/logo-1.png'
+import Logo from './../../img/logo-1.png'
 import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
 import NavList from './NavList';
 import LoginBtn from './LoginBtn';

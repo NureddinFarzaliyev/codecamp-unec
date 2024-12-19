@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import Slider from './Slider'
-import img1 from './../../../public/slide-img-1.jpg'
-import img2 from './../../../public/slide-img-2.jpg'
-import img3 from './../../../public/slide-img-3.jpg'
+import img1 from './../../img/slide-img-1.jpg'
+import img2 from './../../img/slide-img-2.jpg'
+import img3 from './../../img/slide-img-3.jpg'
 import Container from './../ui/Container'
 
 export class BigSlider extends Component {
