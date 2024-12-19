@@ -56,3 +56,20 @@
 .get-out {
     animation: getOut .3s forwards;
 }
+
+.small-slide-hover{
+    & img, & button {
+        transition-duration: .3s;
+    }
+}
+
+.small-slide-hover:hover{
+    & img:not(.rounded-full){
+        transform: scale(1.05);
+    }
+
+    & button {
+        background-color: #FF053B;
+        color: white;
+    }
+}
