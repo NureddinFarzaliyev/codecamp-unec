@@ -5,6 +5,7 @@ import BigSlider from './components/slider/BigSlider'
 import Services from './components/services/Services'
 import SmallSlider from './components/slider/SmallSlider'
 import Reviews from './components/review/Reviews'
+import Footer from './components/footer/Footer'
 
 export class App extends Component {
   render() {
@@ -16,8 +17,7 @@ export class App extends Component {
         <Services />
         <SmallSlider />
         <Reviews />
-
-        <div className='mt-44'></div>
+        <Footer />
       </>
     )
   }
