@@ -1,7 +1,10 @@
 # Codecamp - UNEC
 
+![Learned Technologies](https://skillicons.dev/icons?i=html,css,bootstrap,tailwindcss,javascript,react)
+
 This repository includes my solutions for tasks in Matrix Academy, CodeCamp - UNEC.
 
+### Projects
 - [1. Clicon](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/projects/clicon)
 - [2. Miniture](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/projects/miniture)
 - [3. Poco](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/projects/bootstrap-poco)
@@ -25,3 +28,4 @@ This repository includes my solutions for tasks in Matrix Academy, CodeCamp - UN
 - [JSON Dummy](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/tasks/json_dummy)
 - [A game with Classes(OOP)](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/tasks/classes)
 - [React Counter](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/react/counter)
+- [React Lifecycle Task with API](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/react/counter)
