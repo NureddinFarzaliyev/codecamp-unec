@@ -22,12 +22,9 @@ export class Categories extends Component {
   render() {
     return (
       <div>
-        <div className='bg-red-900'>{this.context.category}</div>
-
         {this.state.data ? 
         this.state.data.map((category, i) => <CategoryButton category={category} key={i} isActive={this.context.category === category} />) : 
         <Loading />}
-
       </div>
     )
   }

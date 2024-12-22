@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { CategoryContext } from '../../contexts/CategoryProvider'
+import Card from './Card';
 
 export class Cards extends Component {
   static contextType = CategoryContext;
@@ -30,7 +31,7 @@ export class Cards extends Component {
     return (
       <div>
         {this.context.isLoading === false ? this.state.data?.map((data, i) => {
-            return <div key={i}>{data.title}</div>
+            return <Card data={data} key={i} />
         }) : 'Loading...'}
       </div>
     )
