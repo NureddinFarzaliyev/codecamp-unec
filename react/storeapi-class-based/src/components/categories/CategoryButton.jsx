@@ -8,7 +8,7 @@ export class CategoryButton extends Component {
     const {category, isActive} = this.props
 
     return (
-      <button className={`m-3 p-3 border-2 ${isActive ? 'bg-red-900 ' : ''}`}
+      <button disabled={this.context.isLoading} className={`m-3 p-3 border-2 ${isActive ? 'bg-red-900 ' : ''}`}
       onClick={() => {
         this.context.updateCategory(category);
         if(isActive) this.context.updateCategory(undefined)

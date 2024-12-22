@@ -8,7 +8,8 @@ export class CategoryProvider extends Component {
     super();
 
     this.state = {
-      category: undefined
+      category: undefined,
+      isLoading: false
     }
     
   }
@@ -17,9 +18,13 @@ export class CategoryProvider extends Component {
     this.setState({category: newCategory})
   }
 
+  toggleLoading = (boolean) => {
+    this.setState({isLoading: boolean})
+  }
+
   render() {
     return (
-      <CategoryContext.Provider value={{category: this.state.category, updateCategory: this.updateCategory}}>
+      <CategoryContext.Provider value={{category: this.state.category, updateCategory: this.updateCategory, isLoading: this.state.isLoading, toggleLoading: this.toggleLoading}}>
         {this.props.children}
       </CategoryContext.Provider>
     )
