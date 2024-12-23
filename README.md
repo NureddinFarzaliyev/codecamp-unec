@@ -15,6 +15,7 @@ This repository includes my solutions for tasks in Matrix Academy, CodeCamp - UN
 - [8. Clock](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/projects/clock)
 - [9. Movie/Book App](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/projects/movie-book-app)
 - [10. React Bookapp](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/react/bookapp)
+- [11. React Fakeshop API](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/react/storeapi-class-based)
 
 ### Other Tasks
 - [Responsiveness](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/tasks/responsive)

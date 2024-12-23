@@ -21,7 +21,7 @@ export class Categories extends Component {
 
   render() {
     return (
-      <div>
+      <div className='flex items-center justify-center flex-col sm:flex-row gap-4 py-4 sm:py-0 min-h-32 sm:h-32 text-white'>
         {this.state.data ? 
         this.state.data.map((category, i) => <CategoryButton category={category} key={i} isActive={this.context.category === category} />) : 
         <Loading />}

@@ -7,8 +7,10 @@ export class App extends Component {
   render() {
     return (
       <CategoryProvider>
+        <div className='min-h-dvh bg-background'>
         <Categories />
         <Cards />
+        </div>
       </CategoryProvider>
     )
   }

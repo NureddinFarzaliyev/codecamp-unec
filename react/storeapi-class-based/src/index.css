@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn-glow {
+    box-shadow: #047857 0px 0px 25px 5px;
+}
+
+.btn-glow-hover:hover{
+    box-shadow: #047857 0px 0px 25px 5px;
+}
+
+
+.image-overlay {
+    background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+    border-radius: 0.5rem;
+}
+
+.image-overlay, .image-header {
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+.card-item:hover .image-overlay, .card-item:hover .image-header {
+    opacity: 100;
+}
