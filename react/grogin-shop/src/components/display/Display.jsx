@@ -6,8 +6,6 @@ const Display = () => {
     const data = useContext( DataContext )
     const dispatch = useContext( DataDispatch )
 
-    console.log(data)
-
     useEffect(() => {
         if(data.length === 0) {
             axios.get('https://www.themealdb.com/api/json/v1/1/filter.php?c=Chicken')
@@ -18,7 +16,7 @@ const Display = () => {
 
     return (
         <div className="border-2 p-3 m-3">
-            {data.map( (item, index) => <p key={index}>{item.strMeal}</p> )}
+            {data?.map((item, index) => <p key={index}>{item.strMeal}</p>)}
         </div>
     )
 }
