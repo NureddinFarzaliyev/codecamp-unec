@@ -1,21 +1,34 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { DataDispatch } from "../../contexts/DataContext"
 import axios from "axios"
+import FilterType from "./FilterType"
+import { ActiveFilterContext, FilterTypeContext } from "../../contexts/FilterContext"
 
 const Filter = () => {
   const dataDispatch = useContext( DataDispatch )
 
+  const activeFilter = useContext(ActiveFilterContext)
+  const filterType = useContext(FilterTypeContext)
+
+  const FILTER_TYPES = { 
+    CATEGORY: 'c',
+    AREA: 'a',
+  }
+
   const filterData = () => {
-    axios.get('https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood').then( response => {
+    axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?${filterType}=${activeFilter}`).then( response => {
         dataDispatch(response.data.meals)
     }).catch(err=>console.error(err))
   }
 
+  useEffect(() => {
+    filterData()
+  }, [activeFilter, filterType])
+
   return (
-    <div className="border-2 p-3 m-3">
-      <button onClick={() => {dataDispatch([])}}>Remove Filter</button>
-      <button onClick={() => {filterData()}}>Filter</button>
-    </div>
+      <div className="border-2 p-3 m-3">
+        {Object.values(FILTER_TYPES).map((key, i) => <FilterType key={i} filter={key} />)}
+      </div>
   )
 }
 

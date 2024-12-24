@@ -6,6 +6,8 @@ const Display = () => {
     const data = useContext( DataContext )
     const dispatch = useContext( DataDispatch )
 
+    console.log(data)
+
     useEffect(() => {
         if(data.length === 0) {
             axios.get('https://www.themealdb.com/api/json/v1/1/filter.php?c=Chicken')
