@@ -1,8 +1,16 @@
 import React from 'react'
+import Filter from './components/filter/Filter'
+import Search from './components/search/Search'
+import Display from './components/display/Display'
+import { DataProvider } from './contexts/DataProvider'
 
 const App = () => {
   return (
-    <div>app</div>
+    <DataProvider>
+      <Search />
+      <Filter />
+      <Display /> 
+    </DataProvider>
   )
 }
 
