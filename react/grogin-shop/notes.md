@@ -17,7 +17,3 @@ https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood
 https://www.themealdb.com/api/json/v1/1/list.php?a=list
 https://www.themealdb.com/api/json/v1/1/filter.php?a=Canadian
 
-- Main Ingredient (?)
-https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast
-https://www.themealdb.com/api/json/v1/1/list.php?i=list
-
