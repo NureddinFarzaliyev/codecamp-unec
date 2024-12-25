@@ -1,14 +1,14 @@
 import React from 'react'
 import Filter from './components/filter/Filter'
-import Search from './components/search/Search'
 import Display from './components/display/Display'
 import { DataProvider } from './contexts/DataProvider'
 import FilterProvider from './contexts/FilterProvider'
+import Header from './components/header/Header'
 
 const App = () => {
   return (
     <DataProvider>
-      <Search />
+      <Header />
       <FilterProvider>
         <Filter />
       </FilterProvider>
