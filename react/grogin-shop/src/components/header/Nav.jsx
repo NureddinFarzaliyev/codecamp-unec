@@ -1,0 +1,28 @@
+import React from 'react'
+import Container from '../ui/Container'
+import { BiChevronDown } from 'react-icons/bi'
+
+const Nav = () => {
+  return (
+    <Container>
+      <div className='h-14 flex items-center justify-between'>
+        <div className='flex'>
+        {['Home', 'Shop', 'Fruits & Vegetables', 'Beverages', 'Blog', 'Contact'].map((item, index) => ( 
+            <a key={index} href="#" className="text-main-text py-2 text-md font-bold mr-5 flex items-center">
+                {item} <BiChevronDown/>
+            </a>
+        ))}
+        </div>
+        <div className='flex'>
+        {['Trending Products', 'Almost Finished'].map((item, index) => ( 
+            <a key={index} href="#" className="text-main-text py-2 text-md font-bold mr-5 flex items-center">
+                {item} <BiChevronDown/>
+            </a>
+        ))}
+        </div>
+      </div>
+    </Container>
+  )
+}
+
+export default Nav

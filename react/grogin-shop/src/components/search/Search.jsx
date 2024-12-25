@@ -1,6 +1,7 @@
 import { useContext, useState } from 'react'
 import { DataDispatch } from '../../contexts/DataContext'
 import axios from 'axios'
+import { FaMagnifyingGlass } from 'react-icons/fa6'
 
 const Search = () => {
   const dataDispatch = useContext( DataDispatch )
@@ -14,9 +15,12 @@ const Search = () => {
   }
 
   return (
-    <div className="border-2 p-3 m-3">
-      <input type="text" placeholder='Search Query...' onChange={(e) => {setQuery(e.target.value)}} />
-      <button onClick={() => {search(query)}}>Search</button>
+    <div className="w-[50%] xl:w-[45%] 2xl:w-[55%] flex relative">
+      <input type="text" placeholder='Search For Meals...' 
+      className='w-full bg-main-text bg-opacity-5 hover:bg-opacity-10 transition-colors px-4 h-12 rounded-md' 
+      onChange={(e) => {setQuery(e.target.value)}} />
+      <button className='absolute right-4 top-[50%] translate-y-[-50%]'
+      onClick={() => {search(query)}}><FaMagnifyingGlass/></button>
     </div>
   )
 }

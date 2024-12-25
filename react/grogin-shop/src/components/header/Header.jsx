@@ -1,10 +1,14 @@
 import React from 'react'
-import Search from '../search/Search'
+import HeaderSale from './HeaderSale'
+import SearchSection from '../search/SearchSection'
+import Nav from './Nav'
 
 const Header = () => {
   return (
     <div>
-      <Search />
+      <HeaderSale />
+      <SearchSection />
+      <Nav />
     </div>
   )
 }
