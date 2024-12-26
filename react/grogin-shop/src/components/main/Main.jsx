@@ -1,8 +1,8 @@
 import React from 'react'
 import Filter from '../filter/Filter'
-import Display from '../display/Display'
 import Container from '../ui/Container'
 import Path from './Path'
+import RightSide from './RightSide'
 
 const Main = () => {
   return (
@@ -10,7 +10,7 @@ const Main = () => {
         <Path />
         <div className='flex justify-between gap-10 mt-5'>
             <Filter />
-            <Display />
+            <RightSide />
         </div>
     </Container>
   )

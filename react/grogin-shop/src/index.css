@@ -16,3 +16,7 @@
 .range-slider{
     height: 5px !important;
 }
+
+.banner {
+    background-image: url('./assets/img/banner.jpg');
+}

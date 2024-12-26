@@ -15,7 +15,7 @@ const Display = () => {
     }, [data])
 
     return (
-        <div className="w-[65%] sm:w-[80%]">
+        <div>
             {data?.map((item, index) => <p key={index}>{item.strMeal}</p>)}
         </div>
     )
