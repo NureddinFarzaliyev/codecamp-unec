@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.range-slider__thumb {
+    background-color: #111827 !important;
+    height: 15px !important;
+    width: 15px !important;
+}
+
+.range-slider__range {
+    background-color: #111827 !important;
+    height: 5px !important;
+}
+
+.range-slider{
+    height: 5px !important;
+}

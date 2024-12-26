@@ -4,6 +4,7 @@ import axios from "axios"
 import FilterType from "./FilterType"
 import { ActiveFilterContext, FilterTypeContext } from "../../contexts/FilterContext"
 import { FILTER_TYPES } from "../../utils"
+import RangeSliderComponent from "./RangeSliderComponent"
 
 const Filter = () => {
   const dataDispatch = useContext( DataDispatch )
@@ -22,8 +23,9 @@ const Filter = () => {
   }, [activeFilter, filterType])
 
   return (
-      <div className="border-2 p-3 m-3">
-        {Object.values(FILTER_TYPES).map((key, i) => <FilterType key={i} filter={key} />)}
+      <div className="w-[35%] sm:w-[20%]">
+        <RangeSliderComponent />
+        {Object.values(FILTER_TYPES).map((key, i) => <FilterType key={i} filter={key} filterName={Object.keys(FILTER_TYPES)[i]} />)}
       </div>
   )
 }

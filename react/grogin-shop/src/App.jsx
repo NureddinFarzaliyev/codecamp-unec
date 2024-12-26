@@ -1,18 +1,16 @@
 import React from 'react'
-import Filter from './components/filter/Filter'
-import Display from './components/display/Display'
 import { DataProvider } from './contexts/DataProvider'
 import FilterProvider from './contexts/FilterProvider'
 import Header from './components/header/Header'
+import Main from './components/main/Main'
 
 const App = () => {
   return (
     <DataProvider>
       <Header />
       <FilterProvider>
-        <Filter />
+        <Main />
       </FilterProvider>
-      <Display /> 
     </DataProvider>
   )
 }

@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import FilterButton from './FilterButton'
 
-const FilterType = ({filter}) => {
+const FilterType = ({filter, filterName}) => {
     const [filters, setFilters] = useState([])
 
     useEffect(() => {
@@ -13,7 +13,8 @@ const FilterType = ({filter}) => {
 
 
   return (
-    <div className='border-2 m-2 p-2'>
+    <div className='mb-5 flex flex-col'>
+        <h1 className='text-md font-medium mb-2'>Filter by {filterName.charAt(0).toUpperCase() + filterName.toLowerCase().slice(1)}</h1>
         {filters.map((f, i) => <FilterButton key={i} filterName={Object.values(f)[0]} filterType={filter} />)}
     </div>
   )
