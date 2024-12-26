@@ -20,3 +20,45 @@
 .banner {
     background-image: url('./assets/img/banner.jpg');
 }
+
+
+@keyframes slideOut {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+
+.hidden-filter{
+    @media screen and (max-width: 768px) {
+        display: none;
+        animation: slideOut 0.5s forwards;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.shown-filter{
+    @media screen and (max-width: 768px) {
+        animation: slideIn 0.5s forwards;
+        position: absolute;
+        background-color: white;
+        z-index: 999;
+        width: 100% !important;
+        padding: 20px 100px 0px 50px;
+    }
+}
+
+.shown-filter body {
+    overflow: hidden;
+}

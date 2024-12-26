@@ -6,7 +6,7 @@ import { ActiveFilterContext, FilterTypeContext } from "../../contexts/FilterCon
 import { FILTER_TYPES } from "../../utils"
 import RangeSliderComponent from "./RangeSliderComponent"
 
-const Filter = () => {
+const Filter = ({isFilterOpen}) => {
   const dataDispatch = useContext( DataDispatch )
 
   const activeFilter = useContext(ActiveFilterContext)
@@ -23,7 +23,7 @@ const Filter = () => {
   }, [activeFilter, filterType])
 
   return (
-      <div className="w-[35%] sm:w-[20%]">
+      <div className={`${!isFilterOpen ? "hidden-filter" : 'shown-filter'} w-[20%]`}>
         <RangeSliderComponent />
         {Object.values(FILTER_TYPES).map((key, i) => <FilterType key={i} filter={key} filterName={Object.keys(FILTER_TYPES)[i]} />)}
       </div>

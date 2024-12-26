@@ -2,9 +2,9 @@ import React from 'react'
 import Display from '../display/Display'
 import Sale from './Sale'
 
-const RightSide = () => {
+const RightSide = ({isFilterOpen}) => {
   return (
-    <div className="w-[65%] sm:w-[80%]">
+    <div className={`w-full ${isFilterOpen && 'h-dvh overflow-hidden'}`}>
       <Sale />
       <Display />
     </div>
