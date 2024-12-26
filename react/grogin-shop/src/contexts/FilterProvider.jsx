@@ -3,7 +3,7 @@ import { useState } from "react"
 
 const FilterProvider = ({children}) => {
 
-  const [activeFilter, setActiveFilter] = useState('Dessert')
+  const [activeFilter, setActiveFilter] = useState('Beef')
   const [filterType, setFilterType] = useState('c')
 
   return (

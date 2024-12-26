@@ -10,7 +10,7 @@ const Search = () => {
 
   const search = (query) => {
     axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`)
-    .then(res =>  res.data.meals ? dataDispatch(res.data.meals) : dataDispatch(['']))
+    .then(res =>  res.data.meals ? dataDispatch(res.data.meals) : dataDispatch())
     .catch(err => console.error(err))
   }
 
