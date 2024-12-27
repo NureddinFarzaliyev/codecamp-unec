@@ -16,6 +16,7 @@ This repository includes my solutions for tasks in Matrix Academy, CodeCamp - UN
 - [9. Movie/Book App](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/projects/movie-book-app)
 - [10. React Bookapp](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/react/bookapp)
 - [11. React Fakeshop API](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/react/storeapi-class-based)
+- [12. React Grogin Template](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/react/grogin-shop)
 
 ### Other Tasks
 - [Responsiveness](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/tasks/responsive)
