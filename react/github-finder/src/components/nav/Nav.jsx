@@ -8,7 +8,7 @@ const Nav = () => {
 
   return (
     <div onClick={() => {navigate('/')}} 
-    className='py-10 text-white text-2xl text-medium flex justify-center items-center gap-4'>
+    className='py-10 text-white text-2xl text-medium flex justify-center items-center gap-4 cursor-pointer'>
       <FaGithub className='text-4xl' />
       <h1>GitHub Finder</h1>
     </div>

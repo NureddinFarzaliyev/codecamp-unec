@@ -5,3 +5,7 @@
 .fira-code {
     font-family: 'Fira Code', 'Courier New';
 }
+
+.gradient {
+background: linear-gradient(135deg, #2b3137, #24292e);
+}

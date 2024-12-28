@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import SearchBar from './SearchBar'
-import axios from 'axios';
 import SearchResult from './SearchResult';
 import { search } from '../../utils';
 
@@ -16,7 +15,7 @@ const Search = () => {
 
       const newTimer = setTimeout(() => {
         search(query, setData);
-      }, 500);
+      }, 300);
 
       setTimer(newTimer);
     }

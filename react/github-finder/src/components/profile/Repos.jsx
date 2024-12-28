@@ -15,10 +15,12 @@ const Repos = ({url}) => {
     <div>
       {data.map((repo, i) => {
         return (
-          <div key={i} className='border-2 m-2 p-2'>
-            <h3 className='text-2xl'>{repo.name}</h3>
-            <p>{repo.description}</p>
+          <a href={repo.html_url} target='_blank'>
+          <div key={i} className='border-[1px] border-opacity-20 border-white rounded-lg mt-3 p-2 flex flex-col gap-1 hover:border-opacity-60 cursor-pointer transition overflow-hidden'>
+            <h3 className='text-lg font-bold'>{repo.name}</h3>
+            <p className='opacity-50 text-xs'><span className='font-semibold'>[{repo.language}]</span> {repo.description}</p>
           </div>
+          </a>
         )
     })}
     </div>

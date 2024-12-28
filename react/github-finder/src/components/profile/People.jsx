@@ -16,8 +16,8 @@ const People = ({url}) => {
     <div>
       {data.map((person, i) => {
         return(
-            <div key={i} onClick={() => {navigate(`/${person.login}`)}} className='border-2 m-2 p-2 flex items-center'>
-                <img src={person.avatar_url} alt={person.login} className='h-16 w-16' />
+            <div key={i} onClick={() => {navigate(`/${person.login}`)}} className='overflow-hidden border-[1px] border-opacity-20 border-white rounded-lg mt-3 p-2 flex gap-3 hover:border-opacity-60 cursor-pointer transition items-center'>
+                <img src={person.avatar_url} alt={person.login} className='h-16 w-16 rounded-lg shadow-md' />
                 <p>{person.login}</p>
             </div>
         )
