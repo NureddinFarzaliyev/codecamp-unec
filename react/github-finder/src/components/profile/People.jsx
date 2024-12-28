@@ -12,7 +12,6 @@ const People = ({url}) => {
         fetchData(url, setData)
     }, [username])
     
-    console.log(data)
   return (
     <div>
       {data.map((person, i) => {

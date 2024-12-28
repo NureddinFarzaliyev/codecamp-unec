@@ -14,7 +14,6 @@ const Profile = () => {
   }, [username])
 
 
-  console.log(data)
 
   return (
     <div>
