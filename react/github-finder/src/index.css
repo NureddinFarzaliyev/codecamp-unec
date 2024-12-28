@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.fira-code {
+    font-family: 'Fira Code', 'Courier New';
+}
