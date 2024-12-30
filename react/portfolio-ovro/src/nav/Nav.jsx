@@ -23,8 +23,8 @@ const Nav = ({sectionIdList}) => {
     }, [])
 
   return (
-    <div className='bg-black text-white m-5 p-5 fixed top-0 left-0 right-0'>
-        <ul className='flex justify-between'>
+    <div className='bg-black text-white m-5 p-5 fixed'>
+        <ul className='flex justify-between flex-col'>
             {sectionIdList.map((sectionId, i) => {
             return (
                 <li key={i} className={`${activeNav === sectionId ? 'text-red-500' : 'text-white'}`}>

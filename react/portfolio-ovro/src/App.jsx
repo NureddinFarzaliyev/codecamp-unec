@@ -1,19 +1,22 @@
 import React from 'react'
 import Nav from './nav/Nav'
+import Profile from './profile/Profile'
+import Sections from './sections/Sections'
+
 
 const App = () => {
   return (
-    <div>
-      <Nav sectionIdList={['home', 'about-us', 'our-service', 'my-skill', 'portfolio', 'testimonial', 'our-blog', 'contact-us']} />
-      
-      <section className='h-dvh bg-red-900 w-dvw mt-44' id='home'>home</section>
-      <section className='h-dvh bg-green-900 w-dvw mt-44' id='about-us'>about-us</section>
-      <section className='h-dvh bg-purple-900 w-dvw mt-44' id='our-service'>our-service</section>
-      <section className='h-dvh bg-gray-900 w-dvw mt-44' id='my-skill'>my-skill</section>
-      <section className='h-dvh bg-red-900 w-dvw mt-44' id='portfolio'>portfolio</section>
-      <section className='h-dvh bg-green-900 w-dvw mt-44' id='testimonial'>testimonial</section>
-      <section className='h-dvh bg-purple-900 w-dvw mt-44' id='our-blog'>our-blog</section>
-      <section className='h-dvh bg-gray-900 w-dvw mt-44' id='contact-us'>contact-us</section>
+    <div className='relative grid grid-cols-5'>
+      {/* <section> elements with corresponding ids */}
+      <div className='relative'>
+        <Nav sectionIdList={['home', 'about-us', 'our-service', 'my-skill', 'portfolio', 'testimonial', 'our-blog', 'contact-us']} />
+      </div>
+      <div className='relative'>
+        <Profile />
+      </div>
+      <div className='col-span-3'>
+        <Sections />
+      </div>
     </div>
   )
 }
