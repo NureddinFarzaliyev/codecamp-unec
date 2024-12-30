@@ -23,7 +23,7 @@ const Nav = ({sectionIdList}) => {
     }, [])
 
   return (
-    <div className='bg-black text-white m-5 p-5 fixed'>
+    <div className='bg-black text-white sticky top-[50%] w-full translate-y-[-50%]'>
         <ul className='flex justify-between flex-col'>
             {sectionIdList.map((sectionId, i) => {
             return (
