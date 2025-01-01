@@ -29,16 +29,20 @@ const Nav = ({}) => {
     }, [])
 
   return (
-    <div className='text-white sticky top-[50%] w-full translate-y-[-50%] flex items-center justify-end'>
+    <div className='text-white sticky top-[50%] w-full translate-y-[-50%] flex items-center justify-end z-[999999]'>
         <ul className='flex justify-between flex-col'>
             {sectionIdList.map((sectionId, i) => {
             return (
-                <a className='text-5xl' 
+                <a className='text-5xl relative nav-item' 
                 href={`#${sectionId}`} onClick={() => {setActiveNav(sectionId)}}>
                     <li key={i} 
-                        className={`${activeNav === sectionId ? 'text-black bg-accent border-accent' : 'transition-all  duration-500 text-black dark:text-white bg-white/50 dark:bg-secondary'} m-2 rounded-md border-[1px] border-white/80 w-min p-3`}>
+                        className={`${activeNav === sectionId ? 'text-black bg-accent border-accent' : 'transition-all  duration-300 text-black dark:text-white bg-white/50 dark:bg-secondary'} 
+                        m-2 rounded-md border-[1px] border-white/80 w-min p-3 dark:hover:bg-accent hover:bg-accent dark:hover:text-black `}>
                             {sectionIconList[i]}
                     </li>
+                    <div className='absolute top-[50%] translate-y-[-50%] right-[-200%] bg-accent text-xl text-black font-bold rounded-md text-center justify-center w-44 h-[80%] flex items-center nav-hidden'>
+                        {sectionId.split("-").map(i => i.charAt(0).toUpperCase() + i.slice(1)).join(" ")}
+                    </div>
                 </a>
             )
             })}
