@@ -18,7 +18,7 @@ const Nav = ({}) => {
                 }
             })
         },{
-            rootMargin: '-100px',
+            rootMargin: '0px 0px -150px 0px',
         })   
 
         const sections = document.querySelectorAll('section')
@@ -29,14 +29,14 @@ const Nav = ({}) => {
     }, [])
 
   return (
-    <div className='text-white sticky top-[50%] w-full translate-y-[-50%] flex items-center justify-end z-[999999]'>
+    <div className='text-white sticky w-full top-[50%] translate-y-[-50%] flex items-center justify-end z-[999999]'>
         <ul className='flex justify-between flex-col'>
             {sectionIdList.map((sectionId, i) => {
             return (
                 <a className='text-5xl relative nav-item' 
                 href={`#${sectionId}`} onClick={() => {setActiveNav(sectionId)}}>
                     <li key={i} 
-                        className={`${activeNav === sectionId ? 'text-black bg-accent border-accent' : 'transition-all  duration-300 text-black dark:text-white bg-white/50 dark:bg-secondary'} 
+                        className={`${activeNav === sectionId ? 'text-black bg-accent border-accent' : 'transition-all  duration-300 text-black dark:text-white bg-secondary/10 dark:bg-secondary'} 
                         m-2 rounded-md border-[1px] border-white/80 w-min p-3 dark:hover:bg-accent hover:bg-accent dark:hover:text-black `}>
                             {sectionIconList[i]}
                     </li>

@@ -8,7 +8,7 @@ const Profile = () => {
   const socialMedia = [<BsTwitterX />, <BsInstagram />, <BsFacebook />, <BsLinkedin />, <BsGlobe />]
 
   return (
-    <div className='h-[75vh] w-[100%] bg-white/50 dark:bg-white/10 border-[1px] rounded-md border-white/10 md:sticky md:top-[50%] md:translate-y-[-50%] py-4 flex flex-col items-center justify-between z-[0]'>
+    <div className='h-[75vh] w-[100%] bg-secondary/10 dark:bg-white/10 border-[1px] rounded-md border-white/10 md:sticky md:top-[50%] md:translate-y-[-50%] py-4 flex flex-col items-center justify-between z-[0]'>
       <div className='object-fit w-[90%] flex items-center justify-center mx-auto'>
         <img src={avatar} alt="avatar" />
       </div>

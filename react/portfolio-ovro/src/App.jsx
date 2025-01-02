@@ -16,6 +16,7 @@ const App = () => {
     Aos.init({
       duration: 700,
       easing: "ease-out-cubic",
+      delay: 200,
     });
   }, []);
 

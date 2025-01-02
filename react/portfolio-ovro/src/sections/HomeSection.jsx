@@ -23,7 +23,7 @@ const HomeSection = () => {
                 </div>
             </div>
         </div>
-        <div data-aos="fade-up" className='my-8 bg-white/10 rounded-md cursor-pointer hover:bg-accent transition-btn p-5 h-44 flex items-center justify-center gap-5 dark:text-white dark:hover:text-text hover:text-text 2xl:text-6xl text-4xl'>
+        <div data-aos="fade-up" className='my-8 bg-white/10 rounded-md cursor-pointer hover:bg-accent transition-extra p-5 h-44 flex items-center justify-center gap-5 dark:text-white dark:hover:text-text hover:text-text 2xl:text-6xl text-4xl'>
             <span className='font-medium'>Let's Work Together</span>
             <div className='text-3xl 2xl:text-5xl bg-white/10 p-2 rounded-full'><MdArrowOutward /></div>
         </div>
