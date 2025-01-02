@@ -10,6 +10,11 @@ export default {
       colors: {
         accent: '#FFAE00',
         secondary: '#1F3434',
+        text: "#0E161F",
+      },
+      fontFamily: {
+        figtree: ['Figtree', 'sans-serif'],
+        playfair: ['Playfair Display', 'serif'],
       },
     },
   },

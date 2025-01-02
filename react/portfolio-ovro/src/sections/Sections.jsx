@@ -1,9 +1,10 @@
 import React from 'react'
+import HomeSection from './HomeSection'
 
 const Sections = () => {
   return (
     <div>
-      <section className='h-dvh mb-44 bg-red-900' id='home'>home</section>
+      <HomeSection />
       <section className='h-dvh mb-44 bg-green-900' id='about-us'>about-us</section>
       <section className='h-dvh mb-44 bg-purple-900' id='our-service'>our-service</section>
       <section className='h-dvh mb-44 bg-gray-900' id='my-skill'>my-skill</section>

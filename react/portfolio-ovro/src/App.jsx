@@ -1,14 +1,23 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Nav from './nav/Nav'
 import Profile from './profile/Profile'
 import Sections from './sections/Sections'
 import Header from './header/Header'
 import BgVideo from './ui/BgVideo'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 
 const App = () => {
 
   const [isDark, setIsDark] = useState(true)
+
+  useEffect(() => {
+    Aos.init({
+      duration: 700,
+      easing: "ease-out-cubic",
+    });
+  }, []);
 
   return (
     <div className={`${isDark ? 'dark' : ''} px-2 md:px-10 xl:px-32`}>

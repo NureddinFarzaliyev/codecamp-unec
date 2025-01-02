@@ -4,6 +4,7 @@
 
 html {
     scroll-behavior: smooth;
+    font-family: 'Figtree';
 }
 
 @keyframes navComeIn {
@@ -36,7 +37,21 @@ html {
 .nav-item {
     &:hover {
         .nav-hidden {
-            animation: navComeIn 0.6s;
+            animation: navComeIn 0.6s forwards;
         }
     }
+}
+
+
+.invert-colors:not(.dark *){
+    -webkit-filter: invert(1);
+   filter: invert(1);
+}
+
+.animate-spin:is(.circle-text) {
+    animation-duration: 20s;
+}
+
+.transition-btn{
+    transition: all 0.5s !important;
 }
