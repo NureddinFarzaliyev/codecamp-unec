@@ -9,7 +9,7 @@ const ServicesSection = () => {
         {title: "Responsive Web Design", description: "Crafting designs that adapt seamlessly across all devices, ensuring a consistent user experience."},
         {title: "Wireframing & Visual Design", description: "Creating detailed wireframes and visually stunning designs to bring ideas into focus."},
         ].map((service, index) => (
-            <div data-aos="fade-left" key={index} className="p-6 rounded-md border-[1px] border-white/50 hover:border-accent cursor-pointer text-text dark:text-white bg-white/10 my-6">
+            <div data-aos="fade-left" key={index} className="p-6 rounded-md border-[1px] border-white/50 hover:border-accent cursor-pointer text-text dark:text-white bg-secondary/10 my-6">
                 <h3 className="text-3xl font-semibold">{service.title}</h3>
                 <p className="mt-4 text-lg">{service.description}</p>
             </div>
