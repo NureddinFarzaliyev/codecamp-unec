@@ -5,8 +5,11 @@ import ServicesSection from './ServicesSection'
 import SkillsSection from './SkillsSection'
 import PortfolioSection from './PortfolioSection'
 import TestimonialSection from './TestimonialSection'
+import BlogSection from './BlogSection'
+import ContactSection from './ContactSection'
+import FooterSection from './FooterSection'
 
-const Sections = () => {
+const Sections = ({isDark}) => {
   return (
     <div>
       <HomeSection />
@@ -15,8 +18,9 @@ const Sections = () => {
       <SkillsSection />
       <PortfolioSection />
       <TestimonialSection />
-      <section className='h-dvh mb-44 bg-purple-900' id='our-blog'>our-blog</section>
-      <section className='h-dvh mb-44 bg-gray-900' id='contact-us'>contact-us</section>
+      <BlogSection />
+      <ContactSection />
+      <FooterSection isDark={isDark} />
     </div>
   )
 }

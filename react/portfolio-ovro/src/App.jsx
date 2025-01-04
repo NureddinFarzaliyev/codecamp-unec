@@ -33,7 +33,7 @@ const App = () => {
           <Profile />
         </div>
         <div className='col-span-6 2xl:col-span-7'>
-          <Sections />
+          <Sections isDark={isDark} />
         </div>
       </div>
     </div>

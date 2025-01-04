@@ -4,7 +4,7 @@ import { BsQuote } from 'react-icons/bs'
 
 const TestimonialCard = ({span, paragraph}) => {
   return (
-    <div data-aos="zoom-in" className={`bg-secondary/10 border-[1px] border-white/30 rounded-md hover:border-accent p-4 cursor-pointer transition duration-500 min-h-64 ${span ? 'md:col-span-2' : ''}`}>
+    <div data-aos="zoom-in" className={`bg-secondary/10 dark:bg-white/10 border-[1px] border-white/30 rounded-md hover:border-accent p-4 cursor-pointer transition duration-500 min-h-64 ${span ? 'md:col-span-2' : ''}`}>
       <div className='flex items-center justify-between'>
         <div className='flex gap-1'>{Array(5).fill().map((_, i) => <BsStarFill key={i} className='text-accent text-md lg:text-lg' />)}</div>
         <BsQuote className='text-3xl dark:text-white text-text' />
