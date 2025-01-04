@@ -6,7 +6,7 @@ import AccentBtn from '../ui/AccentBtn'
 const ContactSection = () => {
   return (
     <Section header="Have Any Project in Mind," highlight="Let's Talk" sectionId='contact-us' subheader="Contact Me">
-        <div className='dark:bg-white/10 bg-secondary/10 dark:text-white text-text rounded-lg p-8 border-[1px] border-white/50 mt-10'>
+        <div data-aos="zoom-in" className='dark:bg-white/10 bg-secondary/10 dark:text-white text-text rounded-lg p-8 border-[1px] border-white/50 mt-10'>
             <form action="#" method="POST" className='grid gap-6'>
                 <h1 className='text-3xl font-medium dark:text-white text-text'>Let's Work Together!</h1>
                 <div className='flex gap-4 flex-col md:flex-row'>
