@@ -24,7 +24,9 @@ const Profile = () => {
           })
         }
       </ul>
-      <AccentBtn text={"DOWNLOAD NOW"} icon={<BsDownload />} />
+      <div className='px-4'>
+        <AccentBtn text={"DOWNLOAD NOW"} icon={<BsDownload />} />
+      </div>
       <p className='dark:text-white text-sm'>© 2024 OVRO. All Rights Reserved.</p>
     </div>
   )

@@ -23,9 +23,10 @@ const HomeSection = () => {
                 </div>
             </div>
         </div>
-        <div data-aos="fade-up" className='my-8 dark:bg-white/10 bg-secondary/10 rounded-md cursor-pointer hover:bg-accent dark:hover:bg-accent transition-extra p-5 h-44 flex items-center justify-center gap-5 dark:text-white dark:hover:text-text hover:text-text 2xl:text-6xl text-4xl'>
-            <span className='font-medium'>Let's Work Together</span>
-            <div className='text-3xl 2xl:text-5xl bg-white/10 p-2 rounded-full'><MdArrowOutward /></div>
+        <div data-aos="fade-up" className='home-btn relative my-8 dark:bg-white/10 bg-secondary/10 rounded-md cursor-pointer transition-extra p-5 h-44 flex items-center justify-center gap-5 dark:text-white dark:hover:text-text hover:text-text 2xl:text-6xl text-4xl
+        before:absolute before:top-0 before:z-0 before:h-[100%] before:w-[0%] before:bg-accent before:rounded-md before:transition-extra before:duration-500 before:ease-in-out hover:before:w-[100%]'>
+            <span className='font-medium z-20'>Let's Work Together</span>
+            <div className='text-3xl 2xl:text-5xl bg-white/10 p-2 rounded-full z-20'><MdArrowOutward /></div>
         </div>
     </Section>
   )
