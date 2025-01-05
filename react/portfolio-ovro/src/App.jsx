@@ -6,7 +6,7 @@ import Header from './header/Header'
 import BgVideo from './ui/BgVideo'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
-
+import Cursor from './ui/Cursor'
 
 const App = () => {
 
@@ -22,6 +22,7 @@ const App = () => {
 
   return (
     <div className={`${isDark ? 'dark' : ''} px-2 md:px-10 xl:px-32`}>
+      <Cursor />
       <BgVideo />
       <Header isDark={isDark} setIsDark={setIsDark} />
       <div className='relative md:grid grid-cols-10 gap-3'>
