@@ -1,6 +1,6 @@
 # Codecamp - UNEC
 
-![Learned Technologies](https://skillicons.dev/icons?i=html,css,bootstrap,tailwindcss,javascript,react)
+![Learned Technologies](https://skillicons.dev/icons?i=html,css,scss,bootstrap,tailwindcss,javascript,react)
 
 This repository includes my solutions for tasks in Matrix Academy, CodeCamp - UNEC.
 
