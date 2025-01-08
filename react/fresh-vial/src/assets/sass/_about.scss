@@ -1,0 +1,84 @@
+@use 'variables';
+@use 'mixin';
+
+.section-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    @include mixin.flexAlign;
+    @include mixin.container;
+    
+    h1 {
+        font-size: 36px;
+        font-weight: bold;
+        color: variables.$primary;
+        margin-top: 50px;
+    }
+
+    p {
+        color: variables.$secondary;
+        text-align: center;
+        width: 50%;
+
+        @media (max-width: 992px) {
+            width: 95%;
+        }
+    }
+    
+    ul.section-header-decor {
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        margin-bottom: 25px;
+
+        li {
+            list-style: none;
+            background-color: variables.$primary;
+            margin: 0 2px;
+
+            &:nth-child(1) {
+                width: 10px;
+                height: 3px;
+            }
+
+            &:nth-child(2) {
+                width: 20px;
+                height: 4px;
+            }
+
+            &:nth-child(3) {
+                width: 30px;
+                height: 5px;
+            }
+
+            &:nth-child(4) {
+                width: 20px;
+                height: 4px;
+            }
+
+            &:nth-child(5) {
+                width: 10px;
+                height: 3px;
+            }
+        }
+
+
+    }
+}
+
+.about-section {
+    flex-direction: column;
+    justify-content: center;
+
+    @include mixin.container;
+    @include mixin.flexAlign;
+
+    img {
+        margin: 50px 0;
+
+        @media (max-width: 992px) {
+            width: 80%;
+        }
+    }
+}

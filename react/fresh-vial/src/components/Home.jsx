@@ -11,8 +11,6 @@ const Home = () => {
       <Swiper
       spaceBetween={50}
       slidesPerView={1}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
       loop={true}
     >
       {[0,1].map((i) => {
