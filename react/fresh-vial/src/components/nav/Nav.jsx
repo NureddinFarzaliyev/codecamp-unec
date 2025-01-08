@@ -10,7 +10,7 @@ const Nav = () => {
 
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false)
 
-  const [links, _] = useState([ {name: "Home", url: "/home"}, {name: "About Us", url: "/about"}, {name: "Cart Products", url: "/cart"}, {name: "Our Pages", url: "/pages"}, {name: "Latest Blog", url: "/blog"}, {name: "Contact Us", url: "/contact"} ])
+  const [links, _] = useState([ {name: "Home", url: "/"}, {name: "About Us", url: "/about"}, {name: "Cart Products", url: "/cart"}, {name: "Our Pages", url: "/pages"}, {name: "Latest Blog", url: "/blog"}, {name: "Contact Us", url: "/contact"} ])
 
   return (
     <nav>

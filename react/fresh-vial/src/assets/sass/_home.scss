@@ -1,0 +1,56 @@
+@use 'mixin';
+@use 'variables';
+
+.home-bg {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.slide-item {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+        width: 70%;
+        font-size: 48px;
+        color: variables.$primary;
+        font-weight: 900;
+        @media (max-width: 992px) {
+            width: 100%;
+            font-size: 36px;
+            text-align: center;
+        }
+    }
+
+    p {
+        margin: 20px 0px;
+        color: variables.$secondary;
+        width: 70%;
+        @media (max-width: 992px) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    button {
+        height: 60px; 
+        width: 190px;
+        background-color: variables.$primary;
+        border-radius: 30px;
+        margin-top: 10px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0px 0px 0px 5px variables.$primary-20;
+        color: white;
+        font-size: 16px;
+        font-weight: 900;
+    }
+
+    @media (max-width: 992px) {
+        align-items: center;
+    }
+    @include mixin.container;
+}
