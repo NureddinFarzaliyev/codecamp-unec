@@ -1,10 +1,18 @@
 @mixin container {
     margin: 0 auto;
-
+    padding: 0px 10px;
     @media (min-width: 576px) {max-width: 576px;}
     @media (min-width: 768px) {max-width: 720px;}
     @media (min-width: 992px) {max-width: 960px;}
     @media (min-width: 1200px) {max-width: 1200px;}
+}
+
+@mixin hideMobile {
+    @media (max-width: 992px) {display: none;}
+}
+
+@mixin showMobile {
+    @media (min-width: 992px) {display: none;}
 }
 
 @mixin flexAlign {
@@ -16,4 +24,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@mixin transition {
+    transition: all 0.3s ease;
 }

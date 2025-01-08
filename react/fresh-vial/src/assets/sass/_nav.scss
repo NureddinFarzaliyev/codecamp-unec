@@ -6,22 +6,99 @@
     
     .nav-top {
         @include mixin.flexAlign;
-        @include mixin.container;
-        @media (max-width: 990px) {padding: 20px 0px}
         
         min-height: 60px;
         justify-content: space-between;
         height: 100%;
         font-size: 14px;
+        @media (max-width: 990px) {font-size: 12px;}
         color: variables.$secondary;
-
-        @media (max-width: 990px) {
-            flex-direction: column;
-            gap: 10px;
-        }
 
         svg {
             color: variables.$primary;
         }
+        
+        @include mixin.container;
+
+        @media (max-width: 990px) {
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        @media (max-width: 990px) {padding: 10px 0px}
+        
+        
     }
+}
+
+nav {
+
+    height: 60px;
+    justify-content: space-between;
+    position: relative;
+
+    
+    
+    ul:not(.mobile-menu) {
+        display: flex;
+        gap: 20px;
+        @include mixin.hideMobile;
+    }
+
+    ul li {
+        list-style: none;
+
+        a {
+            color: variables.$secondary;
+            text-decoration: none;
+            font-weight: bold;
+            @include mixin.transition;
+            
+            &:hover {
+                color: variables.$primary;
+            }
+
+        }
+    }
+
+    ul.mobile-menu {
+        background-color: variables.$primary;
+        border-radius: 10px;
+        z-index: 9999;
+        position: absolute;
+        bottom: -520%;
+        width: 95%;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex; flex-direction: column; gap: 30px;
+        @include mixin.showMobile;
+
+        a {
+            color: white;
+            &:hover{color: white;}
+        }
+    }
+    .icons {
+        display: flex;
+        gap: 20px;  
+        font-size: 24px;
+        
+        span:nth-child(1) {
+            color: variables.$primary;
+        }
+
+        button {
+            @include mixin.showMobile;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    }
+
+
+
+
+    @include mixin.flexAlign;
+    @include mixin.container;
 }
