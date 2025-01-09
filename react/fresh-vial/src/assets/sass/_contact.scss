@@ -1,0 +1,123 @@
+@use 'mixin';
+@use 'variables';
+
+.contact-section {
+    @include mixin.container;
+    overflow-x: hidden;
+
+    .map {
+        margin-top: 50px;
+        object-fit: cover;
+        margin-left: -10px;
+    }
+
+    form {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        color: variables.$secondary;
+        gap: 30px;
+
+        @media (max-width: 580px) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input[type="text"], input[type="email"]{
+            width: 100%;
+            padding: 10px;
+            border: solid 1px variables.$secondary-20;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+
+        .sender-information {
+            display: flex;
+            gap: 20px;
+
+            div {
+                width: 100%;
+            }
+        }
+
+        .message {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            label {
+                margin-top: 25px;
+            }
+
+            textarea {
+                border: solid 1px variables.$secondary-20;
+                height: 200px;
+                border-radius: 10px;
+                padding: 10px;
+                font-size: 16px;
+            }
+        }
+
+
+        h2 {
+            font-size: 16px;
+            color: variables.$secondary;
+            text-decoration: underline;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 15px 35px;
+            font-size: 16px;
+            background-color: variables.$primary;
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: all 0.5s;
+            margin-top: 20px;
+
+            &:hover {
+                background-color: variables.$secondary;
+            }
+        }
+    }
+
+    .contact-info {
+        p {
+            font-size: 16px;
+        }
+
+        div {
+            margin-top: 15px;
+            gap: 10px;
+
+
+            span {
+                color: variables.$primary;
+                font-size: 20px;
+                padding: 4px;
+                border: solid 1px variables.$secondary-20;
+                border-radius: 50%;
+                height: 30px;
+                width: 30px;
+            }
+
+            p {
+                opacity: 70%;
+            }
+            
+            @include mixin.flexAlign;
+        }
+    }
+
+
+    .slide-item {
+        height: fit-content !important;
+        margin: 50px 0px;
+
+        img {
+            opacity: 50%;
+        }
+    }
+
+}
