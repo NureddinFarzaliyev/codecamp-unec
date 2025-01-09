@@ -8,6 +8,9 @@ import img1 from '../assets/images/1.png'
 import img2 from '../assets/images/2.png'
 import img3 from '../assets/images/3.png'
 import img4 from '../assets/images/4.png'
+import bg from '../assets/images/bg-2.jpg'
+import shape from '../assets/images/shape-2.png'
+import contentImg from '../assets/images/van.png'
 
 const Contact = () => {
   return (
@@ -61,10 +64,8 @@ const Contact = () => {
             </div>
         </form>
 
-
         <SectionHeader text={"BUSINESS PARTNERS"} />
-
-        <Swiper
+        <Swiper className='partner-slider'
         spaceBetween={50}
         slidesPerView={1}
         loop={true}
@@ -83,15 +84,43 @@ const Contact = () => {
             }
         }}
         >
-        {[img1, img2, img3, img4, img1, img2, img3, img4, img1, img2, img3, img4].map((url, i) => {
-            return (
+        {[img1, img2, img3, img4, img1, img2, img3].map((url, i) => (
                 <SwiperSlide key={i}>
                     <div className='slide-item'>
                         <img src={url} alt="partner" />
                     </div>
                 </SwiperSlide>
-        )})}
+        ))}
         </Swiper>
+
+        <div className='delivery'>
+            <div className="contact-bg">
+                <div className="overlay"></div>
+                <img src={shape} alt="shape" className="shape" />
+                <img src={bg} alt="fresh-vial" className='bg' />
+            </div>
+
+            <div className='delivery-content'>
+                <div>
+                    <h1>Water Delivery 20km Free Service</h1>
+                    <p>Nunc molestie mi nunc, nec accumsan libero dignissim sit amet. Fusce sit amet tincidunt metus. Nunc eu risus suscipit massa dapibu.</p>
+                    <button>Read More</button>
+                </div>
+                <div><img src={contentImg} alt="van delivery" /></div>
+            </div>
+        </div>
+
+        <div className="newsletter">
+            <div>
+                <h1>Newsletter</h1>
+                <p>Nullam condimentum varius ipsum at viverra. Donec tortor metus, sollicitudin vitae est id, ullamcorper pretium tortor.</p>
+            </div>
+
+            <div>
+                <input type="text" placeholder='Enter your email adress...' />
+                <button>SUBSCRIBE</button>
+            </div>
+        </div>
 
     </div>
   )

@@ -30,3 +30,7 @@
 @mixin transition {
     transition: all 0.3s ease;
 }
+
+@mixin removeContainer {
+    max-width: none !important;
+}

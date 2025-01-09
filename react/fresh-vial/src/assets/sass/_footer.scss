@@ -1,0 +1,51 @@
+@use 'mixin';
+@use 'variables';
+
+footer {
+
+    border-top: 1px dashed variables.$secondary;
+    padding: 50px 10px !important;
+    margin-top: 50px !important;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    @media (max-width: 992px) {grid-template-columns: 1fr 1fr 1fr;}
+    @media (max-width: 768px) {grid-template-columns: 1fr 1fr;}
+    @media (max-width: 576px) {grid-template-columns: 1fr;}
+    
+    ul {
+        list-style: none;
+
+        li {
+            margin-bottom: 20px;
+            color: variables.$secondary;
+            font-size: 14px;
+        }
+    }
+
+    p {
+        font-size: 16px;
+        color: variables.$secondary;
+        margin: 15px 0;
+    }
+
+    h2 {
+        font-size: 20px;
+        color: variables.$primary;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+        margin: 15px 0px;
+        color: variables.$secondary;
+    }
+
+    span {
+        color: variables.$primary;
+        font-size: 14px;
+    }
+
+
+    @include mixin.container;
+}

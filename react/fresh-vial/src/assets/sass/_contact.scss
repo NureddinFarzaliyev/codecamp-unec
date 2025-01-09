@@ -2,16 +2,18 @@
 @use 'variables';
 
 .contact-section {
-    @include mixin.container;
     overflow-x: hidden;
-
+    
     .map {
-        margin-top: 50px;
         object-fit: cover;
         margin-left: -10px;
+        @include mixin.container;
+        @include mixin.flexAlign;
+        margin-top: 50px;
     }
-
+    
     form {
+        @include mixin.container;
         margin-top: 50px;
         display: grid;
         grid-template-columns: 3fr 1fr;
@@ -82,6 +84,10 @@
         }
     }
 
+    .partner-slider {
+        @include mixin.container;
+    }
+
     .contact-info {
         p {
             font-size: 16px;
@@ -118,6 +124,140 @@
         img {
             opacity: 50%;
         }
+    }
+
+
+    .delivery {
+        max-height: 470px;
+        position: relative;
+        overflow: hidden;
+
+        .shape {
+            position: absolute;
+            bottom: 0;
+        }
+        
+        .bg {
+            object-fit: fill;
+        }
+
+        .overlay {
+            height: 470px;
+            width: 100%;
+            background-color: variables.$primary-70;
+            position: absolute;
+            top: 0;
+        }
+    }
+
+    .delivery-content {
+        position: absolute;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        height: 470px;
+
+        img {
+            width: 70%;
+            align-self: flex-end;
+            justify-self: end;
+
+            @media (max-width: 992px) {
+                display: none;
+            }
+        }
+
+        div:nth-child(1){
+            flex-direction: column;
+            justify-content: center;
+            @include mixin.flexAlign;
+            gap: 20px;
+        }
+
+        h1 {
+            color: white;
+            font-size: 48px;
+            font-weight: 900;
+            text-align: center;
+            width: 80%;
+
+            @media (max-width: 576px) {
+                font-size: 32px;
+            }
+        }
+
+        p {
+            text-align: center;
+            width: 50%;
+            color: white;
+            font-size: 16px;
+        }
+
+        button{
+            height: 60px; 
+            width: 190px;
+            background-color: white;
+            border-radius: 30px;
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 0.5);
+            color: variables.$primary;
+            font-size: 16px;
+            transition: all 0.5s;
+            font-weight: 900;
+
+            &:hover{
+                background-color: transparent;
+                color: white;
+            }
+        }
+    }
+
+
+    .newsletter {
+        @include mixin.container;
+        justify-content: space-between;
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        h1 {
+            font-size: 48px;
+            color: variables.$primary;
+            width: fit-content;
+        }
+        p {
+            width: 70%;
+            color: variables.$secondary;
+            margin-top: 10px;
+        }
+        div:nth-child(2) {
+            display: flex;
+            gap: 20px;
+        }
+        input {
+            width: 80%;
+            height: 50px;
+            padding: 5px 15px;
+            border-radius: 25px;
+            font-size: 18px;
+            border: 2px solid variables.$primary;
+        }
+        button {
+            padding: 5px 15px;
+            height: 50px;
+            font-size: 18px;
+            background-color: variables.$primary;
+            border-radius: 25px;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+
     }
 
 }
