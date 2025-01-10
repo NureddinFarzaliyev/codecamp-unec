@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import logo from '../../assets/images/logo.png'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { BiCart, BiSearch } from 'react-icons/bi'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { RxCross1 } from "react-icons/rx";
@@ -17,7 +17,7 @@ const Nav = () => {
       <img src={logo} alt="fresh vial" />
 
       <ul>
-        {links.map((link, i) => <li key={i}><Link to={link.url}>{link.name}</Link></li>)}
+        {links.map((link, i) => <li key={i}><NavLink to={link.url}>{link.name}</NavLink></li>)}
       </ul>
 
       <AnimatePresence>
@@ -26,7 +26,7 @@ const Nav = () => {
         animate={{ y: 0, opacity: 1 }} 
         initial={{ y: '-50%', opacity: 0 }} 
         exit={{ y: '-150%', opacity: 0 }}>
-          {links.map((link, i) => <li key={i} onClick={() => setIsMobileNavOpen(false)}><Link to={link.url}>{link.name}</Link></li>)}
+          {links.map((link, i) => <li key={i} onClick={() => setIsMobileNavOpen(false)}><NavLink className="mobileNavLink" to={link.url}>{link.name}</NavLink></li>)}
         </motion.ul>
       )}
       </AnimatePresence>
