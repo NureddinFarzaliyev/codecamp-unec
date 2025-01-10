@@ -224,6 +224,11 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
 
+        @media (max-width: 992px) {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
         h1 {
             font-size: 48px;
             color: variables.$primary;
