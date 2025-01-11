@@ -3,6 +3,7 @@ import Container from '../ui/Container'
 import logo from '../../assets/img/logo.png'
 import { RiShoppingCartLine } from "react-icons/ri";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { Link } from 'react-router-dom';
 
 const HeaderSale = () => {
   return (
@@ -33,7 +34,9 @@ const HeaderSale = () => {
                     <RxHamburgerMenu />
                 </div>
                 <div className='lg:hidden'>
-                    <img src={logo} alt='logo' className='h-10'/>
+                    <Link to='/'>
+                        <img src={logo} alt='logo' className='h-10'/>
+                    </Link>
                 </div>
                 <div className='text-3xl relative lg:hidden'>
                     <RiShoppingCartLine />
