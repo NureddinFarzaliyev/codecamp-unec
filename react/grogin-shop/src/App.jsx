@@ -5,7 +5,7 @@ import Details from './components/details/Details'
 import RootLayout from './components/ui/RootLayout'
 
 const App = () => {
-  
+
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path='/' element={<RootLayout />}>
