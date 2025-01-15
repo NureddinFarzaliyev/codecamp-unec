@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react'
 import Header from '../header/Header'
-import FilterProvider from '../../contexts/FilterProvider'
-import { DataProvider } from '../../contexts/DataProvider'
 import { Outlet, useLocation } from 'react-router-dom'
 import Footer from '../footer/Footer'
+import Contexts from '../../context/Contexts'
 
 const RootLayout = () => {
     const {pathname} = useLocation();
@@ -13,13 +12,11 @@ const RootLayout = () => {
     }, [pathname])
 
   return (
-      <DataProvider>
+      <Contexts>
         <Header />
-        <FilterProvider>
-            <Outlet />
-        </FilterProvider>
+        <Outlet />
         <Footer />
-    </DataProvider>
+      </Contexts>
   )
 }
 
