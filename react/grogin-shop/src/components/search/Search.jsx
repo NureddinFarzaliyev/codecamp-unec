@@ -17,7 +17,7 @@ const Search = () => {
   return (
     <div className="w-[50%] xl:w-[45%] 2xl:w-[55%] flex relative">
       <input type="text" placeholder='Search For Meals...' 
-      className='w-full bg-main-text bg-opacity-5 hover:bg-opacity-10 transition-colors px-4 h-12 rounded-md' 
+      className='w-full bg-main-text bg-opacity-5 hover:bg-opacity-10 transition-colors px-4 h-12 rounded-md dark:border-[1px] dark:border-opacity-20 dark:border-white' 
       onChange={(e) => {setQuery(e.target.value)}} />
       <button className='absolute right-4 top-[50%] translate-y-[-50%]'
       onClick={() => {search(query)}}><FaMagnifyingGlass/></button>

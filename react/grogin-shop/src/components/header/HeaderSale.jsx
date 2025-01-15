@@ -21,16 +21,16 @@ const HeaderSale = () => {
             </div>
         </div>
         <Container>
-            <div className='h-20 justify-between lg:h-10 flex items-center gap-1 lg:gap-2 text-main-text relative border-b-[1px] border-main-text border-opacity-20'>
+            <div className='h-20 justify-between lg:h-10 flex items-center gap-1 lg:gap-2 text-main-text relative border-b-[1px] border-main-text dark:border-white/20 border-opacity-20'>
                 <div className='gap-3 hidden lg:flex'>
-                    {['About Us', 'My account', 'Wishlist'].map((t, i) => <span className='opacity-70 hover:opacity-100 text-main-text cursor-pointer text-sm transition' key={i}>{t}</span>)}
-                    <div className='text-sm pl-3 border-l-2'><span className='opacity-70'>We deliver to you every day from</span> <span className='text-sale-red font-bold'>7:00 to 23:00</span></div>
+                    {['About Us', 'My account', 'Wishlist'].map((t, i) => <span className='opacity-70 hover:opacity-100 text-main-text dark:text-white cursor-pointer text-sm transition' key={i}>{t}</span>)}
+                    <div className='text-sm pl-3 border-l-2'><span className='opacity-70 dark:text-white'>We deliver to you every day from</span> <span className='text-sale-red font-bold'>7:00 to 23:00</span></div>
                 </div>
                 <div className='gap-3 hidden lg:flex'>
-                    {['English', 'USD', 'Order Tracking'].map((t, i) => <span className='opacity-70 hover:opacity-100 text-main-text cursor-pointer text-sm transition' key={i}>{t}</span>)}
+                    {['English', 'USD', 'Order Tracking'].map((t, i) => <span className='opacity-70 hover:opacity-100 text-main-text dark:text-white cursor-pointer text-sm transition' key={i}>{t}</span>)}
                 </div>
 
-                <div className='text-3xl lg:hidden'>
+                <div className='text-3xl lg:hidden dark:text-white'>
                     <RxHamburgerMenu />
                 </div>
                 <div className='lg:hidden'>
@@ -38,7 +38,7 @@ const HeaderSale = () => {
                         <img src={logo} alt='logo' className='h-10'/>
                     </Link>
                 </div>
-                <div className='text-3xl relative lg:hidden'>
+                <div className='text-3xl relative lg:hidden dark:text-white'>
                     <RiShoppingCartLine />
                     <div className="absolute h-4 w-4 text-center rounded-full top-[-5px] right-[-5px] bg-sale-red text-xs text-white">0</div>
                 </div>

@@ -17,6 +17,20 @@
     height: 5px !important;
 }
 
+.dark {
+    .range-slider__thumb {
+        background-color: white !important;
+    }
+
+    .range-slider__range {
+        background-color: white !important;
+    }
+
+    .range-slider {
+        background-color: rgba(255, 255, 255, .3);
+    }
+}
+
 .banner {
     background-image: url('./assets/img/banner.jpg');
 }
@@ -59,6 +73,18 @@
     }
 }
 
+.dark {
+    .shown-filter {
+        background-color: #111827;
+    }
+}
+
 .shown-filter body {
     overflow: hidden;
+}
+
+.dark {
+    & body {
+        background-color: #111827;
+    }
 }

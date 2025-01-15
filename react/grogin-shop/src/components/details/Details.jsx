@@ -17,7 +17,7 @@ const Details = () => {
   return (
     <Container>
         {data && (
-            <div className='pt-5 text-main-text min-h-dvh'>
+            <div className='pt-5 text-main-text min-h-dvh dark:text-white'>
                 <h1 className='py-2 text-5xl font-semibold'>{data.strMeal}</h1>
                 <div className='flex gap-2'>
                     <span className='px-6 py-2 my-2 bg-cart-green rounded-full text-white font-bold'>{data.strCategory}</span>                

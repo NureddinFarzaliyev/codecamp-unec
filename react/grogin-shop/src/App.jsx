@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Main from './components/main/Main'
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom'
 import Details from './components/details/Details'
 import RootLayout from './components/ui/RootLayout'
+import Contexts from './context/Contexts'
 
 const App = () => {
 
@@ -16,7 +17,9 @@ const App = () => {
   )
 
   return (
-    <RouterProvider router={router} />
+    <Contexts>
+      <RouterProvider router={router} />
+    </Contexts>
   )
 }
 

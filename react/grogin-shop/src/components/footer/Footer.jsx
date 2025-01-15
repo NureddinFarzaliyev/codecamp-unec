@@ -24,16 +24,16 @@ const Footer = () => {
     ]
 
   return (
-    <footer className='bg-[#F3F4F6] py-10 text-main-text mt-20'>
+    <footer className='bg-[#F3F4F6] dark:bg-black/50 py-10 text-main-text mt-20'>
     <Container>  
-        <div className='flex justify-between flex-col lg:flex-row gap-5 border-b-2 pb-10'>
+        <div className='flex justify-between flex-col lg:flex-row gap-5 border-b-2 dark:border-white/20 pb-10'>
             <div>
                 <h1 className='text-xl font-bold'>Join our newsletter for £10 offs </h1>
                 <p className='lg:w-96 mt-1 text-sm opacity-70'>Register now to get latest updates on promotions & coupons.Don’t worry, we not spam!</p>
             </div>
             <div>
                 <div>
-                    <input className='bg-white h-14 w-96 rounded-l-md px-5 outline-sale-purple' 
+                    <input className='bg-white dark:bg-main-text dark:border-[1px] dark:border-white/50 dark:outline-none h-14 w-96 rounded-l-md px-5 outline-sale-purple' 
                     type="text" name='newsletter' placeholder='Enter your email adress' />
                     <button className='bg-sale-purple h-14 px-5 rounded-r-md text-white font-medium'>SEND</button>
                 </div>

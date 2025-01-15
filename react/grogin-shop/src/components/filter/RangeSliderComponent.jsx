@@ -12,7 +12,7 @@ const RangeSliderComponent = () => {
       <div className='flex justify-between my-3 items-end gap-1'>
         <div className='flex flex-col w-10 md:w-16 lg:w-24'>
           <span className='w-max text-sm mb-3 opacity-50'>Min price</span>
-          <input type="text" value={minVal} className='border-[1.5px] border-main-text border-opacity-40 p-2 rounded-md font-bold'
+          <input type="text" value={minVal} className='border-[1.5px] border-main-text dark:border-white/20 outline-none dark:bg-main-text border-opacity-40 p-2 rounded-md font-bold'
           onChange={(e) => {if(e.target.value >= 0 && e.target.value <= 50) setMinVal(e.target.value)}} />
         </div>
         <div className='mb-2 text-2xl font-light'>
@@ -20,7 +20,7 @@ const RangeSliderComponent = () => {
         </div>
         <div className='flex flex-col w-10 md:w-16 lg:w-24'>
           <span className='w-max text-sm mb-3 opacity-50'>Max price</span>
-          <input type="text" value={maxVal} className='border-[1.5px] border-main-text border-opacity-40 p-2 rounded-md font-bold'
+          <input type="text" value={maxVal} className='border-[1.5px] border-main-text dark:border-white/20 outline-none dark:bg-main-text border-opacity-40 p-2 rounded-md font-bold'
            onChange={(e) => {if(e.target.value >= 0 && e.target.value <= 50) setMaxVal(e.target.value)}} />
         </div>
       </div>
