@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Main from './components/main/Main'
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom'
 import Details from './components/details/Details'
 import RootLayout from './components/ui/RootLayout'
-import Contexts from './context/Contexts'
+import Contexts from './contexts/Contexts'
 
 const App = () => {
 

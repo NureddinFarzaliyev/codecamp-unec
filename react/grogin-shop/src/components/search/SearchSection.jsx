@@ -6,7 +6,7 @@ import { CiLocationOn } from "react-icons/ci";
 import { BiMoon, BiHeart, BiSun  } from 'react-icons/bi'
 import { RiShoppingCartLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
-import { ThemeContext } from '../../context/ThemeContext';
+import { ThemeContext } from '../../contexts/ThemeContext';
 
 
 const SearchSection = () => {

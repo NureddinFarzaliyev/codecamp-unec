@@ -1,12 +1,21 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Container from '../ui/Container'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
+import { currencyContext } from '../../contexts/CurrencyContext'
 
 const Details = () => {
 
     const {mealId} = useParams()
     const [data, setData] = useState([])
+
+    const [currency] = useContext(currencyContext)
+    
+    const [price, setPrice] = useState(0)
+
+    useEffect(() => {
+        setPrice(Math.round(Math.floor(Math.random() * 100 + 1) * currency.rate))
+    }, [])
 
     useEffect(() => {
         axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`)
@@ -27,7 +36,9 @@ const Details = () => {
                     <div className='mx-auto'>
                         <img src={data.strMealThumb} alt={data.strMeal} className='rounded-xl shadow-2xl border-cart-green border-2' />
                     </div>
-                    <p className='text-lg px-2 mt-10 xl:mt-0'>{data.strInstructions}</p>
+                    <p className='text-lg px-2 mt-10 xl:mt-0'>{data.strInstructions}
+                    <h1 className='text-3xl mt-5 font-bold'>{price} {currency.name}</h1>
+                    </p>
                 </div>
             </div>
         )}

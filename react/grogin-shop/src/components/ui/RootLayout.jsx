@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import Header from '../header/Header'
 import { Outlet, useLocation } from 'react-router-dom'
 import Footer from '../footer/Footer'
-import Contexts from '../../context/Contexts'
+import Contexts from '../../contexts/Contexts'
 
 const RootLayout = () => {
     const {pathname} = useLocation();

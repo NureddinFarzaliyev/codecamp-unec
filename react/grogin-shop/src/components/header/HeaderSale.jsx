@@ -1,11 +1,37 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Container from '../ui/Container'
 import logo from '../../assets/img/logo.png'
 import { RiShoppingCartLine } from "react-icons/ri";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Link } from 'react-router-dom';
+import { currencyContext } from '../../contexts/CurrencyContext';
+import axios from 'axios';
 
 const HeaderSale = () => {
+    const [currency, setCurrency] = useContext(currencyContext);
+    const [options, setOptions] = useState([])
+
+    const handleCurrencyChange = async (e) => {
+        axios.get(`https://currencyapi.net/api/v1/rates?key=${import.meta.env.VITE_CURRENCY_API}&output=JSON`)
+        .then(res => {
+            Object.keys(res.data.rates).map(currencyName => {
+                if(currencyName === e.target.value){
+                    setCurrency({
+                        name: currencyName,
+                        rate: res.data.rates[currencyName]
+                    })
+                }
+            })
+        })
+    }
+
+    useEffect(() => {
+        axios.get(`https://currencyapi.net/api/v1/rates?key=${import.meta.env.VITE_CURRENCY_API}&output=JSON`)
+        .then(res => {setOptions(Object.keys(res.data.rates))})
+    }, [])
+
+    console.log(currency)
+
   return (
     <div>
         <div className='bg-sale-purple h-16 lg:h-12 w-dvw text-white flex items-center justify-around flex-col lg:flex-row'>
@@ -27,7 +53,10 @@ const HeaderSale = () => {
                     <div className='text-sm pl-3 border-l-2'><span className='opacity-70 dark:text-white'>We deliver to you every day from</span> <span className='text-sale-red font-bold'>7:00 to 23:00</span></div>
                 </div>
                 <div className='gap-3 hidden lg:flex'>
-                    {['English', 'USD', 'Order Tracking'].map((t, i) => <span className='opacity-70 hover:opacity-100 text-main-text dark:text-white cursor-pointer text-sm transition' key={i}>{t}</span>)}
+                    {['English', 'Order Tracking'].map((t, i) => <span className='opacity-70 hover:opacity-100 text-main-text dark:text-white cursor-pointer text-sm transition' key={i}>{t}</span>)}
+                    <select name="currency" className='text-sm dark:text-white bg-transparent border-none opacity-70' id="currency" onChange={(e) => handleCurrencyChange(e)}>
+                        {options.map((o, i) => <option value={o} key={i} selected={currency.name === o} >{o}</option>)}
+                    </select>
                 </div>
 
                 <div className='text-3xl lg:hidden dark:text-white'>

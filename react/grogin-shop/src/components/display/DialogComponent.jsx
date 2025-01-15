@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Dialog, DialogPanel, DialogBackdrop } from '@headlessui/react'
 import { GiKnifeFork } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
+import { currencyContext } from '../../contexts/CurrencyContext';
 
 const DialogComponent = ({isOpen, setIsOpen, info}) => {
+
+  const [currency] = useContext(currencyContext)
+
+  const [price, setPrice] = useState(0)
+
+  useEffect(() => {
+    setPrice(Math.round(Math.floor(Math.random() * 100) * currency.rate))
+  }, [])
+
   return (
     <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="relative z-50">
         <DialogBackdrop className="fixed inset-0 bg-black/80 data-[closed]:opacity-50 duration-200" transition />
@@ -20,7 +30,10 @@ const DialogComponent = ({isOpen, setIsOpen, info}) => {
                       <span className='bg-sale-purple py-1 px-4 font-medium rounded-full border-[1px] border-sale-purple bg-opacity-30'>{info.strCategory}</span>
                     </div>
                     <h3 className='font-medium mt-4 text-lg'>Instructions</h3>
-                    <p className='mt-2 opacity-80 lg:max-h-[58vh] overflow-scroll'>{info.strInstructions}</p>
+                    <p className='mt-2 opacity-80 lg:max-h-[48vh] overflow-scroll'>{info.strInstructions}</p>
+                    <h1 className="mt-5 text-3xl font-bold">
+                      {price} {currency.name}
+                    </h1>
                   </div>
                   <div className='flex items-center justify-center h-full'>
                     <img src={info.strMealThumb} alt={info.strMeal} className='rounded-lg shadow-md mt-5 lg:mt-0' />
