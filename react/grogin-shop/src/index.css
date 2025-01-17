@@ -87,4 +87,8 @@
     & body {
         background-color: #111827;
     }
+
+    .logo {
+        filter: grayscale(1) invert(1) saturate(1);
+    }
 }

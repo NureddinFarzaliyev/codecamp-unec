@@ -17,7 +17,7 @@ const SearchSection = () => {
     <Container>
     <div className='h-24 lg:flex items-center hidden w-full justify-between gap-5 border-b-main-text border-b-[1px] dark:border-b-white/20 border-opacity-10'>
       <Link to='/'>
-        <img src={logo} alt="" className='h-10' />
+        <img src={logo} alt="" className='h-10 logo' />
       </Link>
 
       <div className='flex gap-2'>

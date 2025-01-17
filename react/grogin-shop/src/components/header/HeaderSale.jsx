@@ -64,7 +64,7 @@ const HeaderSale = () => {
                 </div>
                 <div className='lg:hidden'>
                     <Link to='/'>
-                        <img src={logo} alt='logo' className='h-10'/>
+                        <img src={logo} alt='logo' className='h-10 logo'/>
                     </Link>
                 </div>
                 <div className='text-3xl relative lg:hidden dark:text-white'>
