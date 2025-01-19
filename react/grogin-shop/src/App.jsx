@@ -4,6 +4,7 @@ import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } 
 import Details from './components/details/Details'
 import RootLayout from './components/ui/RootLayout'
 import Contexts from './contexts/Contexts'
+import Cart from './components/cart/Cart'
 
 const App = () => {
 
@@ -12,6 +13,7 @@ const App = () => {
       <Route path='/' element={<RootLayout />}>
         <Route index element={<Main />} />
         <Route path="/meals/:mealId" element={<Details />} />
+        <Route path="/cart" element={<Cart />} />
       </Route>
     )
   )

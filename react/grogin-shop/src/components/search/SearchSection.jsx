@@ -34,12 +34,14 @@ const SearchSection = () => {
         <div className='flex flex-col gap-1 items-center cursor-pointer justify-center hover:scale-110'>
             {theme === 'dark' ? <BiSun className='text-3xl' onClick={() => setTheme('light')} /> : <BiMoon className='text-3xl' onClick={() => setTheme('dark')} />}
         </div>
-        {[{title: "Wishlist", icon: BiHeart}, {title: "Your Cart", icon: RiShoppingCartLine}].map((t, i) =>
-          <div className='flex flex-col gap-1 items-center cursor-pointer' key={i}>
-            <t.icon className='text-3xl' />
-            {/* <span className='text-md w-max'>{t.title}</span> */}
+        <div className='flex flex-col gap-1 items-center cursor-pointer'>
+            <BiHeart className='text-3xl' />
+        </div>
+        <Link to={'/cart'}>
+          <div className='flex flex-col gap-1 items-center cursor-pointer'>
+            <RiShoppingCartLine className='text-3xl' />
           </div>
-        )}
+        </Link>
       </div>
     </div>
     </Container>

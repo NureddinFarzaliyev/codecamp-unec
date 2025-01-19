@@ -17,6 +17,8 @@
     "react-icons": "^5.4.0",
     "react-range-slider-input": "^3.0.7",
     "react-router-dom": "^7.1.1",
+    "react-toastify": "^11.0.3",
+    "react-use-cart": "^1.14.0",
     "slugify": "^1.6.6"
   },
   "devDependencies": {

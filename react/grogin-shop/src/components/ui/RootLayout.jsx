@@ -3,6 +3,7 @@ import Header from '../header/Header'
 import { Outlet, useLocation } from 'react-router-dom'
 import Footer from '../footer/Footer'
 import Contexts from '../../contexts/Contexts'
+import { ToastContainer } from 'react-toastify'
 
 const RootLayout = () => {
     const {pathname} = useLocation();
@@ -13,6 +14,7 @@ const RootLayout = () => {
 
   return (
       <Contexts>
+        <ToastContainer position='bottom-right' autoClose={3000} />
         <Header />
         <Outlet />
         <Footer />
