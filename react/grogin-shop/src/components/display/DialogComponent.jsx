@@ -11,7 +11,7 @@ const DialogComponent = ({isOpen, setIsOpen, info}) => {
   const [price, setPrice] = useState(0)
 
   useEffect(() => {
-    setPrice(Math.round(Math.floor(Math.random() * 100) * currency.rate))
+    setPrice(Math.round(Math.floor(Math.random() * 50) * currency.rate))
   }, [])
 
   return (

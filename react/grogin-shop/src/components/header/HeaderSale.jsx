@@ -6,10 +6,12 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { Link } from 'react-router-dom';
 import { currencyContext } from '../../contexts/CurrencyContext';
 import axios from 'axios';
+import { useCart } from 'react-use-cart';
 
 const HeaderSale = () => {
     const [currency, setCurrency] = useContext(currencyContext);
     const [options, setOptions] = useState([])
+    const {totalItems} = useCart()
 
     const handleCurrencyChange = async (e) => {
         axios.get(`https://currencyapi.net/api/v1/rates?key=${import.meta.env.VITE_CURRENCY_API}&output=JSON`)
@@ -67,10 +69,12 @@ const HeaderSale = () => {
                         <img src={logo} alt='logo' className='h-10 logo'/>
                     </Link>
                 </div>
-                <div className='text-3xl relative lg:hidden dark:text-white'>
-                    <RiShoppingCartLine />
-                    <div className="absolute h-4 w-4 text-center rounded-full top-[-5px] right-[-5px] bg-sale-red text-xs text-white">0</div>
-                </div>
+                <Link to={'/cart'}>
+                    <div className='flex flex-col gap-1 items-center cursor-pointer relative lg:hidden dark:text-white'>
+                        <RiShoppingCartLine className='text-3xl' />
+                        <p className={`${totalItems === 0 && 'opacity-50'} absolute bg-sale-red h-6 w-6 text-white rounded-full text-sm font-bold flex items-center justify-center right-[-15px] top-[-10px]`}>{totalItems}</p>
+                    </div>
+                </Link>
             </div>
         </Container>    
     </div>

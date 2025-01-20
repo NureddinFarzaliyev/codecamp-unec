@@ -7,11 +7,13 @@ import { BiMoon, BiHeart, BiSun  } from 'react-icons/bi'
 import { RiShoppingCartLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from '../../contexts/ThemeContext';
+import { useCart } from 'react-use-cart';
 
 
 const SearchSection = () => {
 
   const [theme, setTheme] = useContext(ThemeContext)
+  const { totalItems } = useCart()
 
   return (
     <Container>
@@ -38,8 +40,9 @@ const SearchSection = () => {
             <BiHeart className='text-3xl' />
         </div>
         <Link to={'/cart'}>
-          <div className='flex flex-col gap-1 items-center cursor-pointer'>
+          <div className='flex flex-col gap-1 items-center cursor-pointer relative'>
             <RiShoppingCartLine className='text-3xl' />
+            <p className={`${totalItems === 0 && 'opacity-50'} absolute bg-sale-red text-white h-6 w-6 rounded-full text-sm font-bold flex items-center justify-center right-[-15px] top-[-10px]`}>{totalItems}</p>
           </div>
         </Link>
       </div>

@@ -23,7 +23,7 @@ const Details = () => {
     })
 
     useEffect(() => {
-        setPrice(Math.round(Math.floor(Math.random() * 100 + 1) * currency.rate))
+        setPrice(Math.round(Math.floor(Math.random() * 50 + 1) * currency.rate))
     }, [])
 
     useEffect(() => {
@@ -47,7 +47,7 @@ const Details = () => {
                     </div>
                     <p className='text-lg px-2 mt-10 xl:mt-0'>{data.strInstructions}
                     <h1 className='text-3xl mt-5 font-bold'>{price} {currency.name}</h1>
-                    <button onClick={(e) => {e.stopPropagation(); e.preventDefault(); addItem({...data, id: data.idMeal, price: Math.round(Math.floor(Math.random() * 100))}); notify(data.strMeal) }}
+                    <button onClick={(e) => {e.stopPropagation(); e.preventDefault(); addItem({...data, id: data.idMeal, price: Math.round(Math.floor(Math.random() * 50))}); notify(data.strMeal) }}
                     className='bg-cart-green mt-5 h-10 dark:hover:bg-transparent flex items-center text-xl py-1 px-4 rounded-lg border-2 border-transparent text-white font-bold gap-2 hover:scale-110 transition duration-200 hover:shadow-md hover:text-cart-green hover:bg-white hover:border-cart-green'> <RiShoppingCartLine /> Add to Cart </button>
                     </p>
                 </div>
