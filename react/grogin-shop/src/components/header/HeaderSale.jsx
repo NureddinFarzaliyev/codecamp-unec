@@ -69,8 +69,8 @@ const HeaderSale = () => {
                         <img src={logo} alt='logo' className='h-10 logo'/>
                     </Link>
                 </div>
-                <Link to={'/cart'}>
-                    <div className='flex flex-col gap-1 items-center cursor-pointer relative lg:hidden dark:text-white'>
+                <Link to={'/cart'} className='lg:hidden'>
+                    <div className='flex flex-col gap-1 items-center cursor-pointer relative dark:text-white'>
                         <RiShoppingCartLine className='text-3xl' />
                         <p className={`${totalItems === 0 && 'opacity-50'} absolute bg-sale-red h-6 w-6 text-white rounded-full text-sm font-bold flex items-center justify-center right-[-15px] top-[-10px]`}>{totalItems}</p>
                     </div>
