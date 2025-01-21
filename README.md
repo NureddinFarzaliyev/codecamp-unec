@@ -1,27 +1,31 @@
 # Codecamp - UNEC
 
-![Learned Technologies](https://skillicons.dev/icons?i=html,css,scss,bootstrap,tailwindcss,javascript,react)
+![Learned Technologies](https://skillicons.dev/icons?i=html,css,scss,bootstrap,tailwindcss,javascript,react,redux)
 
 This repository includes my solutions for tasks in Matrix Academy, CodeCamp - UNEC.
 
 ### Projects
-- [1. Clicon](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/projects/clicon)
-- [2. Miniture](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/projects/miniture)
-- [3. Poco](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/projects/bootstrap-poco)
-- [4. Sandbox](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/projects/bootstrap-sandbox)
-- [5. Ecomall](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/projects/ecomall-menu)
-- [6. Cow Calculator](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/tasks/cows)
-- [7. To-Do List](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/projects/todolist)
-- [8. Clock](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/projects/clock)
-- [9. Movie/Book App](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/projects/movie-book-app)
+- [Clicon](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/projects/clicon)
+- [Miniture](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/projects/miniture)
+- [Poco](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/projects/bootstrap-poco)
+- [Sandbox](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/projects/bootstrap-sandbox)
+- [Ecomall](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/projects/ecomall-menu)
+- [Cow Calculator](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/tasks/cows)
+- [To-Do List](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/projects/todolist)
+- [Clock](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/projects/clock)
+- [Movie/Book App](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/projects/movie-book-app)
 
 ### React Projects
-- [10. Bookapp](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/react/bookapp)
-- [11. Fakeshop API](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/react/storeapi-class-based)
-- [12. Grogin Template](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/react/grogin-shop)
-- [13. GitHub Finder](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/react/github-finder)
-- [14. Ovro Portfolio](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/react/github-finder)
-- [15. Fresh Vial](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/react/fresh-vial)
+- [Bookapp](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/react/bookapp)
+- [Fakeshop API](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/react/storeapi-class-based)
+- [Grogin Template](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/react/grogin-shop)
+- [GitHub Finder](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/react/github-finder)
+- [Ovro Portfolio](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/react/github-finder)
+- [Fresh Vial](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/react/fresh-vial)
+
+### Redux & Redux Toolkit Projects
+- [Counter](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/redux/redux-counter)
+- [Products](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/redux/redux-products)
 
 ### Other Tasks
 - [Responsiveness](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/tasks/responsive)
