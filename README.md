@@ -26,6 +26,7 @@ This repository includes my solutions for tasks in Matrix Academy, CodeCamp - UN
 ### Redux & Redux Toolkit Projects
 - [Counter](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/redux/redux-counter)
 - [Products](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/redux/redux-products)
+- [CRUD Dashboard](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/redux/products-dashboard)
 
 ### Other Tasks
 - [Responsiveness](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/tasks/responsive)
