@@ -1,0 +1,15 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+a {
+    color: black !important;
+    opacity: .5;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: solid 1px transparent;
+    border-radius: 5px;
+}
+
+a.active {
+    opacity: 1;
+    border-color: black;
+}
