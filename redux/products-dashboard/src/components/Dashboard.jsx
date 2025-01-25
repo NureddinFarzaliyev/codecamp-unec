@@ -13,7 +13,7 @@ const Dashboard = () => {
         <h1 className='my-5'>📦 Dashboard</h1>
 
         <div className='border rounded p-3  mx-auto text-center bg-light'>
-        There are currently {products.length} products in the store.
+        There {products.length > 1 ? "are" : "is"} total {products.length} products in the store.
         </div>
 
         <Accordion className="mt-5">
