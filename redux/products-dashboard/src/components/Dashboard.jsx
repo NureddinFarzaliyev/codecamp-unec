@@ -12,7 +12,7 @@ const Dashboard = () => {
     <Container>
         <h1 className='my-5'>📦 Dashboard</h1>
 
-        <div className='border rounded p-3  mx-auto text-center bg-light'>
+        <div className='border rounded p-3  mx-auto text-center bg-success'>
         There {products.length > 1 ? "are" : "is"} total {products.length} products in the store.
         </div>
 

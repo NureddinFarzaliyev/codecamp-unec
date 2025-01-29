@@ -9,11 +9,11 @@ const NavComponent = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-              <NavLink to={'/'}>
+              <NavLink to={'/'} className={'text-light'}>
                 Home
               </NavLink>
-              <NavLink to={'/dashboard'}>
-                Dashboard
+              <NavLink to={'/login'} className={'text-light'}>
+                Login to Dashboard
               </NavLink>
           </Nav>
         </Navbar.Collapse>
