@@ -1,8 +1,11 @@
 # Codecamp - UNEC
 
-![Learned Technologies](https://skillicons.dev/icons?i=html,css,scss,bootstrap,tailwindcss,javascript,react,redux)
+![Learned Technologies](https://skillicons.dev/icons?i=html,css,scss,bootstrap,tailwindcss,javascript,react,redux,supabase,typescript)
 
 This repository includes my solutions for tasks in Matrix Academy, CodeCamp - UNEC.
+
+### Final Project
+- [**Final Project**](https://github.com/NureddinFarzaliyev/criterion-clone)
 
 ### Projects
 - [Clicon](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/projects/clicon)
@@ -27,6 +30,7 @@ This repository includes my solutions for tasks in Matrix Academy, CodeCamp - UN
 - [Counter](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/redux/redux-counter)
 - [Products](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/redux/redux-products)
 - [CRUD Dashboard](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/redux/products-dashboard)
+- [Redux Toolkit Todo](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/redux/toolkit-todo)
 
 ### Other Tasks
 - [Responsiveness](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/tasks/responsive)
@@ -41,3 +45,4 @@ This repository includes my solutions for tasks in Matrix Academy, CodeCamp - UN
 - [A game with Classes(OOP)](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/tasks/classes)
 - [React Counter](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/react/counter)
 - [React Lifecycle Task with API](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/react/counter)
+- [Typescript Introduction](https://github.com/NureddinFarzaliyev/codecamp-unec/tree/master/typescript/ts-introduction)
